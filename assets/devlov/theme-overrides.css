@@ -160,6 +160,9 @@ body {
   display: block;
   height: auto;
   white-space: normal;
+  background: none;
+  border-top: none;
+  box-shadow: none;
 }
 #sidebar #nav li {
   display: block;
