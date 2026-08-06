@@ -1,29 +1,7 @@
-/* DevLov — client portal overrides. Loaded AFTER assets/default/css/theme.css.
+/* DevLov — client portal overrides. Loaded AFTER assets/default/css/theme.css
+   AND after assets/devlov/tokens.css (shared :root custom properties — see
+   that file, also used by scp/css/scp.css and scp/css/login.css).
    Never edit theme.css directly — it's vendor code, this file survives osTicket upgrades. */
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
-
-/* Shared design tokens — one source of truth so the login screen and every
-   other client-portal form (open ticket, check status, ticket list...) read
-   as the same product instead of two different visual systems. */
-:root {
-  --dl-violet: #7f6bf2;
-  --dl-orange: #ff9d4d;
-  --dl-orange-hover: #ffb066;
-  --dl-ink: #15161d;
-  --dl-ink-soft: rgba(21,22,29,0.62);
-  --dl-ink-faint: rgba(21,22,29,0.42);
-  --dl-surface: #ffffff;
-  --dl-neutral: #f5f4f1;
-  --dl-border: rgba(21,22,29,0.14);
-  --dl-dark: #241f33;
-  --dl-dark-border: rgba(255,255,255,0.14);
-  --dl-radius-sm: 10px;
-  --dl-radius: 12px;
-  --dl-radius-pill: 999px;
-  --dl-font-body: 'Space Grotesk', helvetica, arial, sans-serif;
-  --dl-font-display: 'Instrument Serif', Georgia, serif;
-}
 
 /* Typography & links */
 body {
@@ -65,13 +43,13 @@ h3 {
   background-color: var(--dl-violet);
 }
 .blue.button:hover {
-  background-color: #6b54e8;
+  background-color: var(--dl-violet-hover);
 }
 
 /* Page & container */
 body {
-  background: #f5f4f1;
-  font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+  background: var(--dl-neutral);
+  font-family: var(--dl-font-body);
 }
 #container {
   width: 1140px;
@@ -177,7 +155,7 @@ body {
   height: auto;
   line-height: 1.4;
   padding: 9px 12px;
-  border-radius: 8px;
+  border-radius: var(--dl-radius-nav);
   color: rgba(255,255,255,0.75);
   background-image: none;
 }

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+/* Fonts + shared :root tokens now come from assets/devlov/tokens.css, loaded
+   before this file in include/staff/login.header.php. */
 input:focus {
-    border: 1px solid #7f6bf2;
+    border: 1px solid var(--dl-violet);
     box-shadow: 0 0 4px rgba(127,107,242,0.5);
     outline: none;
 }
@@ -34,7 +35,7 @@ body {
 }
 
 #brickwall {
-    background: #f5f4f1;
+    background: var(--dl-neutral);
     position: absolute;
     top: 0;
     left: 0;
@@ -58,7 +59,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: #f5f4f1;
+    background: var(--dl-neutral);
 }
 
 #blur {
@@ -75,8 +76,8 @@ body {
 }
 
 body, input {
-    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
-    color: #15161d;
+    font-family: var(--dl-font-body);
+    color: var(--dl-ink);
 }
 
 #loginBox {
@@ -129,10 +130,10 @@ h1 {
 .brand-wordmark {
     display: inline-block;
     vertical-align: middle;
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: var(--dl-font-display);
     font-style: italic;
     font-size: 32px;
-    color: #15161d;
+    color: var(--dl-ink);
 }
 .valign-helper {
     height: 100%;
@@ -240,14 +241,14 @@ input[type="button"] i,
 button[type=submit], input[type="submit"], .primary.button {
     font-weight: bold;
     box-shadow: none;
-    background-color: #7f6bf2;
+    background-color: var(--dl-violet);
     color: #fff;
 }
 
 button[type=submit]:hover, input[type=submit]:hover, input[type=submit]:active {
   color: white;
   box-shadow: none;
-  background-color: #6b54e8;
+  background-color: var(--dl-violet-hover);
 }
 
 input.submit:hover, input.submit:active {

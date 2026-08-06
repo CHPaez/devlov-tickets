@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+/* Fonts + shared :root tokens now come from assets/devlov/tokens.css, loaded
+   before this file in include/staff/header.inc.php. */
 body {
   font-family: 'Space Grotesk', "Helvetica Neue", arial, helvetica, sans-serif;
   font-weight: 400;
@@ -7,8 +8,8 @@ body {
           font-smoothing:antialiased;
 }
 body, html {
-    background:#f5f4f1;
-    color:#15161d;
+    background: var(--dl-neutral);
+    color: var(--dl-ink);
     font-size:14px;
     margin:0;
     padding:0;
@@ -16,7 +17,7 @@ body, html {
 
 .link,
 a {
-    color:#7f6bf2;
+    color: var(--dl-violet);
     text-decoration:none;
     display: inline-block;
 }
@@ -34,7 +35,7 @@ a:hover i[class^="icon-"],
 }
 
 div#header a {
-    color:#7f6bf2;
+    color: var(--dl-violet);
 }
 
 .centered {
@@ -162,7 +163,7 @@ a time {
 #sidebar {
     width: 230px;
     flex: 0 0 230px;
-    background: #1a1b23;
+    background: var(--dl-dark-staff);
     padding: 18px 0 24px;
     box-sizing: border-box;
 }
@@ -183,7 +184,7 @@ a time {
 .brand-wordmark {
     display: inline-block;
     vertical-align: middle;
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: var(--dl-font-display);
     font-style: italic;
     font-size: 22px;
     color: #fff;
@@ -256,7 +257,7 @@ a time {
     color: rgba(255,255,255,0.75);
     text-align: left;
     position: relative;
-    border-radius: 8px;
+    border-radius: var(--dl-radius-nav);
     border: none;
 }
 
@@ -264,7 +265,7 @@ a time {
 #nav .active a {
     display: block;
     padding: 9px 12px;
-    border-radius: 8px;
+    border-radius: var(--dl-radius-nav);
 }
 
 #nav .inactive a {
@@ -274,7 +275,7 @@ a time {
 #nav .active a {
     color: #fff;
     font-weight: 500;
-    background-color: #7f6bf2;
+    background-color: var(--dl-violet);
 }
 
 #nav > li + li {
@@ -2573,7 +2574,7 @@ select + .button {
 button[type=submit], input[type="submit"], .primary.button {
     font-weight: normal;
     box-shadow: none;
-    background-color: #7f6bf2;
+    background-color: var(--dl-violet);
     color: #fff;
 }
 
@@ -2604,7 +2605,7 @@ input[type=reset]:hover, input[type=reset]:active {
 button[type=submit]:hover, input[type=submit]:hover, input[type=submit]:active {
   color: white;
   box-shadow: none;
-  background-color: #6b54e8;
+  background-color: var(--dl-violet-hover);
 }
 
 .button:disabled, .action-button:disabled,

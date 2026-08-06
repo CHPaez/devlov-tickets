@@ -1,0 +1,36 @@
+/* DevLov — shared design tokens.
+
+   Single source of truth for the color/font/radius custom properties used by
+   BOTH panels: the client portal (assets/devlov/theme-overrides.css) and the
+   staff panel (scp/css/scp.css, scp/css/login.css). Load this file BEFORE
+   whichever panel-specific override file applies, so both can reference the
+   same :root variables instead of redeclaring (and silently drifting from)
+   the same colors.
+
+   --dl-dark and --dl-dark-staff are intentionally two different shades, not
+   a naming inconsistency to "fix" — the client login/sidebar and the staff
+   sidebar were designed with slightly different dark tones and unifying
+   them would be a real visual change, not a refactor. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --dl-violet: #7f6bf2;
+  --dl-violet-hover: #6b54e8;
+  --dl-orange: #ff9d4d;
+  --dl-orange-hover: #ffb066;
+  --dl-ink: #15161d;
+  --dl-ink-soft: rgba(21,22,29,0.62);
+  --dl-ink-faint: rgba(21,22,29,0.42);
+  --dl-surface: #ffffff;
+  --dl-neutral: #f5f4f1;
+  --dl-border: rgba(21,22,29,0.14);
+  --dl-dark: #241f33;
+  --dl-dark-staff: #1a1b23;
+  --dl-dark-border: rgba(255,255,255,0.14);
+  --dl-radius-sm: 10px;
+  --dl-radius: 12px;
+  --dl-radius-nav: 8px;
+  --dl-radius-pill: 999px;
+  --dl-font-body: 'Space Grotesk', helvetica, arial, sans-serif;
+  --dl-font-display: 'Instrument Serif', Georgia, serif;
+}
