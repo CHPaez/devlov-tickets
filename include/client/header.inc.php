@@ -97,8 +97,16 @@ if (osTicket::is_ie())
         elseif($ost->getNotice())
             echo sprintf('<div class="notice_bar">%s</div>', $ost->getNotice());
         ?>
-        <div id="header">
-            <div class="pull-right flush-right">
+<?php if ($nav) { ?>
+        <div id="app-body">
+        <div id="sidebar">
+            <a id="logo" href="<?php echo ROOT_PATH; ?>index.php"
+            title="<?php echo __('Support Center'); ?>">
+                <span class="valign-helper"></span>
+                <img class="brand-heart" src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="">
+                <span class="brand-wordmark"><?php echo $ost->getConfig()->getTitle(); ?></span>
+            </a>
+            <div id="sidebar-account">
             <p>
              <?php
                 if ($thisclient && is_object($thisclient) && $thisclient->isValid()
@@ -109,7 +117,7 @@ if (osTicket::is_ie())
                 <a href="<?php echo ROOT_PATH; ?>tickets.php"><?php echo sprintf(__('Tickets <b>(%d)</b>'), $thisclient->getNumTickets()); ?></a> -
                 <a href="<?php echo $signout_url; ?>"><?php echo __('Sign Out'); ?></a>
             <?php
-            } elseif($nav) {
+            } else {
                 if ($cfg->getClientRegistrationMode() == 'public') { ?>
                     <?php echo __('Guest User'); ?> | <?php
                 }
@@ -122,47 +130,35 @@ if (osTicket::is_ie())
                 }
             } ?>
             </p>
-            <p>
 <?php
 if (($all_langs = Internationalization::getConfiguredSystemLanguages())
     && (count($all_langs) > 1)
 ) {
     $qs = array();
     parse_str($_SERVER['QUERY_STRING'], $qs);
-    foreach ($all_langs as $code=>$info) {
+    ?>
+            <p>
+    <?php foreach ($all_langs as $code=>$info) {
         list($lang, $locale) = explode('_', $code);
         $qs['lang'] = $code;
-?>
+    ?>
         <a class="flag flag-<?php echo strtolower($info['flag'] ?: $locale ?: $lang); ?>"
             href="?<?php echo http_build_query($qs);
             ?>" title="<?php echo Internationalization::getLanguageDescription($code); ?>">&nbsp;</a>
-<?php }
-} ?>
+    <?php } ?>
             </p>
+<?php } ?>
             </div>
-            <a class="pull-left" id="logo" href="<?php echo ROOT_PATH; ?>index.php"
-            title="<?php echo __('Support Center'); ?>">
-                <span class="valign-helper"></span>
-                <img class="brand-heart" src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="">
-                <span class="brand-wordmark"><?php echo $ost->getConfig()->getTitle(); ?></span>
-            </a>
-        </div>
-        <div class="clear"></div>
-        <?php
-        if($nav){ ?>
-        <ul id="nav" class="flush-left">
+            <ul id="nav">
             <?php
-            if($nav && ($navs=$nav->getNavLinks()) && is_array($navs)){
-                foreach($navs as $name =>$nav) {
-                    echo sprintf('<li><a class="%s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
+            if(($navs=$nav->getNavLinks()) && is_array($navs)){
+                foreach($navs as $name => $navitem) {
+                    echo sprintf('<li><a class="%s %s" href="%s">%s</a></li>%s',$navitem['active']?'active':'',$name,(ROOT_PATH.$navitem['href']),$navitem['desc'],"\n");
                 }
             } ?>
-        </ul>
-        <?php
-        }else{ ?>
-         <hr>
-        <?php
-        } ?>
+            </ul>
+        </div>
+        <div id="main-panel">
         <div id="content">
 
          <?php if($errors['err']) { ?>
@@ -172,3 +168,24 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
          <?php }elseif($warn) { ?>
             <div id="msg_warning"><?php echo $warn; ?></div>
          <?php } ?>
+<?php } else { ?>
+        <div id="header">
+            <a class="pull-left" id="logo" href="<?php echo ROOT_PATH; ?>index.php"
+            title="<?php echo __('Support Center'); ?>">
+                <span class="valign-helper"></span>
+                <img class="brand-heart" src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="">
+                <span class="brand-wordmark"><?php echo $ost->getConfig()->getTitle(); ?></span>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <div id="content">
+
+         <?php if($errors['err']) { ?>
+            <div id="msg_error"><?php echo $errors['err']; ?></div>
+         <?php }elseif($msg) { ?>
+            <div id="msg_notice"><?php echo $msg; ?></div>
+         <?php }elseif($warn) { ?>
+            <div id="msg_warning"><?php echo $warn; ?></div>
+         <?php } ?>
+<?php } ?>

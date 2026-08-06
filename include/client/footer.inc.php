@@ -1,4 +1,8 @@
         </div>
+<?php if ($nav) { ?>
+        </div>
+        </div>
+<?php } ?>
     </div>
     <div id="footer">
         <img src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="" class="footer-heart">

@@ -98,27 +98,116 @@ body {
   color: var(--dl-orange);
   border-bottom-color: var(--dl-orange);
 }
-#nav {
-  margin: 0 36px;
-  padding: 10px 14px;
-  height: auto;
+/* Sidebar layout — same architecture as the staff panel's #app-body /
+   #sidebar / #main-panel (scp/css/scp.css), applied only when $nav is set
+   (every client page except login.php, which renders its own standalone
+   #header with no sidebar — see include/client/header.inc.php). */
+#app-body {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
 }
-#nav li {
-  display: block;
+#sidebar {
+  width: 230px;
+  flex: 0 0 230px;
+  background: var(--dl-dark);
+  padding: 24px 0;
+  box-sizing: border-box;
+  border-radius: 16px 0 0 16px;
 }
-#nav li a {
+#main-panel {
+  flex: 1;
+  min-width: 0;
+}
+#sidebar #logo {
   display: block;
-  width: fit-content;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 14px 0 34px;
+  text-decoration: none;
+  outline: none;
+  height: auto;
+  padding: 0 20px 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#sidebar .brand-wordmark {
+  font-size: 20px;
+}
+#sidebar-account {
+  padding: 0 20px 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+#sidebar-account a {
+  color: #fff;
+  border-bottom: 1px dotted transparent;
+}
+#sidebar-account a:hover {
+  color: var(--dl-orange);
+  border-bottom-color: var(--dl-orange);
+}
+#sidebar-account p {
+  margin: 0 0 6px;
+}
+#sidebar-account .flag {
+  margin-right: 4px;
+}
+#sidebar #nav {
+  margin: 0;
+  padding: 4px 12px;
+  list-style: none;
+  display: block;
+  height: auto;
+}
+#sidebar #nav li {
+  display: block;
+  list-style: none;
+}
+#sidebar #nav li + li {
+  margin-top: 2px;
+}
+#sidebar #nav li a {
+  display: block;
+  width: auto;
+  height: auto;
+  line-height: 1.4;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.75);
+  background-image: none;
+}
+#sidebar #nav li a:hover {
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+}
+#sidebar #nav li a.active {
+  background-color: var(--dl-violet);
+  color: #fff;
+  font-weight: 500;
 }
 #content {
   margin: 0 36px;
   padding: 32px 0;
+}
+@media (max-width: 900px) {
+  #app-body {
+    flex-direction: column;
+  }
+  #sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    border-radius: 16px 16px 0 0;
+    padding: 16px 0;
+  }
+  #sidebar #nav {
+    display: flex;
+    gap: 4px;
+    padding: 4px 12px 16px;
+  }
+  #sidebar #nav li + li {
+    margin-top: 0;
+  }
 }
 @media (max-width: 1200px) {
   #container {
@@ -139,8 +228,9 @@ body {
 .brand-heart {
   display: inline-block;
   vertical-align: middle;
+  height: 28px;
   width: auto;
-  margin-right: 12px;
+  margin-right: 8px;
   filter: brightness(0) invert(1);
   opacity: 0.92;
 }
@@ -150,22 +240,6 @@ body {
 #header #logo img.brand-heart {
   height: 38px;
   width: auto;
-}
-
-/* Nav */
-#nav {
-  background: none;
-  border-top: 1px solid rgba(21,22,29,0.08);
-  border-bottom: 1px solid rgba(21,22,29,0.08);
-  box-shadow: none;
-}
-#nav li a.active,
-#nav li a:hover {
-  background-color: rgba(127,107,242,0.12);
-  color: #15161d;
-}
-#nav li a:hover {
-  color: #7f6bf2;
 }
 
 /* Footer */
