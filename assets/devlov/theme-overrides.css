@@ -200,6 +200,13 @@ input[value="Create Ticket"]:hover {
 }
 
 /* Login page — true split screen: flat brand panel + dark minimal form panel, flush (no seam/card) */
+/* header.inc.php falls back to a plain <hr> when $nav is cleared (login page
+   only, see login.php) instead of the nav bar — hide it so .login-shell reads
+   truly edge-to-edge. Falls back gracefully wherever :has() isn't supported. */
+hr:has(+ #content .login-shell) {
+    display: none;
+}
+
 .login-shell {
     display: flex;
     align-items: stretch;

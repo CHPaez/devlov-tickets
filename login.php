@@ -148,6 +148,16 @@ if (!$nav) {
     $nav->setActiveNav('status');
 }
 
+// DevLov: the redesigned sign-in screen (login.inc.php) ships its own
+// logo, nav and sign-in chrome inside .login-shell. Clear $nav so the
+// shared header (include/client/header.inc.php) falls through to its
+// own existing no-nav branches instead of duplicating those links.
+// Other $inc targets from this file (accesslink/register) keep the
+// normal shared chrome.
+if ($inc == 'login.inc.php') {
+    $nav = null;
+}
+
 require CLIENTINC_DIR.'header.inc.php';
 require CLIENTINC_DIR.$inc;
 require CLIENTINC_DIR.'footer.inc.php';
