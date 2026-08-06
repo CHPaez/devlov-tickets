@@ -84,6 +84,19 @@ body {
 #header {
   height: 88px;
   padding: 0 36px;
+  background: var(--dl-dark);
+  border-radius: 16px 16px 0 0;
+}
+#header .pull-right {
+  color: rgba(255,255,255,0.55);
+}
+#header .pull-right a {
+  color: #fff;
+  border-bottom: 1px dotted transparent;
+}
+#header .pull-right a:hover {
+  color: var(--dl-orange);
+  border-bottom-color: var(--dl-orange);
 }
 #nav {
   margin: 0 36px;
@@ -112,15 +125,23 @@ body {
   font-family: 'Instrument Serif', Georgia, serif;
   font-style: italic;
   font-size: 36px;
-  color: #15161d;
+  color: #fff;
   text-decoration: none;
 }
 .brand-heart {
   display: inline-block;
   vertical-align: middle;
-  height: 38px;
   width: auto;
   margin-right: 12px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+/* Vendor #header #logo img (ID+ID, theme.css) caps this at max-height:65px
+   with height:auto — beats a plain .brand-heart rule, so match its own
+   specificity to actually win. */
+#header #logo img.brand-heart {
+  height: 38px;
+  width: auto;
 }
 
 /* Nav */
