@@ -24,6 +24,9 @@
 }
 #dashboard-page #basic_search input[type="text"],
 #dashboard-page #basic_search select {
+    height: auto;
+    line-height: normal;
+    max-width: none;
     border: 1px solid var(--dl-border);
     border-radius: var(--dl-radius-sm);
     padding: 6px 10px;
@@ -98,11 +101,11 @@
 
 /* Stats tables — flat borders instead of the vendor dashed/zebra-blue look */
 #dashboard-page table.dashboard-stats {
-    width: 100%;
     border-bottom: none;
     border-collapse: collapse;
     font-family: var(--dl-font-body);
     margin-top: 14px;
+    max-width: 100%;
 }
 #dashboard-page table.dashboard-stats tbody:first-child th {
     border-bottom: 1px solid var(--dl-border);
