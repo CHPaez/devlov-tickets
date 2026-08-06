@@ -89,6 +89,9 @@ if ($ticket
     )
 ) {
     // Thank the user and promise speedy resolution!
+    ?>
+    <div id="thankyou-lottie" class="thankyou-lottie" aria-hidden="true"></div>
+    <?php
     echo Format::viewableImages(
         $ticket->replaceVars(
             $page->getLocalBody()

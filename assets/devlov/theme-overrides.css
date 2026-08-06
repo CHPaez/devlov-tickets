@@ -660,3 +660,48 @@ a.login-tab:hover {
 #ticketTable td {
     padding: 10px 12px;
 }
+
+/* Loading indicator — replaces the vendor spinner GIF with the self-hosted
+   Lottie ring (assets/devlov/lottie/loading-spinner.json, played/stopped by
+   assets/devlov/lottie-init.js on form submit). Keep display:none as the
+   base state (unchanged from css/osticket.css) — jQuery's .show()/.hide()
+   toggle it; only the shown-state box chrome is redeclared here. */
+#loading {
+    width: 300px;
+    padding: 18px 24px;
+    background: var(--dl-surface);
+    border: 1px solid var(--dl-border);
+    border-radius: var(--dl-radius);
+    box-shadow: 0 8px 24px rgba(21,22,29,0.14);
+}
+#loading-lottie {
+    display: inline-block;
+    vertical-align: middle;
+    width: 44px;
+    height: 44px;
+    margin-right: 14px;
+}
+#loading h4 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--dl-font-body);
+    color: var(--dl-ink);
+}
+#loading p {
+    margin: 6px 0 0 58px;
+    font-size: 12.5px;
+    color: var(--dl-ink-soft);
+}
+
+/* Ticket-creation thank-you checkmark (open.php) — one-shot, no loop. */
+.thankyou-lottie {
+    width: 160px;
+    height: 160px;
+    margin: 8px auto 4px;
+}
+.thankyou-lottie svg {
+    display: block;
+}

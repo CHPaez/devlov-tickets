@@ -62,6 +62,9 @@ if (osTicket::is_ie())
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-plugins.js"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-osticket.js"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/select2.min.js"></script>
+    <script>window.DL_ROOT_PATH = "<?php echo ROOT_PATH; ?>";</script>
+    <script src="<?php echo ROOT_PATH; ?>assets/devlov/vendor/lottie-light.min.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/devlov/lottie-init.js"></script>
     <?php
     if($ost && ($headers=$ost->getExtraHeaders())) {
         echo "\n\t".implode("\n\t", $headers)."\n";
