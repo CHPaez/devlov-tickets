@@ -143,8 +143,7 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
             <a class="pull-left" id="logo" href="<?php echo ROOT_PATH; ?>index.php"
             title="<?php echo __('Support Center'); ?>">
                 <span class="valign-helper"></span>
-                <img src="<?php echo ROOT_PATH; ?>logo.php" border=0 alt="<?php
-                echo $ost->getConfig()->getTitle(); ?>">
+                <span class="brand-wordmark"><?php echo $ost->getConfig()->getTitle(); ?></span>
             </a>
         </div>
         <div class="clear"></div>

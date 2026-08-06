@@ -309,12 +309,14 @@ body {
 #logo {
     height: 100%;
 }
-#header #logo img {
-  max-height: 65px;
-  max-width: 380px;
-  width: auto;
-  height: auto;
+.brand-wordmark {
+  display: inline-block;
   vertical-align: middle;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 30px;
+  color: #15161d;
+  text-decoration: none;
 }
 .valign-helper {
     height: 100%;
@@ -1283,4 +1285,59 @@ img.avatar {
     font-weight: bold;
     margin-bottom: 0.3em;
     font-size: 1.1em;
+}
+
+/* DevLov reskin — form controls */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid rgba(21,22,29,0.18);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+    color: #15161d;
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7f6bf2;
+    box-shadow: 0 0 0 3px rgba(127,107,242,0.15);
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+    border: 1px solid rgba(21,22,29,0.15);
+    border-radius: 8px;
+    background: #f5f4f1;
+    color: #15161d;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+input[type="submit"]:hover,
+button:hover {
+    background: #eceae5;
+}
+#ticket-create input[type="submit"],
+input[value="Create Ticket"] {
+    background: #ff9d4d;
+    border-color: #ff9d4d;
+    color: #fff;
+    font-weight: 600;
+}
+input[value="Create Ticket"]:hover {
+    background: #ff8a2e;
 }
