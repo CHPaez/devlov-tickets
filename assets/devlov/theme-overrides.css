@@ -353,12 +353,64 @@ hr:has(+ #content .login-shell) {
 .login-brand {
     flex: 0 0 46%;
     position: relative;
+    overflow: hidden;
     padding: 44px 48px;
     background: var(--dl-neutral);
     border-right: 1px solid var(--dl-border);
     color: var(--dl-ink);
     display: flex;
     flex-direction: column;
+}
+/* Ambient decoration: two soft, slow-drifting glow blobs behind the login
+   brand-panel content. Pure CSS, purely decorative — kept behind real
+   content via z-index and never intercepts clicks (pointer-events: none). */
+.login-brand::before,
+.login-brand::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+}
+.login-brand::before {
+    width: 340px;
+    height: 340px;
+    top: -100px;
+    left: -80px;
+    background: var(--dl-violet);
+    opacity: 0.35;
+    animation: dl-blob-drift-a 22s ease-in-out infinite alternate;
+}
+.login-brand::after {
+    width: 280px;
+    height: 280px;
+    bottom: -90px;
+    right: -60px;
+    background: var(--dl-orange);
+    opacity: 0.3;
+    animation: dl-blob-drift-b 18s ease-in-out infinite alternate;
+    animation-delay: -6s;
+}
+.login-brand > * {
+    position: relative;
+    z-index: 1;
+}
+@keyframes dl-blob-drift-a {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(40px, 30px) scale(1.1); }
+    100% { transform: translate(-15px, 20px) scale(0.95); }
+}
+@keyframes dl-blob-drift-b {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-35px, -25px) scale(1.08); }
+    100% { transform: translate(20px, -10px) scale(0.97); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .login-brand::before,
+    .login-brand::after {
+        animation: none;
+    }
 }
 .login-brand-logo {
     display: flex;
