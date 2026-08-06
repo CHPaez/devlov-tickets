@@ -86,6 +86,8 @@ body {
 #header {
   height: 88px;
   padding: 0 36px;
+  background: var(--dl-neutral);
+  border-radius: 16px 16px 0 0;
 }
 #nav {
   margin: 0 36px;
