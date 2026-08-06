@@ -796,3 +796,150 @@ table.custom-data th {
     margin: 0;
     font-size: 14px;
 }
+
+/* First-time-only 3-step guide strip on the "Open a New Ticket" form
+   (include/client/open.inc.php). Gating is handled in JS — see
+   assets/devlov/ticket-guide-init.js — this file only styles it. Icons
+   reuse the thin-line/currentColor stroke style established by
+   .login-illustration and .empty-state-icon. */
+.dl-ticket-guide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 24px;
+    padding: 20px 44px 20px 22px;
+    background: var(--dl-violet-tint);
+    border: 1px solid var(--dl-border);
+    border-radius: var(--dl-radius);
+}
+.dl-ticket-guide-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+.dl-ticket-guide-icon {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    color: var(--dl-violet);
+}
+.dl-ticket-guide-step p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--dl-ink-soft);
+}
+.dl-ticket-guide-step p strong {
+    display: block;
+    font-size: 14px;
+    color: var(--dl-ink);
+    margin-bottom: 2px;
+}
+.dl-ticket-guide-arrow {
+    flex: 0 0 auto;
+    color: var(--dl-violet);
+    opacity: 0.4;
+    font-size: 18px;
+}
+.dl-ticket-guide-dismiss {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: transparent;
+    color: var(--dl-ink-faint);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.dl-ticket-guide-dismiss:hover,
+.dl-ticket-guide-dismiss:focus-visible {
+    color: var(--dl-ink);
+    background: rgba(21,22,29,0.06);
+    outline: none;
+}
+.dl-ticket-guide.dl-ticket-guide-hide {
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+@media (max-width: 780px) {
+    .dl-ticket-guide {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .dl-ticket-guide-arrow {
+        display: none;
+    }
+}
+
+/* Contextual "?" help tooltips on non-obvious form fields (currently just
+   Tema de ayuda on the ticket form) — pure CSS, hover + keyboard focus,
+   no JS involved. */
+.dl-help-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    border-radius: 50%;
+    border: 1px solid var(--dl-border);
+    color: var(--dl-ink-soft);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: help;
+    position: relative;
+    vertical-align: middle;
+}
+.dl-help-icon:hover,
+.dl-help-icon:focus-visible {
+    outline: none;
+    border-color: var(--dl-violet);
+    color: var(--dl-violet);
+    background: var(--dl-violet-tint);
+}
+.dl-tooltip-bubble {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    width: max-content;
+    max-width: 230px;
+    padding: 8px 10px;
+    border-radius: var(--dl-radius-sm);
+    background: var(--dl-ink);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+.dl-tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--dl-ink);
+}
+.dl-help-icon:hover .dl-tooltip-bubble,
+.dl-help-icon:focus-visible .dl-tooltip-bubble {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}

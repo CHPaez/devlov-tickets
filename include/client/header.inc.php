@@ -66,6 +66,7 @@ if (osTicket::is_ie())
     <script>window.DL_ROOT_PATH = "<?php echo ROOT_PATH; ?>";</script>
     <script src="<?php echo ROOT_PATH; ?>assets/devlov/vendor/lottie-light.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/devlov/lottie-init.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/devlov/ticket-guide-init.js"></script>
     <?php
     if($ost && ($headers=$ost->getExtraHeaders())) {
         echo "\n\t".implode("\n\t", $headers)."\n";
