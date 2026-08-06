@@ -218,7 +218,7 @@ button:hover {
    access-link request, password reset) — matched on class, not the
    translated button text, so it works in Spanish too. `p.buttons` is the
    "Create Ticket" wrapper on open.php (its only [type=submit]). */
-.btn,
+input.btn,
 p.buttons input[type="submit"] {
     background: var(--dl-orange);
     border-color: var(--dl-orange);
@@ -227,7 +227,7 @@ p.buttons input[type="submit"] {
     border-radius: var(--dl-radius-pill);
     padding: 12px 28px;
 }
-.btn:hover,
+input.btn:hover,
 p.buttons input[type="submit"]:hover {
     background: var(--dl-orange-hover);
     box-shadow: 0 4px 14px rgba(255,157,77,0.28);
