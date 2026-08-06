@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 input:focus {
-    border: 1px solid orange;
-    box-shadow: 0 0 4px orange;
+    border: 1px solid #7f6bf2;
+    box-shadow: 0 0 4px rgba(127,107,242,0.5);
     outline: none;
 }
 
@@ -33,11 +34,7 @@ body {
 }
 
 #brickwall {
-    background-image: url(../logo.php?backdrop);
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
+    background: #f5f4f1;
     position: absolute;
     top: 0;
     left: 0;
@@ -61,15 +58,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url(../logo.php?backdrop);
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
-    background-attachment: fixed;
-    mix-blend-mode: normal;
-    filter:"progid:DXImageTransform.Microsoft.Blur(PixelRadius='6')";
-    -ms-filter:"progid:DXImageTransform.Microsoft.Blur(PixelRadius='6')";
+    background: #f5f4f1;
 }
 
 #blur {
@@ -86,17 +75,17 @@ body {
 }
 
 body, input {
-    font-family: helvetica, arial, sans-serif;
-    color: #000;
+    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+    color: #15161d;
 }
 
 #loginBox {
-    box-shadow:0 0 50px 5px rgba(0,0,0,0.3), 0 0 5px -1px white;
+    box-shadow: 0 4px 24px rgba(21,22,29,0.08);
     mix-blend-mode: normal;
     isolation: isolate;
     width:400px;
-    padding:1em;
-    padding-bottom: 1em;
+    padding:1.5em;
+    padding-bottom: 1.5em;
     text-align:center;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -105,7 +94,7 @@ body, input {
     left: 50%;
     top: 15%;
     margin-left: -200px;
-    border-radius: 5px;
+    border-radius: 16px;
 }
 
 #loginBox:after {
@@ -115,11 +104,11 @@ body, input {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 16px;
     z-index: -1;
     mix-blend-mode: normal;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid rgba(21,22,29,0.1);
 }
 /* IE 9-10 */
 @media screen\0 {
@@ -135,17 +124,15 @@ h1 {
 #logo a {
     display:block;
     text-decoration:none;
-    height: 100px;
+    height: 60px;
 }
-
-#logo a img {
-    max-height:66px;
-    max-width: 300px;
-    height: auto;
-    width: auto;
+.brand-wordmark {
+    display: inline-block;
     vertical-align: middle;
-    outline: none;
-    border: none;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #15161d;
 }
 .valign-helper {
     height: 100%;
@@ -245,15 +232,15 @@ input[type="button"] i,
 
 button[type=submit], input[type="submit"], .primary.button {
     font-weight: bold;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.45) inset;
-    background-color: rgba(0,0,0,0.07);
+    box-shadow: none;
+    background-color: #7f6bf2;
+    color: #fff;
 }
 
 button[type=submit]:hover, input[type=submit]:hover, input[type=submit]:active {
   color: white;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.7) inset;
-  background-color: #888;
-  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  background-color: #6b54e8;
 }
 
 input.submit:hover, input.submit:active {
