@@ -9,7 +9,7 @@
     color: #999;
 }
 .filedrop .dropzone a {
-    color: rgba(24, 78, 129, 0.7);
+    color: var(--dl-violet);
 }
 .filedrop .files:not(:empty) {
     border: 1px solid rgba(0, 0, 0, 0.2);

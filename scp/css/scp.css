@@ -1090,10 +1090,6 @@ a.Icon:hover {
     background:#fff;
 }
 
-a {
-    color:#184E81;
-}
-
 #footer {
     clear:both;
     padding:10px;
@@ -1130,11 +1126,19 @@ table.dashboard-stats tbody:nth-child(2) tr:hover th {
 
 table { vertical-align:top; }
 
+/* table.list — the common vendor grid class behind most staff admin
+   screens (ticket queue, users, departments, help topics, canned
+   responses, etc). Polished for consistency with the rest of the reskin:
+   token border color, flat neutral header (no more vendor gray/blue),
+   violet sort-links, flat rows with a single violet-tint hover instead of
+   the vendor's blue zebra + yellow hover combo. Scoped to table.list only
+   — does not touch table.dashboard-stats (separate class, separately
+   customized in dashboard-overrides.css under #dashboard-page). */
 table.list {
     clear:both;
-    background:#ccc;
+    background: var(--dl-border);
     margin: 2px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--dl-border);
     width: 100% !important;
 }
 
@@ -1147,37 +1151,41 @@ table.list caption {
 }
 
 table.list thead th {
-    background-color:#eee;
-    color:#000;
+    background-color: var(--dl-neutral);
+    color: var(--dl-ink);
     text-align:left;
     vertical-align:top;
-    padding: 4px 5px;
+    padding: 7px 8px;
+    font-weight: 600;
 }
 
 table.list th a {
     text-decoration:none;
-    color:#000;
-    margin: -4px -5px;
-    padding: 4px 5px;
+    color: var(--dl-ink);
+    margin: -7px -8px;
+    padding: 7px 8px;
 }
 
-table.list thead th a { padding-right: 15px; display: block; white-space: nowrap; color: #000; background: url('../images/asc_desc.gif') 100% 50% no-repeat; }
+table.list thead th a { padding-right: 15px; display: block; white-space: nowrap; color: var(--dl-violet); background: url('../images/asc_desc.gif') 100% 50% no-repeat; }
+table.list thead th a:hover { color: var(--dl-violet-hover); }
 
 table.list thead th a.asc { background: url('../images/asc.gif') 100% 50% no-repeat var(--dl-violet-tint-strong); }
 table.list thead th a.desc { background: url('../images/desc.gif') 100% 50% no-repeat var(--dl-violet-tint-strong); }
+
 table.list tbody td {
-    background:#fff;
-    border:1px solid #fff;
-    padding:1px;
-    vertical-align:top;
+    background: #fff;
+    border: 1px solid var(--dl-border);
+    padding: 6px 8px;
+    vertical-align: top;
 }
 
-table.list tbody td { background: #fff; padding: 4px 3px; vertical-align: top; }
-table.list tbody tr:nth-child(2n+1) td { background-color: #f0faff; }
-table.list tbody tr:hover td { background: #ffe; }
-table.list tbody tr:nth-child(2n+1):hover td { background: #ffd; }
-/* row highlighting on hover + select */
-table.list tbody tr:hover td, table.list tbody tr.highlight td {  background: #FFFFDD; }
+/* Flat rows, no zebra — matches the flat-card direction already applied
+   to the dashboard stats tables. A single violet-tint hover replaces the
+   vendor's yellow hover + darker-yellow-on-zebra combo. */
+table.list tbody tr:hover td,
+table.list tbody tr.highlight td {
+    background: var(--dl-violet-tint);
+}
 /* disabled highlighting on nohover */
 table.list tbody tr:hover td.nohover, table.list tbody tr.highlight td.nohover {}
 
@@ -1428,7 +1436,7 @@ h2 {
     margin:0 0 0.7em;
     padding:0;
     font-size:1.4em;
-    color:#0A568E;
+    color: var(--dl-ink);
 }
 
 h2 i {
@@ -1749,7 +1757,7 @@ ul.tabs li {
     font-size: 95%;
 }
 ul.tabs li.active {
-    color:#184E81;
+    color: var(--dl-violet);
     background-color:#f9f9f9;
     border:1px solid #aaa;
     border-bottom:none;
@@ -1997,7 +2005,7 @@ ul.tabs.alt li.active {
 }
 
 .tip_content .links a {
-    color: #548dd4;
+    color: var(--dl-violet);
 }
 
 .tip_content hr {
@@ -2241,7 +2249,7 @@ time.faq {
     height:250px;
     height:auto !important;
     background:#f8f8f8;
-    border:2px solid #2a67ac;
+    border:2px solid var(--dl-violet);
     display:none;
     z-index:10;
     box-shadow: 0 5px 60px #001;
@@ -2302,7 +2310,7 @@ time.faq {
 }
 
 .dialog h3 {
-    color:#2a67ac;
+    color: var(--dl-ink);
     font-size:20px;
     margin:0;
     padding:0;
@@ -2311,7 +2319,7 @@ time.faq {
 }
 
 .dialog a {
-        color:#184E81;
+        color: var(--dl-violet);
 }
 
 
@@ -2500,7 +2508,7 @@ select + .button {
     border: none;
     box-shadow: none;
     background-color: transparent;
-    color:#184E81;
+    color: var(--dl-violet);
     padding: 0;
     font-size: inherit;
 }
@@ -2679,7 +2687,7 @@ input[type=button].small, .small.button, input[type=submit].small {
 /* Upgrader */
 #upgrader { width: 100%; height: auto; clear: both;}
 .sidebar { width: 220px; padding: 10px; border: 1px solid #C8DDFA; float: right; background: #F7FBFE; }
-.sidebar h3 { margin: 0 0 5px 0; padding: 0; text-indent: 32px; background: url('../images/cog.png?1312913866') top left no-repeat; line-height: 24px; color: #2a67ac; }
+.sidebar h3 { margin: 0 0 5px 0; padding: 0; text-indent: 32px; background: url('../images/cog.png?1312913866') top left no-repeat; line-height: 24px; color: var(--dl-violet); }
 
 #upgrader #main { width: 680px; float: left;}
 #upgrader #main h1 { margin: 0; padding: 0; font-size: 1.6em; font-weight: normal; }
@@ -2697,7 +2705,7 @@ ul.progress li.yes small {color:green; }
 ul.progress li.no small {color:red;}
 
 #bar { clear: both; padding-top: 10px; height: 24px; line-height: 24px; text-align: center; border-top: 1px solid #aaaaaa; }
-#bar a.unstyled, #bar a.unstyled:hover { font-weight: normal; background: none; border: none; text-decoration: underline; color: #2a67ac; }
+#bar a.unstyled, #bar a.unstyled:hover { font-weight: normal; background: none; border: none; text-decoration: underline; color: var(--dl-violet); }
 
 #bar.error { background: #ffd; text-align: center; color: #a00; font-weight: bold; }
 
@@ -3036,7 +3044,7 @@ tr.disabled th {
 }
 
 i.note-type {
-    color: #2a67ac;
+    color: var(--dl-violet);
     opacity: 0.8;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     padding-right: 8px;
@@ -3197,7 +3205,7 @@ td.indented {
   display: block;
 }
 .accordian dt.active a {
-  color: #184E81;
+  color: var(--dl-violet);
   text-decoration: none;
 }
 .accordian dt:not(.active) a i {
@@ -3401,7 +3409,7 @@ td.indented {
     border-bottom:1px solid #f7f7f7;
 }
 .thread-preview-entry.collapsed.message .header .thread-name span:first-child {
-    color:#0088cc;
+    color: var(--dl-violet);
 }
 
 .thread-preview-entry.collapsed.response .header .thread-name span:first-child {

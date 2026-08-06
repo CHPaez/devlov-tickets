@@ -53,7 +53,7 @@
 }
 .action-dropdown ul li.active > a  {
   background-color: var(--dl-violet-tint-strong);
-  color: #08C;
+  color: var(--dl-violet);
 }
 .action-dropdown ul li.positive > a:hover, .customQ-dropdown ul li.positive > a:hover, .noclick-dropdown ul li.positive > a:hover {
   background-color: #02aa4c;

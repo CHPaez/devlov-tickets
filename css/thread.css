@@ -113,12 +113,12 @@
   box-sizing: border-box;
 }
 .thread-body a:not(.button) {
-  color: #428bca !important;
+  color: var(--dl-violet) !important;
   text-decoration: underline;
 }
 .thread-body a:not(.button):hover,
 .thread-body a:not(.button):focus {
-  color: #2a6496;
+  color: var(--dl-violet-hover);
   text-decoration: underline;
 }
 .thread-body a:not(.button):focus {
