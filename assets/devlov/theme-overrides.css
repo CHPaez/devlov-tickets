@@ -211,7 +211,7 @@ input[value="Create Ticket"]:hover {
     flex: 0 0 46%;
     position: relative;
     padding: 44px 48px;
-    background: linear-gradient(160deg, #7f6bf2 0%, #9d7ff0 45%, #ff9d4d 130%);
+    background: linear-gradient(160deg, #2c1f66 0%, #4c3aa3 55%, #b8703f 140%);
     color: #fff;
     display: flex;
     flex-direction: column;

@@ -56,7 +56,7 @@ $can_open_ticket = ($cfg->getClientRegistrationMode() != 'disabled'
 <?php } ?>
         </div>
 
-        <form action="login.php" method="post" id="clientLogin" class="login-form">
+        <form action="login.php" method="post" id="clientLoginForm" class="login-form">
             <?php csrf_token(); ?>
 <?php if ($errors['login']) { ?>
             <div class="login-error"><?php echo Format::htmlchars($errors['login']); ?></div>
