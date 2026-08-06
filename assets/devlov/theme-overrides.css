@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 
 /* Typography & links */
+body {
+  font-size: 15px;
+  line-height: 1.6;
+}
 a, .link {
   color: #7f6bf2;
 }
@@ -15,7 +19,13 @@ h1 {
   font-weight: normal;
   font-family: 'Instrument Serif', Georgia, serif;
   font-style: italic;
-  font-size: 26px;
+  font-size: 34px;
+}
+h2, .subject {
+  font-size: 20px;
+}
+h3 {
+  font-size: 17px;
 }
 
 /* Buttons */
@@ -42,13 +52,37 @@ body {
   font-family: 'Space Grotesk', helvetica, arial, sans-serif;
 }
 #container {
+  width: 1140px;
   background: rgba(255,255,255,0.6);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  margin: 40px auto;
+  margin: 48px auto;
   border-radius: 16px;
   border: 1px solid rgba(21,22,29,0.1);
   box-shadow: 0 4px 24px rgba(21,22,29,0.06);
+}
+#header {
+  height: 88px;
+  padding: 0 36px;
+}
+#nav {
+  margin: 0 36px;
+  padding: 6px 14px;
+  height: 26px;
+}
+#nav li a {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 14px 0 34px;
+}
+#content {
+  margin: 0 36px;
+  padding: 32px 0;
+}
+@media (max-width: 1200px) {
+  #container {
+    width: 92%;
+  }
 }
 
 /* Header / brand */
@@ -57,16 +91,16 @@ body {
   vertical-align: middle;
   font-family: 'Instrument Serif', Georgia, serif;
   font-style: italic;
-  font-size: 30px;
+  font-size: 36px;
   color: #15161d;
   text-decoration: none;
 }
 .brand-heart {
   display: inline-block;
   vertical-align: middle;
-  height: 32px;
+  height: 38px;
   width: auto;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 /* Nav */
@@ -88,7 +122,8 @@ body {
 /* Footer */
 #footer {
   text-align: center;
-  padding: 24px 0 8px;
+  padding: 32px 0 16px;
+  margin: 0 36px;
   border-top: 1px solid rgba(21,22,29,0.08);
 }
 .footer-heart {
@@ -116,8 +151,9 @@ input[type="number"],
 select,
 textarea {
     border: 1px solid rgba(21,22,29,0.18);
-    border-radius: 8px;
-    padding: 7px 10px;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 15px;
     font-family: 'Space Grotesk', helvetica, arial, sans-serif;
     color: #15161d;
     background: #fff;
@@ -140,10 +176,11 @@ input[type="reset"],
 button {
     font-family: 'Space Grotesk', helvetica, arial, sans-serif;
     border: 1px solid rgba(21,22,29,0.15);
-    border-radius: 8px;
+    border-radius: 10px;
     background: #f5f4f1;
     color: #15161d;
-    padding: 7px 16px;
+    padding: 11px 22px;
+    font-size: 15px;
     cursor: pointer;
     transition: background-color 0.15s ease, border-color 0.15s ease;
 }
@@ -160,4 +197,47 @@ input[value="Create Ticket"] {
 }
 input[value="Create Ticket"]:hover {
     background: #ff8a2e;
+}
+
+/* Login page — widen the two-column split proportionally with the container */
+#clientLogin {
+    margin-top: 28px;
+    padding: 36px;
+}
+.login-box {
+    width: 46%;
+    padding: 16px 40px 16px 0;
+}
+#clientLogin div[style*="table-cell"] {
+    padding: 16px 0 16px 40px !important;
+}
+#clientLogin input[type=text],
+#clientLogin input[type=password] {
+    margin-bottom: 18px;
+}
+
+/* Ticket form — more generous label column and reply/description width */
+#ticketForm > table td {
+    width: 200px;
+}
+#ticketForm td textarea,
+#clientLogin td textarea,
+#ticketForm div textarea,
+#clientLogin div textarea {
+    width: 100%;
+    max-width: 760px;
+}
+#reply textarea {
+    width: 100% !important;
+    max-width: 760px;
+}
+
+/* Ticket list table — more breathing room per row */
+#ticketTable th {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 12px;
+}
+#ticketTable td {
+    padding: 10px 12px;
 }
