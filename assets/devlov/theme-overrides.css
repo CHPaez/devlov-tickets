@@ -100,10 +100,18 @@ body {
 }
 #nav {
   margin: 0 36px;
-  padding: 6px 14px;
-  height: 26px;
+  padding: 10px 14px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#nav li {
+  display: block;
 }
 #nav li a {
+  display: block;
+  width: fit-content;
   height: 26px;
   line-height: 26px;
   padding: 0 14px 0 34px;
