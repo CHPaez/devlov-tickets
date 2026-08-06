@@ -61,7 +61,7 @@
 .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #0088cc;
+  background-color: var(--dl-violet);
 }
 .dropdown-menu li > a:hover .faded,
 .dropdown-menu .active > a .faded,

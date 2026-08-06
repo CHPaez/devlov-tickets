@@ -97,7 +97,7 @@ a time {
 #breadcrumbs {
     color: #333;
     margin-bottom: 15px;
-    background-color:#F4FAFF;
+    background-color: var(--dl-violet-tint);
     padding:8px;
 }
 
@@ -524,7 +524,7 @@ a time {
 
 .customQ-dropdown ul li:not(.personalQ):hover {
     color:#fff;
-    background-color:#08C;
+    background-color: var(--dl-violet);
     cursor:pointer;
 }
 .customQ-dropdown ul li:hover > a {
@@ -1163,8 +1163,8 @@ table.list th a {
 
 table.list thead th a { padding-right: 15px; display: block; white-space: nowrap; color: #000; background: url('../images/asc_desc.gif') 100% 50% no-repeat; }
 
-table.list thead th a.asc { background: url('../images/asc.gif') 100% 50% no-repeat #cfe6ff; }
-table.list thead th a.desc { background: url('../images/desc.gif') 100% 50% no-repeat #cfe6ff; }
+table.list thead th a.asc { background: url('../images/asc.gif') 100% 50% no-repeat var(--dl-violet-tint-strong); }
+table.list thead th a.desc { background: url('../images/desc.gif') 100% 50% no-repeat var(--dl-violet-tint-strong); }
 table.list tbody td {
     background:#fff;
     border:1px solid #fff;
@@ -1475,7 +1475,7 @@ h3.title > .sub-title {
 }
 
 .ticket_info {
-    background:#F4FAFF;
+    background: var(--dl-violet-tint);
 }
 
 .ticket_info.custom-data thead th {
@@ -1598,10 +1598,10 @@ img.avatar {
 }
 
 .thread-entry.message .header {
-    background:#C3D9FF;
+    background: var(--dl-violet-tint-strong);
 }
 .thread-entry.avatar.message .header:after {
-    border-left: 7px solid #C3D9FF;
+    border-left: 7px solid var(--dl-violet-tint-strong);
     margin-right: 1px;
 }
 
@@ -1659,7 +1659,7 @@ img.avatar {
     border-radius: 0 0 5px 5px;
 }
 .thread-body .attachments {
-  background-color: #f4faff;
+  background-color: var(--dl-violet-tint);
   margin: 0 -0.9em;
   position: relative;
   top: 0.9em;
@@ -1714,7 +1714,7 @@ ul.tabs {
     text-align:left;
     height:29px;
     border-bottom:1px solid #aaa;
-    background:#eef3f8;
+    background: var(--dl-violet-tint);
     position: relative;
     box-shadow: inset 0 -5px 10px -9px rgba(0,0,0,0.3);
 }
@@ -2203,7 +2203,7 @@ h2 > i.help-tip {
 }
 
 #faq ol li:hover {
-  background-color:#e9f5ff;
+  background-color: var(--dl-violet-tint);
 }
 
 time.faq {
@@ -2217,7 +2217,7 @@ time.faq {
 }
 
 .cat-manage-bar {
-    background:#e3f5ff;
+    background: var(--dl-violet-tint-strong);
     padding:5px;
     border-bottom:1px solid #777;
 }
@@ -3371,7 +3371,7 @@ td.indented {
 }
 /***Types of headers***/
 .thread-preview-entry.message .header {
-    background-color:#C3D9FF;
+    background-color: var(--dl-violet-tint-strong);
 }
 
 .thread-preview-entry.response .header {
@@ -3724,7 +3724,7 @@ a.attachment {
   opacity: 0.4;
 }
 #resizable-columns .column-header.ui-resizable.active {
-  background-color: #cfe6ff;
+  background-color: var(--dl-violet-tint-strong);
 }
 
 .ui-resizable-handle {

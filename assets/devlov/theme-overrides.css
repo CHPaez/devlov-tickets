@@ -389,7 +389,9 @@ hr:has(+ #content .login-shell) {
 }
 @media (prefers-reduced-motion: reduce) {
     .login-brand::before,
-    .login-brand::after {
+    .login-brand::after,
+    .login-panel::before,
+    .login-panel::after {
         animation: none;
     }
 }
@@ -449,12 +451,51 @@ hr:has(+ #content .login-shell) {
 
 .login-panel {
     flex: 1;
+    position: relative;
+    overflow: hidden;
     padding: 56px 60px;
     background: var(--dl-dark);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+/* Echo of .login-brand's ambient glow blobs (same keyframes, same
+   technique) so the right/form panel doesn't feel flat next to the left
+   brand panel — but MUCH lower opacity: this sits behind functional form
+   fields, not an empty hero, so it must read as background texture only. */
+.login-panel::before,
+.login-panel::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+}
+.login-panel::before {
+    width: 320px;
+    height: 320px;
+    top: -110px;
+    right: -90px;
+    background: var(--dl-violet);
+    opacity: 0.12;
+    animation: dl-blob-drift-a 22s ease-in-out infinite alternate;
+    animation-delay: -10s;
+}
+.login-panel::after {
+    width: 260px;
+    height: 260px;
+    bottom: -80px;
+    left: -70px;
+    background: var(--dl-orange);
+    opacity: 0.08;
+    animation: dl-blob-drift-b 18s ease-in-out infinite alternate;
+    animation-delay: -3s;
+}
+.login-panel > * {
+    position: relative;
+    z-index: 1;
 }
 .login-tabs {
     display: flex;
@@ -648,6 +689,42 @@ a.login-tab:hover {
 #ticketTable th a:hover {
     color: var(--dl-violet-hover);
     border-bottom-color: var(--dl-violet-hover);
+}
+
+/* Leftover vendor blue BACKGROUNDS (theme.css) → brand violet. Text colors
+   on these selectors are intentionally left untouched — this pass is
+   background-only. */
+.blue.button,
+.blue.button:visited {
+    background-color: var(--dl-violet);
+}
+.blue.button:hover {
+    background-color: var(--dl-violet-hover);
+}
+#nav li a.active,
+#nav li a:hover {
+    background-color: var(--dl-violet-tint);
+}
+#faq ol li a:hover {
+    background-color: var(--dl-violet-tint);
+}
+.infoTable,
+table.custom-data th {
+    background-color: var(--dl-violet-tint);
+}
+.thread-entry.message .header {
+    background: var(--dl-violet-tint-strong);
+}
+.thread-entry.avatar.message .header:after {
+    border-left-color: var(--dl-violet-tint-strong);
+}
+.thread-body .attachments {
+    background-color: var(--dl-violet-tint);
+}
+.sidebar,
+.sidebar .content {
+    background: var(--dl-violet-tint);
+    border-color: var(--dl-border);
 }
 
 /* Loading indicator — replaces the vendor spinner GIF with the self-hosted

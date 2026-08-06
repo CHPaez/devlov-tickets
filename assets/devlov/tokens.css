@@ -16,6 +16,8 @@
 :root {
   --dl-violet: #7f6bf2;
   --dl-violet-hover: #6b54e8;
+  --dl-violet-tint: rgba(127,107,242,0.08);
+  --dl-violet-tint-strong: rgba(127,107,242,0.2);
   --dl-orange: #ff9d4d;
   --dl-orange-hover: #ffb066;
   --dl-ink: #15161d;

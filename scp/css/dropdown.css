@@ -44,15 +44,15 @@
   margin-right: 0.1em;
 }
 .action-dropdown ul li > a:hover,
-.action-dropdown ul li.active > a:hover, 
-.noclick-dropdown ul li > a:hover, 
+.action-dropdown ul li.active > a:hover,
+.noclick-dropdown ul li > a:hover,
 .noclick-dropdown ul li.active > a:hover {
-  background-color: #08C;
+  background-color: var(--dl-violet);
   color: #FFF !important;
   cursor: pointer;
 }
 .action-dropdown ul li.active > a  {
-  background-color: rgba(0, 136, 204, 0.2);
+  background-color: var(--dl-violet-tint-strong);
   color: #08C;
 }
 .action-dropdown ul li.positive > a:hover, .customQ-dropdown ul li.positive > a:hover, .noclick-dropdown ul li.positive > a:hover {
