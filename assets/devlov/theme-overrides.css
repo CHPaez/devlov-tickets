@@ -159,6 +159,7 @@ body {
   list-style: none;
   display: block;
   height: auto;
+  white-space: normal;
 }
 #sidebar #nav li {
   display: block;
