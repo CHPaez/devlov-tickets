@@ -80,11 +80,6 @@ if (osTicket::is_ie())
             | <a href="<?php echo ROOT_PATH ?>scp/profile.php"><?php echo __('Profile'); ?></a>
             | <a href="<?php echo ROOT_PATH ?>scp/logout.php?auth=<?php echo $ost->getLinkToken(); ?>" class="no-pjax"><?php echo __('Log Out'); ?></a>
         </p>
-        <a href="<?php echo ROOT_PATH ?>scp/index.php" class="no-pjax" id="logo">
-            <span class="valign-helper"></span>
-            <img class="brand-heart" src="<?php echo ROOT_PATH ?>images/devlo-heart-icon.png" alt="">
-            <span class="brand-wordmark">DevLov Tickets</span>
-        </a>
     </div>
     <div id="pjax-container" class="<?php if ($_POST) echo 'no-pjax'; ?>">
 <?php } else {
@@ -100,11 +95,23 @@ if (osTicket::is_ie())
     } ?>
     <title><?php echo ($ost && ($title=$ost->getPageTitle()))?$title:'osTicket :: '.__('Staff Control Panel'); ?></title><?php
 } # endif X_PJAX ?>
+    <div id="app-body">
+    <div id="sidebar">
+    <a href="<?php echo ROOT_PATH ?>scp/index.php" class="no-pjax" id="logo">
+        <span class="valign-helper"></span>
+        <img class="brand-heart" src="<?php echo ROOT_PATH ?>images/devlo-heart-icon.png" alt="">
+        <span class="brand-wordmark">DevLov Tickets</span>
+    </a>
+    <form id="sidebar-search" action="<?php echo ROOT_PATH ?>scp/tickets.php" method="get">
+        <i class="icon-search"></i>
+        <input type="text" name="query" placeholder="<?php echo __('Search tickets'); ?>">
+    </form>
     <ul id="nav">
 <?php include STAFFINC_DIR . "templates/navigation.tmpl.php"; ?>
     </ul>
+    </div>
+    <div id="main-panel">
     <?php include STAFFINC_DIR . "templates/sub-navigation.tmpl.php"; ?>
-
         <div id="content">
         <?php if(isset($errors['err'])) { ?>
             <div id="msg_error"><?php echo $errors['err']; ?></div>

@@ -1,5 +1,7 @@
 </div>
 </div>
+</div>
+</div>
 <?php if (!isset($_SERVER['HTTP_X_PJAX'])) { ?>
     <div id="footer">
         <?php echo __('Copyright &copy;') ?> 2006-<?php echo date('Y'); ?>&nbsp;<?php

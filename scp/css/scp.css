@@ -139,29 +139,54 @@ a time {
 }
 
 #header {
-    height:76px;
+    height:44px;
+    line-height: 44px;
     border-left:none;
     border-right:none;
     background-color: transparent;
     box-shadow: none;
     border-bottom: 1px solid rgba(21,22,29,0.08);
+    padding: 0 20px;
+}
+#header p#info {
+    margin: 0;
+}
+
+/* --- Sidebar layout --- */
+#app-body {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+#sidebar {
+    width: 230px;
+    flex: 0 0 230px;
+    background: #1a1b23;
+    padding: 18px 0 24px;
+    box-sizing: border-box;
+}
+#main-panel {
+    flex: 1;
+    min-width: 0;
 }
 
 #logo {
     display:block;
     text-decoration:none;
     outline:none;
-    height: 64px;
-    max-width: 400px;
-    padding: 5px 0 7px 5px;
+    height: 44px;
+    padding: 0 16px 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .brand-wordmark {
     display: inline-block;
     vertical-align: middle;
     font-family: 'Instrument Serif', Georgia, serif;
     font-style: italic;
-    font-size: 26px;
-    color: #15161d;
+    font-size: 22px;
+    color: #fff;
 }
 .valign-helper {
     height: 100%;
@@ -171,9 +196,38 @@ a time {
 .brand-heart {
     display: inline-block;
     vertical-align: middle;
-    height: 32px;
+    height: 28px;
     width: auto;
-    margin-right: 10px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1);
+}
+
+#sidebar-search {
+    position: relative;
+    margin: 4px 16px 16px;
+}
+#sidebar-search input {
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 7px 10px 7px 30px;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+}
+#sidebar-search input::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+#sidebar-search i.icon-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    pointer-events: none;
 }
 
 #header p {
@@ -187,133 +241,63 @@ a time {
     text-align:center;
 }
 
-#nav, #sub_nav {
-    clear:both;
-    margin:0;
-    padding:0 20px;
-    height:26px;
-    line-height:26px;
-    border-left:none;
-    border-right:none;
-    white-space: nowrap;
-}
-
-#nav .active, #sub_nav > li  {
-    padding:0;
-    list-style:none;
-    display:inline;
-}
-
+/* --- Sidebar primary nav (vertical) --- */
 #nav {
-    background:#fff;
-    padding-top:4px;
-    z-index:200;
-    border-top:none;
-    border-bottom:1px solid rgba(21,22,29,0.08);
+    margin: 0;
+    padding: 4px 12px;
+    list-style: none;
 }
 
 #nav .active, #nav .inactive {
-    display:inline-block;
-    min-width:95px;
+    display: block;
     width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    height:26px;
-    color:#555;
-    text-align:center;
-    position:relative;
+    padding: 0;
+    height: auto;
+    color: rgba(255,255,255,0.75);
+    text-align: left;
+    position: relative;
+    border-radius: 8px;
+    border: none;
+}
 
-    border-radius:5px 5px 0 0;
-    border-style: solid;
-    border-width: 1px 1px 0;
-    border-color: transparent;
+#nav .inactive a,
+#nav .active a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
 }
 
 #nav .inactive a {
-    color:#555;
-    display:block;
+    color: rgba(255,255,255,0.75);
 }
 
 #nav .active a {
-    color:#7f6bf2;
-    font-weight:bold;
+    color: #fff;
+    font-weight: 500;
+    background-color: #7f6bf2;
 }
 
 #nav > li + li {
-    margin-left: 8px;
+    margin-left: 0;
+    margin-top: 2px;
 }
 
-#nav li.active, #nav li.inactive:hover {
-    box-shadow: none;
-    border-color: rgba(127,107,242,0.2);
-}
-#nav li.active {
-    background-color: rgba(127,107,242,0.1);
-}
 #nav li.inactive:hover {
-    background-color: rgba(21,22,29,0.03);
+    box-shadow: none;
+}
+#nav li.inactive:hover > a {
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
 }
 
+/* Hover-preview flyouts for inactive tabs are dropped in the sidebar layout
+   (no horizontal room) — items are just click-through links now. */
 #nav li.inactive > ul {
-    width:230px;
-    background:#fbfbfb;
-    margin:0;
-    padding:5px 0;
-    position:absolute;
-    left: -1px;
-    z-index:500;
-    border-bottom:1px solid #ccc;
-    border-left:1px solid #ccc;
-    border-right:1px solid #ccc;
-    border-radius: 0 0 5px 5px;
-    display:block;
-    -moz-box-shadow: 3px 3px 3px #ccc;
-    -webkit-box-shadow: 3px 3px 3px #ccc;
-    box-shadow: 3px 3px 3px #ccc;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear, opacity 0.1s linear;
-}
-
-#nav .inactive li {
-    display:block;
-    margin:0;
-    padding:0;
-    list-style:none;
-    text-align:left;
-}
-
-#nav li.inactive:hover > ul {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0.25s;
+    display: none;
 }
 
 .ieshadow {
-    width:230px;
-    background:#000;
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-    zoom: 1;
-    z-index:300;
-    position:absolute;
-    top:24px;
-    left:0;
-}
-
-#nav .inactive li a {
-    background-position: 10px 50%;
-    background-repeat: no-repeat;
-    padding: 0 10px 0 34px;
-}
-
-#nav .inactive li a:hover {
-    color:#E65524;
-    background-color: #fbfbfb;
-    background-color: rgba(0,0,0,0.05);
-
+    display: none;
 }
 
 /* Custom queue fields with background color should fill cell */
@@ -338,6 +322,15 @@ a time {
     background:#f7f7f7;
     border-bottom:1px solid #bebebe;
     padding: 2px 20px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    white-space: nowrap;
+}
+#sub_nav > li {
+    padding: 0;
+    list-style: none;
+    display: inline;
 }
 #customQ_nav {
     clear:both;
@@ -1141,6 +1134,7 @@ table.list {
     background:#ccc;
     margin: 2px 0;
     border-bottom: 1px solid #ccc;
+    width: 100% !important;
 }
 
 table.list caption {
