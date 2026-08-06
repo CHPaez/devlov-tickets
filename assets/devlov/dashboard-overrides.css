@@ -110,12 +110,18 @@
 #dashboard-page table.dashboard-stats tbody:first-child th {
     border-bottom: 1px solid var(--dl-border);
     border-top: none;
-    padding: 8px 10px;
+    padding: 8px 6px;
     color: var(--dl-ink-soft);
     font-size: 12.5px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+}
+/* Safety net: if a table is ever wider than the card (more columns, longer
+   translated labels), scroll it horizontally instead of breaking out of
+   the container. */
+#dashboard-page .tab_content {
+    overflow-x: auto;
 }
 #dashboard-page table.dashboard-stats tbody:nth-child(2) tr {
     background: none;
@@ -124,7 +130,7 @@
 #dashboard-page table.dashboard-stats tbody:nth-child(2) td {
     border-right: none;
     border-bottom: 1px solid var(--dl-border);
-    padding: 10px;
+    padding: 8px 6px;
     color: var(--dl-ink);
 }
 #dashboard-page table.dashboard-stats tbody:nth-child(2) tr:hover {
