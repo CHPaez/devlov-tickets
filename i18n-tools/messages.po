@@ -1,0 +1,4269 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: osTicket DevLov Tickets\n"
+"X-Osticket-Major-Version: 1.18\n"
+"POT-Create-Date: 2026-08-06 00:00+0000\n"
+"Report-Msgid-Bugs-To: soporte@universos.dev\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevLov i18n\n"
+"PO-Revision-Date: 2026-08-06 00:00+0000\n"
+
+msgid " Manage Collaborators"
+msgstr " Gestionar Colaboradores"
+
+msgid "\"1\" is recommended if AJAX is not working"
+msgstr "Se recomienda \"1\" si AJAX no está funcionando"
+
+msgid "%d"
+msgstr "%d"
+
+msgid "%d FAQs matched your search criteria."
+msgstr "%d preguntas frecuentes coinciden con tu búsqueda."
+
+msgid "%s <%s> will no longer have access to the ticket"
+msgstr "%s <%s> ya no tendrá acceso al ticket"
+
+msgid "%s Task #%s"
+msgstr "%s Tarea #%s"
+
+msgid "%s Tickets"
+msgstr "%s Tickets"
+
+msgid "%s assigned to this organization will be orphaned."
+msgstr "%s asignados a esta organización quedarán huérfanos."
+
+msgid "%s does not have any tasks"
+msgstr "%s no tiene tareas"
+
+msgid "%s does not have any tickets"
+msgstr "%s no tiene tickets"
+
+msgid "%s is available"
+msgstr "%s está disponible"
+
+msgid "%s is currently locked by %s"
+msgstr "%s está actualmente bloqueado por %s"
+
+msgid "%s is marked as closed and cannot be reopened."
+msgstr "%s está marcado como cerrado y no puede reabrirse."
+
+msgid "%s must be active"
+msgstr "%s debe estar activo"
+
+msgid "%s selected must be active"
+msgstr "%s seleccionado debe estar activo"
+
+msgid "(%d of %d)"
+msgstr "(%d de %d)"
+
+msgid "(0 to disable)"
+msgstr "(0 para desactivar)"
+
+msgid "(Default)"
+msgstr "(Predeterminado)"
+
+msgid "(Override global setting)"
+msgstr "(Anula la configuración global)"
+
+msgid "(These fields are requested for new tickets\n                via the %s form)"
+msgstr "(Estos campos se solicitan para tickets nuevos\n                a través del formulario %s)"
+
+msgid "(disabled)"
+msgstr "(desactivado)"
+
+msgid "(enabled by default)"
+msgstr "(activado por defecto)"
+
+msgid "(in-use)"
+msgstr "(en uso)"
+
+msgid "(internal)"
+msgstr "(interno)"
+
+msgid "(on front-page sidebar)"
+msgstr "(en la barra lateral de la portada)"
+
+msgid "(optional)"
+msgstr "(opcional)"
+
+msgid "(publish)"
+msgstr "(publicar)"
+
+msgid "<b>%s</b> posted %s"
+msgstr "<b>%s</b> publicó %s"
+
+msgid "<strong>Disable</strong> for %s"
+msgstr "<strong>Desactivar</strong> para %s"
+
+msgid "<strong>Disable</strong> new ticket auto-response"
+msgstr "<strong>Desactivar</strong> respuesta automática de tickets nuevos"
+
+msgid "<strong>Disable</strong> overdue alerts notices."
+msgstr "<strong>Desactivar</strong> avisos de alertas vencidas."
+
+msgid "<strong>Stop</strong> processing further on match!"
+msgstr "<strong>Detener</strong> el procesamiento al coincidir"
+
+msgid "A confirmation email has been sent"
+msgstr "Se envió un correo de confirmación"
+
+msgid "ACL"
+msgstr "ACL"
+
+msgid "API Key"
+msgstr "Clave API"
+
+msgid "API Key is auto-generated. Delete and re-add to change the key."
+msgstr "La clave API se genera automáticamente. Elimínala y agrégala de nuevo para cambiarla."
+
+msgid "API Keys"
+msgstr "Claves API"
+
+msgid "About this osTicket Installation"
+msgstr "Sobre esta instalación de osTicket"
+
+msgid "Accept All Emails"
+msgstr "Aceptar todos los correos"
+
+msgid "Accept Email Collaborators"
+msgstr "Aceptar colaboradores por correo"
+
+msgid "Accept email from unknown Users"
+msgstr "Aceptar correos de usuarios desconocidos"
+
+msgid "Access"
+msgstr "Acceso"
+
+msgid "Access Credentials"
+msgstr "Credenciales de acceso"
+
+msgid "Access Token"
+msgstr "Token de acceso"
+
+msgid "Account"
+msgstr "Cuenta"
+
+msgid "Account Access"
+msgstr "Acceso a la cuenta"
+
+msgid "Account Confirmation Email"
+msgstr "Correo de confirmación de cuenta"
+
+msgid "Account Confirmed Page"
+msgstr "Página de cuenta confirmada"
+
+msgid "Account Flags"
+msgstr "Marcas de la cuenta"
+
+msgid "Account Manager"
+msgstr "Gestor de cuenta"
+
+msgid "Account Registration"
+msgstr "Registro de cuenta"
+
+msgid "Actions"
+msgstr "Acciones"
+
+msgid "Actions are executed in the order declared below"
+msgstr "Las acciones se ejecutan en el orden indicado abajo"
+
+msgid "Active"
+msgstr "Activo"
+
+msgid "Add"
+msgstr "Agregar"
+
+msgid "Add Collaborator"
+msgstr "Agregar colaborador"
+
+msgid "Add Custom Form"
+msgstr "Agregar formulario personalizado"
+
+msgid "Add FAQ"
+msgstr "Agregar pregunta frecuente"
+
+msgid "Add Field"
+msgstr "Agregar campo"
+
+msgid "Add Filter"
+msgstr "Agregar filtro"
+
+msgid "Add Form"
+msgstr "Agregar formulario"
+
+msgid "Add Instance"
+msgstr "Agregar instancia"
+
+msgid "Add Key"
+msgstr "Agregar clave"
+
+msgid "Add List"
+msgstr "Agregar lista"
+
+msgid "Add New"
+msgstr "Agregar nuevo"
+
+msgid "Add New API Key"
+msgstr "Agregar nueva clave API"
+
+msgid "Add New Agent"
+msgstr "Agregar nuevo agente"
+
+msgid "Add New Canned Response"
+msgstr "Agregar nueva respuesta predefinida"
+
+msgid "Add New Category"
+msgstr "Agregar nueva categoría"
+
+msgid "Add New Custom Form"
+msgstr "Agregar nuevo formulario personalizado"
+
+msgid "Add New Custom List"
+msgstr "Agregar nueva lista personalizada"
+
+msgid "Add New Department"
+msgstr "Agregar nuevo departamento"
+
+msgid "Add New Email"
+msgstr "Agregar nuevo correo"
+
+msgid "Add New Email Address"
+msgstr "Agregar nueva dirección de correo"
+
+msgid "Add New Email Address to Ban List"
+msgstr "Agregar nueva dirección de correo a la lista de bloqueados"
+
+msgid "Add New Entry"
+msgstr "Agregar nueva entrada"
+
+msgid "Add New FAQ"
+msgstr "Agregar nueva pregunta frecuente"
+
+msgid "Add New Filter"
+msgstr "Agregar nuevo filtro"
+
+msgid "Add New Help Topic"
+msgstr "Agregar nuevo tema de ayuda"
+
+msgid "Add New Instance"
+msgstr "Agregar nueva instancia"
+
+msgid "Add New Item"
+msgstr "Agregar nuevo ítem"
+
+msgid "Add New List Item"
+msgstr "Agregar nuevo ítem de lista"
+
+msgid "Add New Organization"
+msgstr "Agregar nueva organización"
+
+msgid "Add New Page"
+msgstr "Agregar nueva página"
+
+msgid "Add New Plugin"
+msgstr "Agregar nuevo plugin"
+
+msgid "Add New Queue"
+msgstr "Agregar nueva cola"
+
+msgid "Add New Response"
+msgstr "Agregar nueva respuesta"
+
+msgid "Add New Role"
+msgstr "Agregar nuevo rol"
+
+msgid "Add New SLA Plan"
+msgstr "Agregar nuevo plan SLA"
+
+msgid "Add New Schedule"
+msgstr "Agregar nuevo horario"
+
+msgid "Add New Schedule Entry"
+msgstr "Agregar nueva entrada de horario"
+
+msgid "Add New Sequence"
+msgstr "Agregar nueva secuencia"
+
+msgid "Add New Sort Criteria"
+msgstr "Agregar nuevo criterio de orden"
+
+msgid "Add New Task"
+msgstr "Agregar nueva tarea"
+
+msgid "Add New Team"
+msgstr "Agregar nuevo equipo"
+
+msgid "Add New Template"
+msgstr "Agregar nueva plantilla"
+
+msgid "Add New Template Set"
+msgstr "Agregar nuevo conjunto de plantillas"
+
+msgid "Add New User"
+msgstr "Agregar nuevo usuario"
+
+msgid "Add Organization"
+msgstr "Agregar organización"
+
+msgid "Add Other Field"
+msgstr "Agregar otro campo"
+
+msgid "Add Page"
+msgstr "Agregar página"
+
+msgid "Add Plan"
+msgstr "Agregar plan"
+
+msgid "Add Queue Column"
+msgstr "Agregar columna de cola"
+
+msgid "Add Response"
+msgstr "Agregar respuesta"
+
+msgid "Add Role"
+msgstr "Agregar rol"
+
+msgid "Add Rule"
+msgstr "Agregar regla"
+
+msgid "Add Sort Criteria"
+msgstr "Agregar criterio de orden"
+
+msgid "Add Sort Option"
+msgstr "Agregar opción de orden"
+
+msgid "Add Sub Queue"
+msgstr "Agregar subcola"
+
+msgid "Add Template"
+msgstr "Agregar plantilla"
+
+msgid "Add Topic"
+msgstr "Agregar tema"
+
+msgid "Add User"
+msgstr "Agregar usuario"
+
+msgid "Add a Language"
+msgstr "Agregar un idioma"
+
+msgid "Add a Ticket"
+msgstr "Agregar un ticket"
+
+msgid "Add a annotation"
+msgstr "Agregar una anotación"
+
+msgid "Add a column"
+msgstr "Agregar una columna"
+
+msgid "Add a condition"
+msgstr "Agregar una condición"
+
+msgid "Add a custom form"
+msgstr "Agregar un formulario personalizado"
+
+msgid "Add a form"
+msgstr "Agregar un formulario"
+
+msgid "Add a property"
+msgstr "Agregar una propiedad"
+
+msgid "Add new custom form section"
+msgstr "Agregar nueva sección de formulario personalizado"
+
+msgid "Add personal queue"
+msgstr "Agregar cola personal"
+
+msgid "Add personal search"
+msgstr "Agregar búsqueda personal"
+
+msgid "Add to Organization"
+msgstr "Agregar a la organización"
+
+msgid "Add to all tickets from this organization"
+msgstr "Agregar a todos los tickets de esta organización"
+
+msgid "Add, and remove the fields in this list using the options below. Drag columns to reorder them."
+msgstr "Agrega y elimina campos de esta lista usando las opciones de abajo. Arrastra las columnas para reordenarlas."
+
+msgid "Add, and remove the fields in this list using the options below. Drag fields to reorder them."
+msgstr "Agrega y elimina campos de esta lista usando las opciones de abajo. Arrastra los campos para reordenarlos."
+
+msgid "Added"
+msgstr "Agregado"
+
+msgid "Admin Email"
+msgstr "Correo del administrador"
+
+msgid "Admin Email Only"
+msgstr "Solo correo del administrador"
+
+msgid "Admin Notes"
+msgstr "Notas del administrador"
+
+msgid "Admin Panel"
+msgstr "Panel de administración"
+
+msgid "Admin's Email Address"
+msgstr "Dirección de correo del administrador"
+
+msgid "Administratively Locked"
+msgstr "Bloqueado administrativamente"
+
+msgid "Administrator"
+msgstr "Administrador"
+
+msgid "Advanced"
+msgstr "Avanzado"
+
+msgid "Advanced CSV Options"
+msgstr "Opciones avanzadas de CSV"
+
+msgid "Advanced Ticket Search"
+msgstr "Búsqueda avanzada de tickets"
+
+msgid "Agent"
+msgstr "Agente"
+
+msgid "Agent Excessive Logins"
+msgstr "Intentos de inicio de sesión excesivos del agente"
+
+msgid "Agent Identity Masking"
+msgstr "Ocultar identidad del agente"
+
+msgid "Agent Login"
+msgstr "Inicio de sesión de agente"
+
+msgid "Agent Panel"
+msgstr "Panel de agente"
+
+msgid "Agent Password Reset"
+msgstr "Restablecer contraseña del agente"
+
+msgid "Agent Session Timeout"
+msgstr "Tiempo de espera de sesión del agente"
+
+msgid "Agent Welcome Email"
+msgstr "Correo de bienvenida al agente"
+
+msgid "Agent will have access to tickets assigned to a team they belong to regardless of the ticket's department. Alerts can be enabled for each associated team."
+msgstr "El agente tendrá acceso a los tickets asignados a un equipo al que pertenece, sin importar el departamento del ticket. Las alertas se pueden activar para cada equipo asociado."
+
+msgid "Agents"
+msgstr "Agentes"
+
+msgid "Agents (%d)"
+msgstr "Agentes (%d)"
+
+msgid "Agents Settings"
+msgstr "Configuración de agentes"
+
+msgid "Agents who are members of %s"
+msgstr "Agentes miembros de %s"
+
+msgid "Agents who are primary members of %s"
+msgstr "Agentes miembros principales de %s"
+
+msgid "Agents who have extended access to %s"
+msgstr "Agentes con acceso extendido a %s"
+
+msgid "Alert All"
+msgstr "Alertar a todos"
+
+msgid "Alert to User"
+msgstr "Alertar al usuario"
+
+msgid "Alerts"
+msgstr "Alertas"
+
+msgid "Alerts &amp; Notices"
+msgstr "Alertas y avisos"
+
+msgid "Alerts and Notices"
+msgstr "Alertas y avisos"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "All Active Policies"
+msgstr "Todas las políticas activas"
+
+msgid "All Active Recipients"
+msgstr "Todos los destinatarios activos"
+
+msgid "All Categories"
+msgstr "Todas las categorías"
+
+msgid "All Departments"
+msgstr "Todos los departamentos"
+
+msgid "All Help Topics"
+msgstr "Todos los temas de ayuda"
+
+msgid "All Rights Reserved."
+msgstr "Todos los derechos reservados."
+
+msgid "All Tasks (%s)"
+msgstr "Todas las tareas (%s)"
+
+msgid "All Teams"
+msgstr "Todos los equipos"
+
+msgid "All Tickets"
+msgstr "Todos los tickets"
+
+msgid "All Topics"
+msgstr "Todos los temas"
+
+msgid "All logs"
+msgstr "Todos los registros"
+
+msgid "All members see all tickets"
+msgstr "Todos los miembros ven todos los tickets"
+
+msgid "Allow External Images"
+msgstr "Permitir imágenes externas"
+
+msgid "Allow Password Resets"
+msgstr "Permitir restablecer contraseñas"
+
+msgid "Allow System iFrame"
+msgstr "Permitir iFrame del sistema"
+
+msgid "Allow for %s"
+msgstr "Permitir para %s"
+
+msgid "Also delete all associated tickets and attachments"
+msgstr "También eliminar todos los tickets y adjuntos asociados"
+
+msgid "An access link will be emailed to you."
+msgstr "Se te enviará un enlace de acceso por correo."
+
+msgid "Annotations"
+msgstr "Anotaciones"
+
+msgid "Answer"
+msgstr "Respuesta"
+
+msgid "Any changes will require re-authorization"
+msgstr "Cualquier cambio requerirá volver a autorizar"
+
+msgid "Append"
+msgstr "Agregar al final"
+
+msgid "Apply"
+msgstr "Aplicar"
+
+msgid "Archive"
+msgstr "Archivar"
+
+msgid "Archived"
+msgstr "Archivado"
+
+msgid "Are you sure want to <b>disable</b> %s?"
+msgstr "¿Seguro que querés <b>desactivar</b> %s?"
+
+msgid "Are you sure want to <b>enable</b> %s?"
+msgstr "¿Seguro que querés <b>activar</b> %s?"
+
+msgid "Are you sure want to flag the selected tasks as <font color=\"red\"><b>overdue</b></font>?"
+msgstr "¿Seguro que querés marcar las tareas seleccionadas como <font color=\"red\"><b>vencidas</b></font>?"
+
+msgid "Are you sure you want to <b>REMOVE</b> %1$s from <strong>%2$s</strong>?"
+msgstr "¿Seguro que querés <b>QUITAR</b> %1$s de <strong>%2$s</strong>?"
+
+msgid "Are you sure you want to <b>archive</b> %s?"
+msgstr "¿Seguro que querés <b>archivar</b> %s?"
+
+msgid "Are you sure you want to <b>ban</b> %s?"
+msgstr "¿Seguro que querés <b>bloquear</b> %s?"
+
+msgid "Are you sure you want to <b>change</b> ticket owner to %s?"
+msgstr "¿Seguro que querés <b>cambiar</b> el dueño del ticket a %s?"
+
+msgid "Are you sure you want to <b>claim</b> (self assign) %s?"
+msgstr "¿Seguro que querés <b>reclamar</b> (autoasignarte) %s?"
+
+msgid "Are you sure you want to <b>disable</b> %s?"
+msgstr "¿Seguro que querés <b>desactivar</b> %s?"
+
+msgid "Are you sure you want to <b>disable</b> (lock) %s?"
+msgstr "¿Seguro que querés <b>desactivar</b> (bloquear) %s?"
+
+msgid "Are you sure you want to <b>enable</b> %s?"
+msgstr "¿Seguro que querés <b>activar</b> %s?"
+
+msgid "Are you sure you want to <b>enable</b> (unlock) %s?"
+msgstr "¿Seguro que querés <b>activar</b> (desbloquear) %s?"
+
+msgid "Are you sure you want to <b>remove</b> %s from ban list?"
+msgstr "¿Seguro que querés <b>quitar</b> %s de la lista de bloqueados?"
+
+msgid "Are you sure you want to <b>unassign</b> ticket from <b>%s</b>?"
+msgstr "¿Seguro que querés <b>desasignar</b> el ticket de <b>%s</b>?"
+
+msgid "Are you sure you want to DELETE %s?"
+msgstr "¿Seguro que querés ELIMINAR %s?"
+
+msgid "Are you sure you want to DISABLE the collaborator?"
+msgstr "¿Seguro que querés DESACTIVAR al colaborador?"
+
+msgid "Are you sure you want to ENABLE the collaborator?"
+msgstr "¿Seguro que querés ACTIVAR al colaborador?"
+
+msgid "Are you sure you want to delete the child ticket(s)?"
+msgstr "¿Seguro que querés eliminar el/los ticket(s) hijo(s)?"
+
+msgid "Are you sure you want to flag the ticket as <b>answered</b>?"
+msgstr "¿Seguro que querés marcar el ticket como <b>respondido</b>?"
+
+msgid "Are you sure you want to flag the ticket as <b>unanswered</b>?"
+msgstr "¿Seguro que querés marcar el ticket como <b>sin responder</b>?"
+
+msgid "Are you sure you want to flag the ticket as <font color=\"red\"><b>overdue</b></font>?"
+msgstr "¿Seguro que querés marcar el ticket como <font color=\"red\"><b>vencido</b></font>?"
+
+msgid "Are you sure you want to make %s <b>private</b> (internal)?"
+msgstr "¿Seguro que querés hacer %s <b>privado</b> (interno)?"
+
+msgid "Are you sure you want to make %s <b>public</b>?"
+msgstr "¿Seguro que querés hacer %s <b>público</b>?"
+
+msgid "Are you sure you want to mark ticket as <b>%s</b>?"
+msgstr "¿Seguro que querés marcar el ticket como <b>%s</b>?"
+
+msgid "Are you sure you want to send a <b>Password Reset Link</b> to <em> %s </em>?"
+msgstr "¿Seguro que querés enviar un <b>enlace para restablecer contraseña</b> a <em> %s </em>?"
+
+msgid "Are you sure you want to send an <b>Account Activation Link</b> to <em> %s </em>?"
+msgstr "¿Seguro que querés enviar un <b>enlace de activación de cuenta</b> a <em> %s </em>?"
+
+msgid "Are you sure?"
+msgstr "¿Estás seguro?"
+
+msgid "Article Content"
+msgstr "Contenido del artículo"
+
+msgid "Ascending"
+msgstr "Ascendente"
+
+msgid "Assign"
+msgstr "Asignar"
+
+msgid "Assign Tasks"
+msgstr "Asignar tareas"
+
+msgid "Assign To"
+msgstr "Asignar a"
+
+msgid "Assign tickets from this organization to the <em>Account Manager</em>"
+msgstr "Asignar tickets de esta organización al <em>Gestor de cuenta</em>"
+
+msgid "Assign to Agent"
+msgstr "Asignar a agente"
+
+msgid "Assign to Team"
+msgstr "Asignar a equipo"
+
+msgid "Assigned Agent"
+msgstr "Agente asignado"
+
+msgid "Assigned Agent / Team"
+msgstr "Agente / Equipo asignado"
+
+msgid "Assigned Teams"
+msgstr "Equipos asignados"
+
+msgid "Assigned To"
+msgstr "Asignado a"
+
+msgid "Assignee"
+msgstr "Responsable"
+
+msgid "Assignment Alert"
+msgstr "Alerta de asignación"
+
+msgid "Attachments"
+msgstr "Adjuntos"
+
+msgid "Attachments Storage and Settings"
+msgstr "Almacenamiento y configuración de adjuntos"
+
+msgid "Authentication"
+msgstr "Autenticación"
+
+msgid "Authentication Backend"
+msgstr "Backend de autenticación"
+
+msgid "Authentication Settings"
+msgstr "Configuración de autenticación"
+
+msgid "Authentication Sources"
+msgstr "Fuentes de autenticación"
+
+msgid "Authentication Token"
+msgstr "Token de autenticación"
+
+msgid "Authentication and Registration Templates &amp; Pages"
+msgstr "Plantillas y páginas de autenticación y registro"
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "Auto Add Members From"
+msgstr "Agregar miembros automáticamente desde"
+
+msgid "Auto Detect"
+msgstr "Detección automática"
+
+msgid "Auto Refresh Rate"
+msgstr "Frecuencia de actualización automática"
+
+msgid "Auto-Assignment"
+msgstr "Asignación automática"
+
+msgid "Auto-Response"
+msgstr "Respuesta automática"
+
+msgid "Auto-Response Email"
+msgstr "Correo de respuesta automática"
+
+msgid "Auto-assign To"
+msgstr "Autoasignar a"
+
+msgid "Auto-refer on Close"
+msgstr "Auto-referir al cerrar"
+
+msgid "Automated Collaboration"
+msgstr "Colaboración automática"
+
+msgid "Automatically add collaborators from email fields"
+msgstr "Agregar colaboradores automáticamente desde campos de correo"
+
+msgid "Autoresponder"
+msgstr "Autorespondedor"
+
+msgid "Autoresponder Settings"
+msgstr "Configuración del autorespondedor"
+
+msgid "Avatar Source"
+msgstr "Origen del avatar"
+
+msgid "Back To Index"
+msgstr "Volver al inicio"
+
+msgid "Backend"
+msgstr "Backend"
+
+msgid "Ban Email <%s>"
+msgstr "Bloquear correo <%s>"
+
+msgid "Ban New Email"
+msgstr "Bloquear nuevo correo"
+
+msgid "Ban Status"
+msgstr "Estado de bloqueo"
+
+msgid "Banned Email Addresses"
+msgstr "Direcciones de correo bloqueadas"
+
+msgid "Basic Authentication"
+msgstr "Autenticación básica"
+
+msgid "Basic Information"
+msgstr "Información básica"
+
+msgid "Basic Ticket Information"
+msgstr "Información básica del ticket"
+
+msgid "Be liberal, they're internal"
+msgstr "Sé flexible, son internos"
+
+msgid "Between"
+msgstr "Entre"
+
+msgid "Bind Agent Session to IP"
+msgstr "Vincular sesión del agente a la IP"
+
+msgid "Bro, not sure how you got here!"
+msgstr "¡No sabemos cómo llegaste hasta acá!"
+
+msgid "Browse by Topic"
+msgstr "Explorar por tema"
+
+msgid "Built"
+msgstr "Compilado"
+
+msgid "Built-in Forms"
+msgstr "Formularios integrados"
+
+msgid "CAPTCHA Text"
+msgstr "Texto CAPTCHA"
+
+msgid "CHILD"
+msgstr "HIJO"
+
+msgid "Can Create Tickets <em>(XML/JSON/EMAIL)</em>"
+msgstr "Puede crear tickets <em>(XML/JSON/EMAIL)</em>"
+
+msgid "Can Execute Cron"
+msgstr "Puede ejecutar Cron"
+
+msgid "Can be overridden by other filters depending on processing order."
+msgstr "Puede ser anulado por otros filtros según el orden de procesamiento."
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Cancel Changes"
+msgstr "Cancelar cambios"
+
+msgid "Canned Attachments"
+msgstr "Adjuntos predefinidos"
+
+msgid "Canned Response"
+msgstr "Respuesta predefinida"
+
+msgid "Canned Responses"
+msgstr "Respuestas predefinidas"
+
+msgid "Canned response is in use by email filter(s)"
+msgstr "La respuesta predefinida está en uso por filtro(s) de correo"
+
+msgid "Canned response settings"
+msgstr "Configuración de respuestas predefinidas"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Category"
+msgstr "Categoría"
+
+msgid "Category Description"
+msgstr "Descripción de la categoría"
+
+msgid "Category Information"
+msgstr "Información de la categoría"
+
+msgid "Category Listing"
+msgstr "Listado de categorías"
+
+msgid "Category Name"
+msgstr "Nombre de la categoría"
+
+msgid "Category Type"
+msgstr "Tipo de categoría"
+
+msgid "Category does not have FAQs"
+msgstr "La categoría no tiene preguntas frecuentes"
+
+msgid "Cc"
+msgstr "CC"
+
+msgid "Cc Collaborator"
+msgstr "Colaborador en CC"
+
+msgid "Change"
+msgstr "Cambiar"
+
+msgid "Change Department"
+msgstr "Cambiar departamento"
+
+msgid "Change Owner"
+msgstr "Cambiar dueño"
+
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+msgid "Change Status"
+msgstr "Cambiar estado"
+
+msgid "Change Tasks Status"
+msgstr "Cambiar estado de tareas"
+
+msgid "Change Tickets Ownership"
+msgstr "Cambiar propiedad de tickets"
+
+msgid "Change Tickets Status"
+msgstr "Cambiar estado de tickets"
+
+msgid "Change User"
+msgstr "Cambiar usuario"
+
+msgid "Changing Email Address will invalidates set Credentials"
+msgstr "Cambiar la dirección de correo invalidará las credenciales configuradas"
+
+msgid "Changing Oauth2 provider will overwrite existing credentials"
+msgstr "Cambiar el proveedor OAuth2 sobrescribirá las credenciales existentes"
+
+msgid "Check Ticket Status"
+msgstr "Consultar estado del ticket"
+
+msgid "Check all Holiday Schedules applicable to this schedule"
+msgstr "Marcá todos los calendarios de feriados aplicables a este horario"
+
+msgid "Check all help topics related to %s."
+msgstr "Marcá todos los temas de ayuda relacionados con %s."
+
+msgid "Check applicable API services enabled for the key."
+msgstr "Marcá los servicios de API aplicables activados para la clave."
+
+msgid "Check columns to export"
+msgstr "Marcá las columnas a exportar"
+
+msgid "Child Status"
+msgstr "Estado del hijo"
+
+msgid "Child Tickets"
+msgstr "Tickets hijos"
+
+msgid "Child Tickets do not allow the end user or agent to reply."
+msgstr "Los tickets hijos no permiten que el usuario final o el agente respondan."
+
+msgid "Choose which Tickets to %s. The Ticket on top will be the Parent Ticket. Sort the order of the Tickets by clicking and dragging them."
+msgstr "Elegí qué tickets %s. El ticket de arriba será el ticket padre. Ordená los tickets arrastrándolos."
+
+msgid "Claim"
+msgstr "Reclamar"
+
+msgid "Claim on Response"
+msgstr "Reclamar al responder"
+
+msgid "Clear all filters and sort"
+msgstr "Limpiar todos los filtros y el orden"
+
+msgid "Click on the category to browse FAQs or manage its existing FAQs."
+msgstr "Hacé clic en la categoría para ver o gestionar sus preguntas frecuentes."
+
+msgid "Click on the category to browse FAQs."
+msgstr "Hacé clic en la categoría para ver sus preguntas frecuentes."
+
+msgid "Click on the title to edit."
+msgstr "Hacé clic en el título para editar."
+
+msgid "Click to create a new note"
+msgstr "Hacé clic para crear una nueva nota"
+
+msgid "Clicking <strong>Save Changes</strong> will permanently delete data associated with the deleted forms"
+msgstr "Al hacer clic en <strong>Guardar cambios</strong> se eliminarán permanentemente los datos asociados a los formularios eliminados"
+
+msgid "Clicking <strong>Save Changes</strong> will permanently remove the\n    deleted sequences."
+msgstr "Al hacer clic en <strong>Guardar cambios</strong> se eliminarán permanentemente\n    las secuencias eliminadas."
+
+msgid "Clicking <strong>Save Changes</strong> will unlink this Ticket"
+msgstr "Al hacer clic en <strong>Guardar cambios</strong> se desvinculará este ticket"
+
+msgid "Client"
+msgstr "Cliente"
+
+msgid "Client Quick Access"
+msgstr "Acceso rápido de cliente"
+
+msgid "Clone"
+msgstr "Clonar"
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Close Date"
+msgstr "Fecha de cierre"
+
+msgid "Closed"
+msgstr "Cerrado"
+
+msgid "Closed By"
+msgstr "Cerrado por"
+
+msgid "Closed Tickets"
+msgstr "Tickets cerrados"
+
+msgid "Collaborator"
+msgstr "Colaborador"
+
+msgid "Collaborator Tickets Visibility"
+msgstr "Visibilidad de tickets del colaborador"
+
+msgid "Collaborators"
+msgstr "Colaboradores"
+
+msgid "Collaborators (%d)"
+msgstr "Colaboradores (%d)"
+
+msgid "Collision Avoidance Duration"
+msgstr "Duración de prevención de colisiones"
+
+msgid "Column Details"
+msgstr "Detalles de la columna"
+
+msgid "Columns"
+msgstr "Columnas"
+
+msgid "Combine Threads"
+msgstr "Combinar hilos"
+
+msgid "Common Attachments"
+msgstr "Adjuntos comunes"
+
+msgid "Company Profile"
+msgstr "Perfil de la empresa"
+
+msgid "Complete the form below and then click Next to verify the setup"
+msgstr "Completá el formulario y hacé clic en Siguiente para verificar la configuración"
+
+msgid "Complete the form below to add a new organization."
+msgstr "Completá el formulario para agregar una nueva organización."
+
+msgid "Complete the form below to create a user account for <b>%s</b>."
+msgstr "Completá el formulario para crear una cuenta de usuario para <b>%s</b>."
+
+msgid "Completed"
+msgstr "Completado"
+
+msgid "Completed Tasks"
+msgstr "Tareas completadas"
+
+msgid "Conditions"
+msgstr "Condiciones"
+
+msgid "Conditions are used to change the view of the data in a row based on some conditions of the data. For instance, a column might be shown bold if some condition is met."
+msgstr "Las condiciones se usan para cambiar cómo se ve una fila según los datos. Por ejemplo, una columna puede mostrarse en negrita si se cumple una condición."
+
+msgid "Config"
+msgstr "Configuración"
+
+msgid "Config Signature"
+msgstr "Firma de configuración"
+
+msgid "Configuration for deleted plugins CANNOT be recovered."
+msgstr "La configuración de los plugins eliminados NO se puede recuperar."
+
+msgid "Configure Options"
+msgstr "Configurar opciones"
+
+msgid "Confirm New Password"
+msgstr "Confirmar nueva contraseña"
+
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+msgid "Continue"
+msgstr "Continuar"
+
+msgid "Copy Paste"
+msgstr "Copiar y pegar"
+
+msgid "Copy of {0}"
+msgstr "Copia de {0}"
+
+msgid "Copyright"
+msgstr "Copyright"
+
+msgid "Copyright &copy;"
+msgstr "Copyright &copy;"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Create Account"
+msgstr "Crear cuenta"
+
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgid "Create Dept"
+msgstr "Crear departamento"
+
+msgid "Create New Organization"
+msgstr "Crear nueva organización"
+
+msgid "Create New Ticket"
+msgstr "Crear nuevo ticket"
+
+msgid "Create New User"
+msgstr "Crear nuevo usuario"
+
+msgid "Create Task"
+msgstr "Crear tarea"
+
+msgid "Create Team"
+msgstr "Crear equipo"
+
+msgid "Create Ticket"
+msgstr "Crear ticket"
+
+msgid "Create a Password"
+msgstr "Crear una contraseña"
+
+msgid "Create an account"
+msgstr "Crear una cuenta"
+
+msgid "Created"
+msgstr "Creado"
+
+msgid "Created On"
+msgstr "Creado el"
+
+msgid "Creator"
+msgstr "Creador"
+
+msgid "Criteria"
+msgstr "Criterio"
+
+msgid "Current Password"
+msgstr "Contraseña actual"
+
+msgid "Current ticket status (%s) does not allow the end user to reply."
+msgstr "El estado actual del ticket (%s) no permite que el usuario final responda."
+
+msgid "Currently selected user"
+msgstr "Usuario seleccionado actualmente"
+
+msgid "Custom"
+msgstr "Personalizado"
+
+msgid "Custom Forms"
+msgstr "Formularios personalizados"
+
+msgid "Custom Lists"
+msgstr "Listas personalizadas"
+
+msgid "Custom lists are used to provide drop-down lists for custom forms."
+msgstr "Las listas personalizadas se usan para las listas desplegables de los formularios personalizados."
+
+msgid "DEBUG"
+msgstr "DEBUG"
+
+msgid "Data"
+msgstr "Datos"
+
+msgid "Data Integrity"
+msgstr "Integridad de datos"
+
+msgid "Data is required in this field in order to close the related ticket"
+msgstr "Se requiere completar este campo para cerrar el ticket relacionado"
+
+msgid "Database Information and Usage"
+msgstr "Información y uso de la base de datos"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Date Added"
+msgstr "Fecha de alta"
+
+msgid "Date Closed"
+msgstr "Fecha de cierre"
+
+msgid "Date Created"
+msgstr "Fecha de creación"
+
+msgid "Date Format"
+msgstr "Formato de fecha"
+
+msgid "Date Installed"
+msgstr "Fecha de instalación"
+
+msgid "Date and Time Format"
+msgstr "Formato de fecha y hora"
+
+msgid "Date and Time Options"
+msgstr "Opciones de fecha y hora"
+
+msgid "Day, Date and Time Format"
+msgstr "Formato de día, fecha y hora"
+
+msgid "Debug logs"
+msgstr "Registros de depuración"
+
+msgid "Default"
+msgstr "Predeterminado"
+
+msgid "Default 2FA"
+msgstr "2FA predeterminado"
+
+msgid "Default Alert Email"
+msgstr "Correo de alerta predeterminado"
+
+msgid "Default Department"
+msgstr "Departamento predeterminado"
+
+msgid "Default From Name"
+msgstr "Nombre de remitente predeterminado"
+
+msgid "Default Help Topic"
+msgstr "Tema de ayuda predeterminado"
+
+msgid "Default Locale"
+msgstr "Idioma predeterminado"
+
+msgid "Default Log Level"
+msgstr "Nivel de registro predeterminado"
+
+msgid "Default MTA"
+msgstr "MTA predeterminado"
+
+msgid "Default Page Size"
+msgstr "Tamaño de página predeterminado"
+
+msgid "Default Paper Size"
+msgstr "Tamaño de papel predeterminado"
+
+msgid "Default Priority"
+msgstr "Prioridad predeterminada"
+
+msgid "Default SLA"
+msgstr "SLA predeterminado"
+
+msgid "Default Signature"
+msgstr "Firma predeterminada"
+
+msgid "Default Sorting"
+msgstr "Orden predeterminado"
+
+msgid "Default Status"
+msgstr "Estado predeterminado"
+
+msgid "Default System Email"
+msgstr "Correo del sistema predeterminado"
+
+msgid "Default Task Number Format"
+msgstr "Formato de número de tarea predeterminado"
+
+msgid "Default Task Number Sequence"
+msgstr "Secuencia de número de tarea predeterminada"
+
+msgid "Default Template Set"
+msgstr "Conjunto de plantillas predeterminado"
+
+msgid "Default Thank-You Page"
+msgstr "Página de agradecimiento predeterminada"
+
+msgid "Default Ticket Number Format"
+msgstr "Formato de número de ticket predeterminado"
+
+msgid "Default Ticket Number Sequence"
+msgstr "Secuencia de número de ticket predeterminada"
+
+msgid "Default Ticket Queue"
+msgstr "Cola de tickets predeterminada"
+
+msgid "Default Time Zone"
+msgstr "Zona horaria predeterminada"
+
+msgid "Default email only applies to outgoing emails without SMTP setting."
+msgstr "El correo predeterminado solo aplica a correos salientes sin configuración SMTP."
+
+msgid "Definition"
+msgstr "Definición"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete %1$s %2$s %3$s and any associated attachments and data."
+msgstr "Eliminar %1$s %2$s %3$s y todos sus adjuntos y datos asociados."
+
+msgid "Delete %s"
+msgstr "Eliminar %s"
+
+msgid "Delete Category"
+msgstr "Eliminar categoría"
+
+msgid "Delete Child Ticket"
+msgstr "Eliminar ticket hijo"
+
+msgid "Delete FAQ"
+msgstr "Eliminar pregunta frecuente"
+
+msgid "Delete Organization"
+msgstr "Eliminar organización"
+
+msgid "Delete Selected Entries"
+msgstr "Eliminar entradas seleccionadas"
+
+msgid "Delete Tasks"
+msgstr "Eliminar tareas"
+
+msgid "Delete Ticket"
+msgstr "Eliminar ticket"
+
+msgid "Delete Token"
+msgstr "Eliminar token"
+
+msgid "Delete User"
+msgstr "Eliminar usuario"
+
+msgid "Delete emails"
+msgstr "Eliminar correos"
+
+msgid "Deleted data CANNOT be recovered, including any associated FAQs."
+msgstr "Los datos eliminados NO se pueden recuperar, incluyendo las preguntas frecuentes asociadas."
+
+msgid "Deleted data CANNOT be recovered, including any associated attachments."
+msgstr "Los datos eliminados NO se pueden recuperar, incluyendo los adjuntos asociados."
+
+msgid "Deleted data CANNOT be recovered, including any associated rules."
+msgstr "Los datos eliminados NO se pueden recuperar, incluyendo las reglas asociadas."
+
+msgid "Deleted data CANNOT be recovered."
+msgstr "Los datos eliminados NO se pueden recuperar."
+
+msgid "Deleted organization CANNOT be recovered"
+msgstr "La organización eliminada NO se puede recuperar"
+
+msgid "Deleted roles CANNOT be recovered."
+msgstr "Los roles eliminados NO se pueden recuperar."
+
+msgid "Deleted users and tickets CANNOT be recovered"
+msgstr "Los usuarios y tickets eliminados NO se pueden recuperar"
+
+msgid "Delimiter"
+msgstr "Delimitador"
+
+msgid "Department"
+msgstr "Departamento"
+
+msgid "Department Email"
+msgstr "Correo del departamento"
+
+msgid "Department Information"
+msgstr "Información del departamento"
+
+msgid "Department Manager"
+msgstr "Gestor del departamento"
+
+msgid "Department Members"
+msgstr "Miembros del departamento"
+
+msgid "Department Name (%s)"
+msgstr "Nombre del departamento (%s)"
+
+msgid "Department Signature"
+msgstr "Firma del departamento"
+
+msgid "Department Signature (%s)"
+msgstr "Firma del departamento (%s)"
+
+msgid "Department and extended access members"
+msgstr "Departamento y miembros con acceso extendido"
+
+msgid "Department does not have primary members"
+msgstr "El departamento no tiene miembros principales"
+
+msgid "Department members only"
+msgstr "Solo miembros del departamento"
+
+msgid "Department's Default"
+msgstr "Predeterminado del departamento"
+
+msgid "Departments"
+msgstr "Departamentos"
+
+msgid "Descending"
+msgstr "Descendente"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "Diagnostic"
+msgstr "Diagnóstico"
+
+msgid "Disable"
+msgstr "Desactivar"
+
+msgid "Disable Agent Collaborators"
+msgstr "Desactivar colaboradores agentes"
+
+msgid "Disabled"
+msgstr "Desactivado"
+
+msgid "Disabled — All users are guests"
+msgstr "Desactivado — Todos los usuarios son invitados"
+
+msgid "Disabling knowledge base disables clients' interface."
+msgstr "Desactivar la base de conocimientos desactiva la interfaz de clientes."
+
+msgid "Do Not Email Reply"
+msgstr "No responder por correo"
+
+msgid "Do Not Send Alert"
+msgstr "No enviar alerta"
+
+msgid "Do Nothing"
+msgstr "No hacer nada"
+
+msgid "Done"
+msgstr "Listo"
+
+msgid "Double"
+msgstr "Doble"
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Due Date"
+msgstr "Fecha límite"
+
+msgid "Due date overrides SLA's grace period."
+msgstr "La fecha límite anula el período de gracia del SLA."
+
+msgid "ERROR"
+msgstr "ERROR"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit Category"
+msgstr "Editar categoría"
+
+msgid "Edit FAQ"
+msgstr "Editar pregunta frecuente"
+
+msgid "Edit Thread Entry"
+msgstr "Editar entrada del hilo"
+
+msgid "Edit Ticket"
+msgstr "Editar ticket"
+
+msgid "Editable"
+msgstr "Editable"
+
+msgid "Edited"
+msgstr "Editado"
+
+msgid "Edited on %s by %s"
+msgstr "Editado el %s por %s"
+
+msgid "Editing Ticket #%s"
+msgstr "Editando ticket #%s"
+
+msgid "Editor Spacing"
+msgstr "Espaciado del editor"
+
+msgid "Email"
+msgstr "Correo"
+
+msgid "Email Access Link"
+msgstr "Enlace de acceso por correo"
+
+msgid "Email Address"
+msgstr "Dirección de correo"
+
+msgid "Email Address Name"
+msgstr "Nombre de la dirección de correo"
+
+msgid "Email Addresses"
+msgstr "Direcciones de correo"
+
+msgid "Email Domain"
+msgstr "Dominio de correo"
+
+msgid "Email Fetching"
+msgstr "Obtención de correo"
+
+msgid "Email Information and Settings"
+msgstr "Información y configuración de correo"
+
+msgid "Email Name"
+msgstr "Nombre del correo"
+
+msgid "Email Recipients"
+msgstr "Destinatarios de correo"
+
+msgid "Email Settings and Options"
+msgstr "Configuración y opciones de correo"
+
+msgid "Email Subject and Body"
+msgstr "Asunto y cuerpo del correo"
+
+msgid "Email Template Set"
+msgstr "Conjunto de plantillas de correo"
+
+msgid "Email Template Sets"
+msgstr "Conjuntos de plantillas de correo"
+
+msgid "Email attachments to the user"
+msgstr "Enviar adjuntos por correo al usuario"
+
+msgid "Email is in banlist! Must be removed before any reply/response"
+msgstr "¡El correo está en la lista de bloqueados! Debe quitarse antes de responder"
+
+msgid "Email or Username"
+msgstr "Correo o nombre de usuario"
+
+msgid "Emailed Tickets Priority"
+msgstr "Prioridad de tickets por correo"
+
+msgid "Emails"
+msgstr "Correos"
+
+msgid "Emails Per Fetch"
+msgstr "Correos por obtención"
+
+msgid "Embedded Domain Whitelist"
+msgstr "Lista blanca de dominios incrustados"
+
+msgid "Empty"
+msgstr "Vacío"
+
+msgid "Enable"
+msgstr "Activar"
+
+msgid "Enable CAPTCHA on new web tickets."
+msgstr "Activar CAPTCHA en tickets web nuevos."
+
+msgid "Enable Canned Responses"
+msgstr "Activar respuestas predefinidas"
+
+msgid "Enable Knowledge Base"
+msgstr "Activar base de conocimientos"
+
+msgid "Enable Rich Text"
+msgstr "Activar texto enriquecido"
+
+msgid "Enable html in thread entries and email correspondence."
+msgstr "Activar HTML en entradas del hilo y correspondencia por correo."
+
+msgid "Enable use of authentication tokens to auto-login users"
+msgstr "Activar el uso de tokens de autenticación para iniciar sesión automáticamente"
+
+msgid "Enabled"
+msgstr "Activado"
+
+msgid "EndUser email address is not valid! Consider updating it before responding"
+msgstr "¡La dirección de correo del usuario final no es válida! Considerá actualizarla antes de responder"
+
+msgid "Enter one name and abbreviation per line."
+msgstr "Ingresá un nombre y abreviatura por línea."
+
+msgid "Enter one name and email address per line."
+msgstr "Ingresá un nombre y dirección de correo por línea."
+
+msgid "Enter the text shown on the image."
+msgstr "Ingresá el texto que se muestra en la imagen."
+
+msgid "Enter the token sent to you and click Verify"
+msgstr "Ingresá el token que te enviamos y hacé clic en Verificar"
+
+msgid "Enter your username or email address again in the form below and press the <strong>Login</strong> to access your account and reset your password."
+msgstr "Ingresá de nuevo tu usuario o correo en el formulario de abajo y presioná <strong>Ingresar</strong> para acceder a tu cuenta y restablecer tu contraseña."
+
+msgid "Enter your username or email address in the form below and press the <strong>Send Email</strong> button to have a password reset link sent to your email account on file."
+msgstr "Ingresá tu usuario o correo en el formulario de abajo y presioná <strong>Enviar correo</strong> para recibir un enlace de restablecimiento de contraseña."
+
+msgid "Entered date span is invalid. Selection ignored."
+msgstr "El rango de fechas ingresado no es válido. Se ignoró la selección."
+
+msgid "Entries"
+msgstr "Entradas"
+
+msgid "Errors"
+msgstr "Errores"
+
+msgid "Excessive failed login attempts"
+msgstr "Intentos de inicio de sesión fallidos excesivos"
+
+msgid "Execution Order"
+msgstr "Orden de ejecución"
+
+msgid "Expired Access Token gets auto-refreshed on use"
+msgstr "El token de acceso expirado se renueva automáticamente al usarse"
+
+msgid "Expires"
+msgstr "Expira"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Export Agents"
+msgstr "Exportar agentes"
+
+msgid "Ext"
+msgstr "Ext"
+
+msgid "Extended Access"
+msgstr "Acceso extendido"
+
+msgid "FAQ Categories"
+msgstr "Categorías de preguntas frecuentes"
+
+msgid "FAQ category the question belongs to."
+msgstr "Categoría de preguntas frecuentes a la que pertenece la pregunta."
+
+msgid "FAQs"
+msgstr "Preguntas frecuentes"
+
+msgid "Fall back to primary role on assignments"
+msgstr "Usar el rol principal por defecto en las asignaciones"
+
+msgid "Featured"
+msgstr "Destacado"
+
+msgid "Featured (promote to front page)"
+msgstr "Destacado (promover a la portada)"
+
+msgid "Featured Questions"
+msgstr "Preguntas destacadas"
+
+msgid "Fetch Frequency"
+msgstr "Frecuencia de obtención"
+
+msgid "Fetch on auto-cron"
+msgstr "Obtener con auto-cron"
+
+msgid "Fetched Emails"
+msgstr "Correos obtenidos"
+
+msgid "Field"
+msgstr "Campo"
+
+msgid "Field Configuration"
+msgstr "Configuración del campo"
+
+msgid "Field Setup"
+msgstr "Configuración de campo"
+
+msgid "Fields"
+msgstr "Campos"
+
+msgid "Fields marked editable allow agents and endusers to update the content of this field after the form entry has been created."
+msgstr "Los campos marcados como editables permiten que agentes y usuarios finales actualicen su contenido después de creada la entrada."
+
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+msgid "Filter"
+msgstr "Filtro"
+
+msgid "Filter Actions"
+msgstr "Acciones del filtro"
+
+msgid "Filter Name"
+msgstr "Nombre del filtro"
+
+msgid "Filter Rules"
+msgstr "Reglas del filtro"
+
+msgid "Filter Status"
+msgstr "Estado del filtro"
+
+msgid "Filters are executed based on execution order. Filter can target specific ticket source."
+msgstr "Los filtros se ejecutan según el orden de ejecución. Un filtro puede apuntar a un origen de ticket específico."
+
+msgid "First Name"
+msgstr "Nombre"
+
+msgid "For Agents"
+msgstr "Para agentes"
+
+msgid "For EndUsers"
+msgstr "Para usuarios finales"
+
+msgid "Force HTTPS"
+msgstr "Forzar HTTPS"
+
+msgid "Force all requests through HTTPS."
+msgstr "Forzar todas las solicitudes a través de HTTPS."
+
+msgid "Forgot My Password"
+msgstr "Olvidé mi contraseña"
+
+msgid "Form Fields"
+msgstr "Campos del formulario"
+
+msgid "Format"
+msgstr "Formato"
+
+msgid "Forms"
+msgstr "Formularios"
+
+msgid "Forms are used to allow for collection of custom data"
+msgstr "Los formularios se usan para recopilar datos personalizados"
+
+msgid "Frequently Asked Question"
+msgstr "Pregunta frecuente"
+
+msgid "Frequently Asked Questions"
+msgstr "Preguntas frecuentes"
+
+msgid "From"
+msgstr "De"
+
+msgid "From name to use when replying to a thread"
+msgstr "Nombre de remitente a usar al responder un hilo"
+
+msgid "General Settings"
+msgstr "Configuración general"
+
+msgid "Global default task settings and options."
+msgstr "Configuración y opciones predeterminadas globales de tareas."
+
+msgid "Global setting - can be disabled at department or email level."
+msgstr "Configuración global - se puede desactivar a nivel de departamento o correo."
+
+msgid "Go!"
+msgstr "¡Ir!"
+
+msgid "Grace Period"
+msgstr "Período de gracia"
+
+msgid "Grace Period (hrs)"
+msgstr "Período de gracia (hs)"
+
+msgid "Guest"
+msgstr "Invitado"
+
+msgid "Guest Ticket Access"
+msgstr "Acceso a tickets de invitados"
+
+msgid "Guest User"
+msgstr "Usuario invitado"
+
+msgid "Have an account with us?"
+msgstr "¿Ya tenés una cuenta?"
+
+msgid "Header Spoofing"
+msgstr "Suplantación de encabezados"
+
+msgid "Heading"
+msgstr "Título"
+
+msgid "Heading and Width"
+msgstr "Título y ancho"
+
+msgid "Help Text"
+msgstr "Texto de ayuda"
+
+msgid "Help Topic"
+msgstr "Tema de ayuda"
+
+msgid "Help Topic Information"
+msgstr "Información del tema de ayuda"
+
+msgid "Help Topics"
+msgstr "Temas de ayuda"
+
+msgid "Help text shown with the field"
+msgstr "Texto de ayuda que se muestra con el campo"
+
+msgid "Helpdesk Name/Title"
+msgstr "Nombre/Título de la mesa de ayuda"
+
+msgid "Helpdesk Status"
+msgstr "Estado de la mesa de ayuda"
+
+msgid "Helpdesk URL"
+msgstr "URL de la mesa de ayuda"
+
+msgid "Here you can manage the question and answer for the article. Multiple languages are available if enabled in the admin panel."
+msgstr "Acá podés gestionar la pregunta y respuesta del artículo. Hay varios idiomas disponibles si está activado en el panel de administración."
+
+msgid "Hide agent's name on responses."
+msgstr "Ocultar el nombre del agente en las respuestas."
+
+msgid "Highly recommended for non western european language content"
+msgstr "Muy recomendado para contenido en idiomas no de Europa occidental"
+
+msgid "Highly recommended for plugins and language packs"
+msgstr "Muy recomendado para plugins y paquetes de idioma"
+
+msgid "Holidays"
+msgstr "Feriados"
+
+msgid "Hostname"
+msgstr "Nombre del host"
+
+msgid "Human Verification"
+msgstr "Verificación humana"
+
+msgid "I'm an agent"
+msgstr "Soy un agente"
+
+msgid "IP Address"
+msgstr "Dirección IP"
+
+msgid "If the information provided is valid a password reset email will be sent to the email address you have on file. Follow the link in the email to reset your password."
+msgstr "Si la información es válida, se enviará un correo de restablecimiento a la dirección registrada. Seguí el enlace del correo para restablecer tu contraseña."
+
+msgid "If the information provided is valid a password reset email will be sent to the email address you have on file. If you do not receive the email or have trouble reseting your password, please contact support."
+msgstr "Si la información es válida, se enviará un correo de restablecimiento a la dirección registrada. Si no lo recibís o tenés problemas, contactá a soporte."
+
+msgid "If this is your first time contacting us or you've lost the ticket number, please %s open a new ticket %s"
+msgstr "Si es la primera vez que nos contactás o perdiste el número de ticket, por favor %s abrí un nuevo ticket %s"
+
+msgid "Image Attachment View"
+msgstr "Vista de adjuntos de imagen"
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Import Items"
+msgstr "Importar ítems"
+
+msgid "Import Users"
+msgstr "Importar usuarios"
+
+msgid "Import a CSV File"
+msgstr "Importar un archivo CSV"
+
+msgid "Improves overall performance"
+msgstr "Mejora el rendimiento general"
+
+msgid "Improves performance creating and processing JSON"
+msgstr "Mejora el rendimiento al crear y procesar JSON"
+
+msgid "In-Use"
+msgstr "En uso"
+
+msgid "Incoming Emails"
+msgstr "Correos entrantes"
+
+msgid "Increment"
+msgstr "Incremento"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Inherit columns from the parent queue"
+msgstr "Heredar columnas de la cola padre"
+
+msgid "Inherit export fields from the parent queue"
+msgstr "Heredar campos de exportación de la cola padre"
+
+msgid "Inherit from parent"
+msgstr "Heredar del padre"
+
+msgid "Inherit sorting from the parent queue"
+msgstr "Heredar orden de la cola padre"
+
+msgid "Inherited Criteria"
+msgstr "Criterio heredado"
+
+msgid "Initial response for the ticket"
+msgstr "Respuesta inicial del ticket"
+
+msgid "Inline"
+msgstr "En línea"
+
+msgid "Install"
+msgstr "Instalar"
+
+msgid "Install a new plugin"
+msgstr "Instalar un nuevo plugin"
+
+msgid "Installed"
+msgstr "Instalado"
+
+msgid "Installed Language Packs"
+msgstr "Paquetes de idioma instalados"
+
+msgid "Installed Plugins"
+msgstr "Plugins instalados"
+
+msgid "Instance"
+msgstr "Instancia"
+
+msgid "Instance Name and Status"
+msgstr "Nombre y estado de la instancia"
+
+msgid "Instance description and notes"
+msgstr "Descripción y notas de la instancia"
+
+msgid "Instances (%d)"
+msgstr "Instancias (%d)"
+
+msgid "Instructions"
+msgstr "Instrucciones"
+
+msgid "Internal"
+msgstr "Interno"
+
+msgid "Internal Note"
+msgstr "Nota interna"
+
+msgid "Internal Note details"
+msgstr "Detalles de la nota interna"
+
+msgid "Internal Notes"
+msgstr "Notas internas"
+
+msgid "Internal notes viewable by all admins."
+msgstr "Notas internas visibles para todos los administradores."
+
+msgid "Interpreted as %s"
+msgstr "Interpretado como %s"
+
+msgid "Item Properties"
+msgstr "Propiedades del ítem"
+
+msgid "Items (%d)"
+msgstr "Ítems (%d)"
+
+msgid "John Doe"
+msgstr "Juan Pérez"
+
+msgid "Knowledge Base Settings and Options"
+msgstr "Configuración y opciones de la base de conocimientos"
+
+msgid "Knowledge Base Status"
+msgstr "Estado de la base de conocimientos"
+
+msgid "Knowledgebase Article Content"
+msgstr "Contenido del artículo de la base de conocimientos"
+
+msgid "Label"
+msgstr "Etiqueta"
+
+msgid "Landing Page"
+msgstr "Página de inicio"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Language-Specific Attachments"
+msgstr "Adjuntos específicos del idioma"
+
+msgid "Last Login"
+msgstr "Último inicio de sesión"
+
+msgid "Last Message"
+msgstr "Último mensaje"
+
+msgid "Last Name"
+msgstr "Apellido"
+
+msgid "Last Respondent"
+msgstr "Último en responder"
+
+msgid "Last Response"
+msgstr "Última respuesta"
+
+msgid "Last Updated"
+msgstr "Última actualización"
+
+msgid "Last Updated %s"
+msgstr "Última actualización %s"
+
+msgid "Last month"
+msgstr "El mes pasado"
+
+msgid "Limit ticket access to ONLY assigned tickets"
+msgstr "Limitar el acceso SOLO a tickets asignados"
+
+msgid "Link"
+msgstr "Enlace"
+
+msgid "Link Tickets"
+msgstr "Vincular tickets"
+
+msgid "List Name"
+msgstr "Nombre de la lista"
+
+msgid "Listing Type"
+msgstr "Tipo de listado"
+
+msgid "Loading ..."
+msgstr "Cargando..."
+
+msgid "Locale Defaults"
+msgstr "Predeterminados de idioma"
+
+msgid "Locale Defaults, 24-hour Time"
+msgstr "Predeterminados de idioma, formato 24 horas"
+
+msgid "Localization"
+msgstr "Localización"
+
+msgid "Lock"
+msgstr "Bloquear"
+
+msgid "Lock Semantics"
+msgstr "Semántica de bloqueo"
+
+msgid "Lock on activity"
+msgstr "Bloquear al haber actividad"
+
+msgid "Lock on view"
+msgstr "Bloquear al ver"
+
+msgid "Locked"
+msgstr "Bloqueado"
+
+msgid "Locked staff won't be able to login to Staff Control Panel."
+msgstr "El personal bloqueado no podrá ingresar al panel de staff."
+
+msgid "Log Date"
+msgstr "Fecha del registro"
+
+msgid "Log In"
+msgstr "Ingresar"
+
+msgid "Log Level"
+msgstr "Nivel de registro"
+
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+msgid "Log Title"
+msgstr "Título del registro"
+
+msgid "Log Type"
+msgstr "Tipo de registro"
+
+msgid "Login Backdrop"
+msgstr "Fondo de inicio de sesión"
+
+msgid "Login With"
+msgstr "Ingresar con"
+
+msgid "Login required"
+msgstr "Se requiere iniciar sesión"
+
+msgid "Login via email"
+msgstr "Ingresar vía correo"
+
+msgid "Logos"
+msgstr "Logos"
+
+msgid "Longest Thread"
+msgstr "Hilo más largo"
+
+msgid "Looking for your other tickets?"
+msgstr "¿Buscás tus otros tickets?"
+
+msgid "Mail Folder"
+msgstr "Carpeta de correo"
+
+msgid "Mailbox Setting"
+msgstr "Configuración del buzón"
+
+msgid "Make Internal"
+msgstr "Hacer interno"
+
+msgid "Make Public"
+msgstr "Hacer público"
+
+msgid "Make the title short and clear."
+msgstr "Hacé que el título sea corto y claro."
+
+msgid "Making fields <em>visible</em> allows agents and endusers to view and create information in this field."
+msgstr "Hacer los campos <em>visibles</em> permite que agentes y usuarios finales vean y creen información en ese campo."
+
+msgid "Manage"
+msgstr "Gestionar"
+
+msgid "Manage 2FA Options"
+msgstr "Gestionar opciones de 2FA"
+
+msgid "Manage Access"
+msgstr "Gestionar acceso"
+
+msgid "Manage Account"
+msgstr "Gestionar cuenta"
+
+msgid "Manage Account Access"
+msgstr "Gestionar acceso de cuenta"
+
+msgid "Manage Agent"
+msgstr "Gestionar agente"
+
+msgid "Manage Collaborators"
+msgstr "Gestionar colaboradores"
+
+msgid "Manage Content"
+msgstr "Gestionar contenido"
+
+msgid "Manage Custom Queue"
+msgstr "Gestionar cola personalizada"
+
+msgid "Manage Export fields this queue"
+msgstr "Gestionar campos de exportación de esta cola"
+
+msgid "Manage Forms"
+msgstr "Gestionar formularios"
+
+msgid "Manage Organization"
+msgstr "Gestionar organización"
+
+msgid "Manage Queue Column"
+msgstr "Gestionar columna de la cola"
+
+msgid "Manage Queue Sorting"
+msgstr "Gestionar orden de la cola"
+
+msgid "Manage Referrals"
+msgstr "Gestionar referencias"
+
+msgid "Manage Sequences"
+msgstr "Gestionar secuencias"
+
+msgid "Manage Sort Options"
+msgstr "Gestionar opciones de orden"
+
+msgid "Manage User"
+msgstr "Gestionar usuario"
+
+msgid "Manage Your Profile Information"
+msgstr "Gestionar información de tu perfil"
+
+msgid "Manage columns in this queue"
+msgstr "Gestionar columnas de esta cola"
+
+msgid "Manager"
+msgstr "Gestor"
+
+msgid "Mark as Answered"
+msgstr "Marcar como respondido"
+
+msgid "Mark as Overdue"
+msgstr "Marcar como vencido"
+
+msgid "Mark as Unanswered"
+msgstr "Marcar como sin responder"
+
+msgid "Marked overdue!"
+msgstr "¡Marcado como vencido!"
+
+msgid "Match All"
+msgstr "Coincidir con todos"
+
+msgid "Match Any"
+msgstr "Coincidir con alguno"
+
+msgid "Maximum <b>Open</b> Tickets"
+msgstr "Máximo de tickets <b>abiertos</b>"
+
+msgid "Maximum Page size"
+msgstr "Tamaño máximo de página"
+
+msgid "Members"
+msgstr "Miembros"
+
+msgid "Merge"
+msgstr "Combinar"
+
+msgid "Merge Tickets"
+msgstr "Combinar tickets"
+
+msgid "Merge Type: "
+msgstr "Tipo de combinación: "
+
+msgid "Merged tickets cannot be added manually. They must be preselected."
+msgstr "Los tickets combinados no se pueden agregar manualmente. Deben preseleccionarse."
+
+msgid "Message content"
+msgstr "Contenido del mensaje"
+
+msgid "Mobile Number"
+msgstr "Número de celular"
+
+msgid "More"
+msgstr "Más"
+
+msgid "Most Recently Closed"
+msgstr "Cerrados más recientemente"
+
+msgid "Most Recently Created"
+msgstr "Creados más recientemente"
+
+msgid "Most Recently Updated"
+msgstr "Actualizados más recientemente"
+
+msgid "Move Child Tasks to Parent"
+msgstr "Mover tareas hijas al padre"
+
+msgid "Move to folder"
+msgstr "Mover a carpeta"
+
+msgid "Multifactor Authentication"
+msgstr "Autenticación multifactor"
+
+msgid "My Account Profile"
+msgstr "Perfil de mi cuenta"
+
+msgid "My Location"
+msgstr "Mi ubicación"
+
+msgid "My Name"
+msgstr "Mi nombre"
+
+msgid "My Searches"
+msgstr "Mis búsquedas"
+
+msgid "My Signature"
+msgstr "Mi firma"
+
+msgid "My Tasks"
+msgstr "Mis tareas"
+
+msgid "MySQL Version"
+msgstr "Versión de MySQL"
+
+msgid "NO FAQs found"
+msgstr "No se encontraron preguntas frecuentes"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Name Formatting"
+msgstr "Formato del nombre"
+
+msgid "Name and Email"
+msgstr "Nombre y correo"
+
+msgid "Name required"
+msgstr "Se requiere el nombre"
+
+msgid "Never Purge Logs"
+msgstr "Nunca purgar registros"
+
+msgid "New Activity Alert"
+msgstr "Alerta de actividad nueva"
+
+msgid "New Internal Activity Alert"
+msgstr "Alerta de actividad interna nueva"
+
+msgid "New Message"
+msgstr "Mensaje nuevo"
+
+msgid "New Message Alert"
+msgstr "Alerta de mensaje nuevo"
+
+msgid "New Password"
+msgstr "Nueva contraseña"
+
+msgid "New Sequence"
+msgstr "Nueva secuencia"
+
+msgid "New Task"
+msgstr "Tarea nueva"
+
+msgid "New Task Alert"
+msgstr "Alerta de tarea nueva"
+
+msgid "New Ticket"
+msgstr "Ticket nuevo"
+
+msgid "New Ticket Alert"
+msgstr "Alerta de ticket nuevo"
+
+msgid "New Ticket Settings"
+msgstr "Configuración de tickets nuevos"
+
+msgid "New Ticket by Agent"
+msgstr "Ticket nuevo por agente"
+
+msgid "New entries cannot be created unless all <em>required</em> fields have valid data."
+msgstr "No se pueden crear nuevas entradas a menos que todos los campos <em>requeridos</em> tengan datos válidos."
+
+msgid "New ticket options"
+msgstr "Opciones de tickets nuevos"
+
+msgid "New tickets from the email address will be auto-rejected."
+msgstr "Los tickets nuevos de esa dirección de correo se rechazarán automáticamente."
+
+msgid "New tickets from the email address will be automatically rejected."
+msgstr "Los tickets nuevos de esa dirección de correo se rechazarán automáticamente."
+
+msgid "Next"
+msgstr "Siguiente"
+
+msgid "No"
+msgstr "No"
+
+msgid "No API keys found"
+msgstr "No se encontraron claves API"
+
+msgid "No FAQ categories found!"
+msgstr "¡No se encontraron categorías de preguntas frecuentes!"
+
+msgid "No SLA plans found"
+msgstr "No se encontraron planes SLA"
+
+msgid "No agents found!"
+msgstr "¡No se encontraron agentes!"
+
+msgid "No annotations for this field"
+msgstr "No hay anotaciones para este campo"
+
+msgid "No banned emails found!"
+msgstr "¡No se encontraron correos bloqueados!"
+
+msgid "No banned emails matching the query found!"
+msgstr "¡No se encontraron correos bloqueados que coincidan!"
+
+msgid "No canned responses"
+msgstr "No hay respuestas predefinidas"
+
+msgid "No custom lists defined yet &mdash; %s add one %s!"
+msgstr "Todavía no hay listas personalizadas &mdash; ¡%s agregá una %s!"
+
+msgid "No departments found!"
+msgstr "¡No se encontraron departamentos!"
+
+msgid "No emails found!"
+msgstr "¡No se encontraron correos!"
+
+msgid "No entries have been posted to this thread."
+msgstr "No se publicaron entradas en este hilo."
+
+msgid "No extra forms defined yet &mdash; %s add one! %s"
+msgstr "Todavía no hay formularios extra &mdash; ¡%s agregá uno! %s"
+
+msgid "No filters found"
+msgstr "No se encontraron filtros"
+
+msgid "No help topics found"
+msgstr "No se encontraron temas de ayuda"
+
+msgid "No logs found"
+msgstr "No se encontraron registros"
+
+msgid "No one (disable Alerts and Notices)"
+msgstr "Nadie (desactivar alertas y avisos)"
+
+msgid "No organizations found!"
+msgstr "¡No se encontraron organizaciones!"
+
+msgid "No pages found!"
+msgstr "¡No se encontraron páginas!"
+
+msgid "No plugins installed yet &mdash; %s add one %s!"
+msgstr "Todavía no hay plugins instalados &mdash; ¡%s agregá uno %s!"
+
+msgid "No premade responses found!"
+msgstr "¡No se encontraron respuestas predefinidas!"
+
+msgid "No roles defined yet &mdash; %s add one %s!"
+msgstr "Todavía no hay roles definidos &mdash; ¡%s agregá uno %s!"
+
+msgid "No schedules defined yet &mdash; %s add one %s!"
+msgstr "Todavía no hay horarios definidos &mdash; ¡%s agregá uno %s!"
+
+msgid "No teams found!"
+msgstr "¡No se encontraron equipos!"
+
+msgid "No templates found!"
+msgstr "¡No se encontraron plantillas!"
+
+msgid "No users found!"
+msgstr "¡No se encontraron usuarios!"
+
+msgid "No, Cancel"
+msgstr "No, cancelar"
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "None (Disable Logger)"
+msgstr "Ninguno (desactivar registro)"
+
+msgid "None: Use PHP mail function"
+msgstr "Ninguno: usar función de correo de PHP"
+
+msgid "Not yet registered?"
+msgstr "¿Todavía no te registraste?"
+
+msgid "Note details"
+msgstr "Detalles de la nota"
+
+msgid "Note that some of the global settings can be overridden at department/email level."
+msgstr "Tené en cuenta que algunas configuraciones globales se pueden anular a nivel de departamento/correo."
+
+msgid "Note title - summary of the note (optional)"
+msgstr "Título de la nota - resumen de la nota (opcional)"
+
+msgid "Notes"
+msgstr "Notas"
+
+msgid "Notes (%d)"
+msgstr "Notas (%d)"
+
+msgid "Notes about the canned response."
+msgstr "Notas sobre la respuesta predefinida."
+
+msgid "Number"
+msgstr "Número"
+
+msgid "OAuth2 Authorization"
+msgstr "Autorización OAuth2"
+
+msgid "OAuth2 Instance is Disabled"
+msgstr "La instancia OAuth2 está desactivada"
+
+msgid "OK"
+msgstr "Aceptar"
+
+msgid "Offline"
+msgstr "Fuera de línea"
+
+msgid "Offline Page"
+msgstr "Página fuera de línea"
+
+msgid "Online"
+msgstr "En línea"
+
+msgid "Oops"
+msgstr "Ups"
+
+msgid "Open"
+msgstr "Abierto"
+
+msgid "Open Tasks"
+msgstr "Tareas abiertas"
+
+msgid "Open Tickets"
+msgstr "Tickets abiertos"
+
+msgid "Open a New Ticket"
+msgstr "Abrir un nuevo ticket"
+
+msgid "Open image attachments in new tab or directly download. (CTRL + Right Click)"
+msgstr "Abrí los adjuntos de imagen en una pestaña nueva o descargalos directo. (CTRL + clic derecho)"
+
+msgid "Optional internal note (recommended on assignment)"
+msgstr "Nota interna opcional (recomendada al asignar)"
+
+msgid "Optional reason for status change (internal note)"
+msgstr "Motivo opcional del cambio de estado (nota interna)"
+
+msgid "Optional reason for the deletion"
+msgstr "Motivo opcional de la eliminación"
+
+msgid "Optional response to the above issue."
+msgstr "Respuesta opcional al problema anterior."
+
+msgid "Optional signature used on outgoing emails."
+msgstr "Firma opcional usada en correos salientes."
+
+msgid "Optionally, this field can prevent closing a thread until it has valid data."
+msgstr "Opcionalmente, este campo puede impedir cerrar un hilo hasta tener datos válidos."
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "Order"
+msgstr "Orden"
+
+msgid "Organization"
+msgstr "Organización"
+
+msgid "Organization Account Manager"
+msgstr "Gestor de cuenta de la organización"
+
+msgid "Organization Lookup"
+msgstr "Búsqueda de organización"
+
+msgid "Organization Members"
+msgstr "Miembros de la organización"
+
+msgid "Organizations"
+msgstr "Organizaciones"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "Original Message"
+msgstr "Mensaje original"
+
+msgid "Original Thread Entry"
+msgstr "Entrada original del hilo"
+
+msgid "Other"
+msgstr "Otro"
+
+msgid "Other Languages"
+msgstr "Otros idiomas"
+
+msgid "Other Resources"
+msgstr "Otros recursos"
+
+msgid "Outgoing"
+msgstr "Saliente"
+
+msgid "Outgoing Email"
+msgstr "Correo saliente"
+
+msgid "Outgoing Email Settings"
+msgstr "Configuración de correo saliente"
+
+msgid "Overdue"
+msgstr "Vencido"
+
+msgid "Overdue Task Alert"
+msgstr "Alerta de tarea vencida"
+
+msgid "Overdue Tasks"
+msgstr "Tareas vencidas"
+
+msgid "Overdue Ticket Alert"
+msgstr "Alerta de ticket vencido"
+
+msgid "Overlimit Notice"
+msgstr "Aviso de límite excedido"
+
+msgid "PARENT"
+msgstr "PADRE"
+
+msgid "PHP Extensions"
+msgstr "Extensiones de PHP"
+
+msgid "PHP Settings"
+msgstr "Configuración de PHP"
+
+msgid "PHP Version"
+msgstr "Versión de PHP"
+
+msgid "Padding Character"
+msgstr "Carácter de relleno"
+
+msgid "Page"
+msgstr "Página"
+
+msgid "Page Content"
+msgstr "Contenido de la página"
+
+msgid "Page information"
+msgstr "Información de la página"
+
+msgid "Paper Size"
+msgstr "Tamaño de papel"
+
+msgid "Paper size used when printing tickets to PDF"
+msgstr "Tamaño de papel usado al imprimir tickets a PDF"
+
+msgid "Parent"
+msgstr "Padre"
+
+msgid "Parent Category"
+msgstr "Categoría padre"
+
+msgid "Parent Department"
+msgstr "Departamento padre"
+
+msgid "Parent Queue"
+msgstr "Cola padre"
+
+msgid "Parent Status"
+msgstr "Estado del padre"
+
+msgid "Parent Topic"
+msgstr "Tema padre"
+
+msgid "Participants"
+msgstr "Participantes"
+
+msgid "Participants: Send new activity notice"
+msgstr "Participantes: enviar aviso de actividad nueva"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Password Change"
+msgstr "Cambio de contraseña"
+
+msgid "Password Policy"
+msgstr "Política de contraseñas"
+
+msgid "Password Reset Email"
+msgstr "Correo de restablecimiento de contraseña"
+
+msgid "Password Reset Required"
+msgstr "Se requiere restablecer contraseña"
+
+msgid "Permissions"
+msgstr "Permisos"
+
+msgid "Phone"
+msgstr "Teléfono"
+
+msgid "Phone Number"
+msgstr "Número de teléfono"
+
+msgid "Please Confirm"
+msgstr "Por favor confirmá"
+
+msgid "Please Confirm Email Address Page"
+msgstr "Página de confirmación de dirección de correo"
+
+msgid "Please Wait!"
+msgstr "¡Esperá un momento!"
+
+msgid "Please check assignee(s) to release assignment."
+msgstr "Marcá el/los responsable(s) para liberar la asignación."
+
+msgid "Please confirm to continue."
+msgstr "Confirmá para continuar."
+
+msgid "Please fill in the form below to open a new ticket."
+msgstr "Completá el formulario de abajo para abrir un nuevo ticket."
+
+msgid "Please note that updates will be reflected system-wide."
+msgstr "Tené en cuenta que las actualizaciones se aplicarán a todo el sistema."
+
+msgid "Please provide your email address and a ticket number."
+msgstr "Ingresá tu dirección de correo y un número de ticket."
+
+msgid "Please re-enter the text again"
+msgstr "Volvé a ingresar el texto"
+
+msgid "Please select at least one entry."
+msgstr "Seleccioná al menos una entrada."
+
+msgid "Please wait while we generate the export"
+msgstr "Esperá mientras generamos la exportación"
+
+msgid "Please wait... it will take a second!"
+msgstr "Esperá un momento, ¡solo toma un segundo!"
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin Information"
+msgstr "Información del plugin"
+
+msgid "Plugin Name"
+msgstr "Nombre del plugin"
+
+msgid "Plugin Settings"
+msgstr "Configuración del plugin"
+
+msgid "Plugin description and instructions"
+msgstr "Descripción e instrucciones del plugin"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Plural Name"
+msgstr "Nombre en plural"
+
+msgid "Port Number"
+msgstr "Número de puerto"
+
+msgid "Post Internal Note"
+msgstr "Publicar nota interna"
+
+msgid "Post Note"
+msgstr "Publicar nota"
+
+msgid "Post Reply"
+msgstr "Publicar respuesta"
+
+msgid "Post Update"
+msgstr "Publicar actualización"
+
+msgid "Post a Reply"
+msgstr "Publicar una respuesta"
+
+msgid "Preferences"
+msgstr "Preferencias"
+
+msgid "Preferred Language"
+msgstr "Idioma preferido"
+
+msgid "Preferred Locale"
+msgstr "Configuración regional preferida"
+
+msgid "Premade Replies"
+msgstr "Respuestas predefinidas"
+
+msgid "Preview"
+msgstr "Vista previa"
+
+msgid "Preview Task"
+msgstr "Vista previa de la tarea"
+
+msgid "Preview Ticket"
+msgstr "Vista previa del ticket"
+
+msgid "Primary Contacts"
+msgstr "Contactos principales"
+
+msgid "Primary Department"
+msgstr "Departamento principal"
+
+msgid "Primary Language"
+msgstr "Idioma principal"
+
+msgid "Primary Members"
+msgstr "Miembros principales"
+
+msgid "Primary contacts see all tickets"
+msgstr "Los contactos principales ven todos los tickets"
+
+msgid "Print"
+msgstr "Imprimir"
+
+msgid "Print <b>Internal</b> Notes/Comments"
+msgstr "Imprimir notas/comentarios <b>internos</b>"
+
+msgid "Print Events"
+msgstr "Imprimir eventos"
+
+msgid "Print Notes"
+msgstr "Imprimir notas"
+
+msgid "Print Thread Events"
+msgstr "Imprimir eventos del hilo"
+
+msgid "Priority"
+msgstr "Prioridad"
+
+msgid "Private"
+msgstr "Privado"
+
+msgid "Private — Only agents can register users"
+msgstr "Privado — Solo los agentes pueden registrar usuarios"
+
+msgid "Private/Internal"
+msgstr "Privado/Interno"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "Profile preferences and settings"
+msgstr "Preferencias y configuración del perfil"
+
+msgid "Properties"
+msgstr "Propiedades"
+
+msgid "Protocol"
+msgstr "Protocolo"
+
+msgid "Public"
+msgstr "Público"
+
+msgid "Public URL"
+msgstr "URL pública"
+
+msgid "Public — Anyone can register"
+msgstr "Público — Cualquiera puede registrarse"
+
+msgid "Published"
+msgstr "Publicado"
+
+msgid "Purge Logs"
+msgstr "Purgar registros"
+
+msgid "Query returned 0 results."
+msgstr "La búsqueda no devolvió resultados."
+
+msgid "Question"
+msgstr "Pregunta"
+
+msgid "Queue"
+msgstr "Cola"
+
+msgid "Queue Name"
+msgstr "Nombre de la cola"
+
+msgid "Queue Search Criteria"
+msgstr "Criterio de búsqueda de la cola"
+
+msgid "Queues"
+msgstr "Colas"
+
+msgid "Quick Filter"
+msgstr "Filtro rápido"
+
+msgid "Random"
+msgstr "Aleatorio"
+
+msgid "Range: "
+msgstr "Rango: "
+
+msgid "Raw Email Headers"
+msgstr "Encabezados de correo sin procesar"
+
+msgid "Reason for editing the task (optional)"
+msgstr "Motivo de la edición de la tarea (opcional)"
+
+msgid "Reason for editing the ticket (optional)"
+msgstr "Motivo de la edición del ticket (opcional)"
+
+msgid "Reassign"
+msgstr "Reasignar"
+
+msgid "Recent Searches"
+msgstr "Búsquedas recientes"
+
+msgid "Recipients"
+msgstr "Destinatarios"
+
+msgid "Redirect URL used after replying to a ticket."
+msgstr "URL de redirección usada tras responder un ticket."
+
+msgid "Refer"
+msgstr "Referir"
+
+msgid "Referrals"
+msgstr "Referencias"
+
+msgid "Refresh"
+msgstr "Actualizar"
+
+msgid "Refresh Token"
+msgstr "Token de actualización"
+
+msgid "Register"
+msgstr "Registrarse"
+
+msgid "Register: %s"
+msgstr "Registrar: %s"
+
+msgid "Registration Method"
+msgstr "Método de registro"
+
+msgid "Registration Required"
+msgstr "Se requiere registro"
+
+msgid "Related Tickets"
+msgstr "Tickets relacionados"
+
+msgid "Relative Time"
+msgstr "Tiempo relativo"
+
+msgid "Release"
+msgstr "Liberar"
+
+msgid "Release (unassign) Ticket"
+msgstr "Liberar (desasignar) ticket"
+
+msgid "Release Confirmation"
+msgstr "Confirmación de liberación"
+
+msgid "Relevance"
+msgstr "Relevancia"
+
+msgid "Reload"
+msgstr "Recargar"
+
+msgid "Remote Mailbox"
+msgstr "Buzón remoto"
+
+msgid "Remove"
+msgstr "Quitar"
+
+msgid "Remove Existing Data?"
+msgstr "¿Quitar datos existentes?"
+
+msgid "Remove all data entered for <u> %s </u>?"
+msgstr "¿Quitar todos los datos ingresados para <u> %s </u>?"
+
+msgid "Reopen"
+msgstr "Reabrir"
+
+msgid "Reopen Auto Assignment"
+msgstr "Reabrir asignación automática"
+
+msgid "Repeats"
+msgstr "Repite"
+
+msgid "Reply"
+msgstr "Responder"
+
+msgid "Reply Redirect"
+msgstr "Redirección de respuesta"
+
+msgid "Reply Separator Tag"
+msgstr "Etiqueta separadora de respuesta"
+
+msgid "Reply To"
+msgstr "Responder a"
+
+msgid "Report timeframe"
+msgstr "Rango de tiempo del informe"
+
+msgid "Require Client Login"
+msgstr "Requerir inicio de sesión del cliente"
+
+msgid "Require Help Topic to Close"
+msgstr "Requerir tema de ayuda para cerrar"
+
+msgid "Require agents to turn on 2FA"
+msgstr "Requerir que los agentes activen 2FA"
+
+msgid "Require email verification on \"Check Ticket Status\" page"
+msgstr "Requerir verificación de correo en la página \"Consultar estado del ticket\""
+
+msgid "Require entry to close a thread"
+msgstr "Requerir entrada para cerrar un hilo"
+
+msgid "Require login to view any attachments"
+msgstr "Requerir inicio de sesión para ver adjuntos"
+
+msgid "Require password change on login"
+msgstr "Requerir cambio de contraseña al ingresar"
+
+msgid "Require registration and login to create tickets"
+msgstr "Requerir registro e inicio de sesión para crear tickets"
+
+msgid "Required"
+msgstr "Requerido"
+
+msgid "Required for email fetching"
+msgstr "Requerido para obtener correo"
+
+msgid "Required to close a thread"
+msgstr "Requerido para cerrar un hilo"
+
+msgid "Required to close ticket"
+msgstr "Requerido para cerrar el ticket"
+
+msgid "Resend"
+msgstr "Reenviar"
+
+msgid "Resend Entry"
+msgstr "Reenviar entrada"
+
+msgid "Resent"
+msgstr "Reenviado"
+
+msgid "Reset"
+msgstr "Restablecer"
+
+msgid "Reset 2FA"
+msgstr "Restablecer 2FA"
+
+msgid "Reset Access"
+msgstr "Restablecer acceso"
+
+msgid "Reset Changes"
+msgstr "Restablecer cambios"
+
+msgid "Reset Permissions"
+msgstr "Restablecer permisos"
+
+msgid "Reset Token Expiration"
+msgstr "Restablecer vencimiento del token"
+
+msgid "Resource Owner Email"
+msgstr "Correo del propietario del recurso"
+
+msgid "Resource Owner Id"
+msgstr "ID del propietario del recurso"
+
+msgid "Response"
+msgstr "Respuesta"
+
+msgid "Roles"
+msgstr "Roles"
+
+msgid "Roles are used to define agents' permissions"
+msgstr "Los roles se usan para definir los permisos de los agentes"
+
+msgid "Rules"
+msgstr "Reglas"
+
+msgid "Rules Matching Criteria"
+msgstr "Criterio de coincidencia de reglas"
+
+msgid "Rules are applied based on the criteria."
+msgstr "Las reglas se aplican según el criterio."
+
+msgid "SLA"
+msgstr "SLA"
+
+msgid "SLA Plan"
+msgstr "Plan SLA"
+
+msgid "SLA can be overridden on ticket transfer or help topic change"
+msgstr "El SLA se puede anular al transferir el ticket o cambiar el tema de ayuda"
+
+msgid "SLA's Default"
+msgstr "Predeterminado del SLA"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "SMTP Settings"
+msgstr "Configuración SMTP"
+
+msgid "SQL errors"
+msgstr "Errores SQL"
+
+msgid "SYSTEM"
+msgstr "SISTEMA"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+msgid "Save Search"
+msgstr "Guardar búsqueda"
+
+msgid "Save and Resend"
+msgstr "Guardar y reenviar"
+
+msgid "Schedule"
+msgstr "Horario"
+
+msgid "Schedule Details"
+msgstr "Detalles del horario"
+
+msgid "Schedules"
+msgstr "Horarios"
+
+msgid "Schema"
+msgstr "Esquema"
+
+msgid "Schema Signature"
+msgstr "Firma del esquema"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Search Results"
+msgstr "Resultados de búsqueda"
+
+msgid "Search Title"
+msgstr "Título de búsqueda"
+
+msgid "Search by email, phone or name"
+msgstr "Buscar por correo, teléfono o nombre"
+
+msgid "Search existing organizations or add a new one."
+msgstr "Buscá organizaciones existentes o agregá una nueva."
+
+msgid "Search existing users or add a new user."
+msgstr "Buscá usuarios existentes o agregá uno nuevo."
+
+msgid "Search existing users."
+msgstr "Buscar usuarios existentes."
+
+msgid "Search items"
+msgstr "Buscar ítems"
+
+msgid "Search our knowledge base"
+msgstr "Buscá en nuestra base de conocimientos"
+
+msgid "Search tickets"
+msgstr "Buscar tickets"
+
+msgid "Secondary Languages"
+msgstr "Idiomas secundarios"
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Select Action"
+msgstr "Seleccionar acción"
+
+msgid "Select Active Collaborators"
+msgstr "Seleccionar colaboradores activos"
+
+msgid "Select Agent"
+msgstr "Seleccionar agente"
+
+msgid "Select Contacts"
+msgstr "Seleccionar contactos"
+
+msgid "Select Default Department"
+msgstr "Seleccionar departamento predeterminado"
+
+msgid "Select Default Email Template Set"
+msgstr "Seleccionar conjunto de plantillas de correo predeterminado"
+
+msgid "Select Department"
+msgstr "Seleccionar departamento"
+
+msgid "Select FAQ Category"
+msgstr "Seleccionar categoría de preguntas frecuentes"
+
+msgid "Select Help Topic"
+msgstr "Seleccionar tema de ayuda"
+
+msgid "Select Landing Page"
+msgstr "Seleccionar página de inicio"
+
+msgid "Select Offline Page"
+msgstr "Seleccionar página fuera de línea"
+
+msgid "Select One"
+msgstr "Seleccionar uno"
+
+msgid "Select Page Type"
+msgstr "Seleccionar tipo de página"
+
+msgid "Select Print Paper Size"
+msgstr "Seleccionar tamaño de papel de impresión"
+
+msgid "Select Role"
+msgstr "Seleccionar rol"
+
+msgid "Select Source"
+msgstr "Seleccionar origen"
+
+msgid "Select Storage Backend"
+msgstr "Seleccionar backend de almacenamiento"
+
+msgid "Select Team"
+msgstr "Seleccionar equipo"
+
+msgid "Select Thank-You Page"
+msgstr "Seleccionar página de agradecimiento"
+
+msgid "Select Ticket"
+msgstr "Seleccionar ticket"
+
+msgid "Select Type"
+msgstr "Seleccionar tipo"
+
+msgid "Select User"
+msgstr "Seleccionar usuario"
+
+msgid "Select a Channel"
+msgstr "Seleccionar un canal"
+
+msgid "Select a Help Topic"
+msgstr "Seleccionar un tema de ayuda"
+
+msgid "Select a Language"
+msgstr "Seleccionar un idioma"
+
+msgid "Select a canned response"
+msgstr "Seleccionar una respuesta predefinida"
+
+msgid "Select an Action"
+msgstr "Seleccionar una acción"
+
+msgid "Select an Agent OR a Team"
+msgstr "Seleccionar un agente O un equipo"
+
+msgid "Select or Add New Collaborators"
+msgstr "Seleccionar o agregar nuevos colaboradores"
+
+msgid "Select protocol"
+msgstr "Seleccionar protocolo"
+
+msgid "Select the departments the agent is allowed to access and the corresponding effective role."
+msgstr "Seleccioná los departamentos a los que puede acceder el agente y su rol efectivo correspondiente."
+
+msgid "Select the sorting options available in the sorting drop-down when viewing the queue. New items can be added via the drop-down below."
+msgstr "Seleccioná las opciones de orden disponibles en el desplegable al ver la cola. Podés agregar nuevas opciones abajo."
+
+msgid "Select the starting time and period for the system activity graph"
+msgstr "Seleccioná la hora de inicio y el período para el gráfico de actividad del sistema"
+
+msgid "Send Activation Email"
+msgstr "Enviar correo de activación"
+
+msgid "Send Email"
+msgstr "Enviar correo"
+
+msgid "Send Password Reset Email"
+msgstr "Enviar correo de restablecimiento de contraseña"
+
+msgid "Send account activation email to %s."
+msgstr "Enviar correo de activación de cuenta a %s."
+
+msgid "Separate Threads"
+msgstr "Hilos separados"
+
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgid "Sequences are used to generate sequential numbers. Various sequences can be\nused to generate sequences for different purposes."
+msgstr "Las secuencias se usan para generar números secuenciales. Se pueden usar varias secuencias\npara distintos propósitos."
+
+msgid "Server Information"
+msgstr "Información del servidor"
+
+msgid "Service Level Agreements"
+msgstr "Acuerdos de nivel de servicio"
+
+msgid "Services"
+msgstr "Servicios"
+
+msgid "Set Password"
+msgstr "Establecer contraseña"
+
+msgid "Set status for all children."
+msgstr "Establecer estado para todos los hijos."
+
+msgid "Set the editor spacing to Single or Double when pressing Enter."
+msgstr "Establecé el espaciado del editor en Simple o Doble al presionar Enter."
+
+msgid "Setting default timezone is highly recommended"
+msgstr "Se recomienda mucho establecer una zona horaria predeterminada"
+
+msgid "Settings"
+msgstr "Configuración"
+
+msgid "Setup"
+msgstr "Configuración"
+
+msgid "Short descriptive name."
+msgstr "Nombre descriptivo corto."
+
+msgid "Show Avatars"
+msgstr "Mostrar avatares"
+
+msgid "Show Avatars on thread view."
+msgstr "Mostrar avatares en la vista del hilo."
+
+msgid "Sign In"
+msgstr "Ingresar"
+
+msgid "Sign Out"
+msgstr "Cerrar sesión"
+
+msgid "Sign-In Page"
+msgstr "Página de inicio de sesión"
+
+msgid "Sign-in Login Banner"
+msgstr "Banner de inicio de sesión"
+
+msgid "Signature"
+msgstr "Firma"
+
+msgid "Signature is made available as a choice, on ticket reply."
+msgstr "La firma queda disponible como opción al responder un ticket."
+
+msgid "Single"
+msgstr "Simple"
+
+msgid "Site Pages"
+msgstr "Páginas del sitio"
+
+msgid "Size and maximum uploads setting mainly apply to web tickets."
+msgstr "El tamaño y máximo de subidas aplica principalmente a tickets web."
+
+msgid "Small"
+msgstr "Pequeño"
+
+msgid "Some variables may not be a valid for this context. Please check for spelling errors and correct usage for %s."
+msgstr "Algunas variables pueden no ser válidas en este contexto. Revisá errores de tipeo y el uso correcto de %s."
+
+msgid "Sort"
+msgstr "Ordenar"
+
+msgid "Sort By"
+msgstr "Ordenar por"
+
+msgid "Sort Order"
+msgstr "Orden"
+
+msgid "Sort the forms on this ticket by click and dragging on them. Use the box below the forms list to add new forms to the ticket."
+msgstr "Ordená los formularios de este ticket arrastrándolos. Usá el cuadro debajo de la lista para agregar nuevos formularios."
+
+msgid "Sortable"
+msgstr "Ordenable"
+
+msgid "Sorting Mode"
+msgstr "Modo de orden"
+
+msgid "Source"
+msgstr "Origen"
+
+msgid "Space Used"
+msgstr "Espacio usado"
+
+msgid "Space for Attachments"
+msgstr "Espacio para adjuntos"
+
+msgid "Staff"
+msgstr "Staff"
+
+msgid "Staff Control Panel"
+msgstr "Panel de control de staff"
+
+msgid "Start writing your response here. Use canned responses from the drop-down above"
+msgstr "Empezá a escribir tu respuesta acá. Usá las respuestas predefinidas del desplegable de arriba"
+
+msgid "Start writing your update here."
+msgstr "Empezá a escribir tu actualización acá."
+
+msgid "Statistics"
+msgstr "Estadísticas"
+
+msgid "Statistics of tickets organized by department, help topic, and agent."
+msgstr "Estadísticas de tickets organizadas por departamento, tema de ayuda y agente."
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Status and Settings"
+msgstr "Estado y configuración"
+
+msgid "Stock Templates"
+msgstr "Plantillas predeterminadas"
+
+msgid "Store Attachments"
+msgstr "Almacenar adjuntos"
+
+msgid "Strict Matching"
+msgstr "Coincidencia estricta"
+
+msgid "Strip Quoted Reply"
+msgstr "Quitar cita de la respuesta"
+
+msgid "Subject"
+msgstr "Asunto"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Submitter: Send receipt confirmation"
+msgstr "Remitente: enviar confirmación de recepción"
+
+msgid "Summary of the category."
+msgstr "Resumen de la categoría."
+
+msgid "Supplemental Filters"
+msgstr "Filtros suplementarios"
+
+msgid "Support Center"
+msgstr "Centro de soporte"
+
+msgid "Support Ticket System"
+msgstr "Sistema de tickets de soporte"
+
+msgid "Supported Variables"
+msgstr "Variables soportadas"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "System Alerts"
+msgstr "Alertas del sistema"
+
+msgid "System Default"
+msgstr "Predeterminado del sistema"
+
+msgid "System Default Backdrop"
+msgstr "Fondo predeterminado del sistema"
+
+msgid "System Default Logo"
+msgstr "Logo predeterminado del sistema"
+
+msgid "System Emails"
+msgstr "Correos del sistema"
+
+msgid "System Errors"
+msgstr "Errores del sistema"
+
+msgid "System Languages"
+msgstr "Idiomas del sistema"
+
+msgid "System Logs"
+msgstr "Registros del sistema"
+
+msgid "System Settings and Preferences"
+msgstr "Configuración y preferencias del sistema"
+
+msgid "System-wide default ticket settings and options."
+msgstr "Configuración y opciones predeterminadas de tickets para todo el sistema."
+
+msgid "Target"
+msgstr "Destino"
+
+msgid "Target Channel"
+msgstr "Canal de destino"
+
+msgid "Task #%s"
+msgstr "Tarea #%s"
+
+msgid "Task Assignment Alert"
+msgstr "Alerta de asignación de tarea"
+
+msgid "Task Attachment Settings"
+msgstr "Configuración de adjuntos de tareas"
+
+msgid "Task Information"
+msgstr "Información de la tarea"
+
+msgid "Task Number"
+msgstr "Número de tarea"
+
+msgid "Task Settings and Options"
+msgstr "Configuración y opciones de tareas"
+
+msgid "Task Summary"
+msgstr "Resumen de la tarea"
+
+msgid "Task Transfer Alert"
+msgstr "Alerta de transferencia de tarea"
+
+msgid "Task Visibility & Assignment"
+msgstr "Visibilidad y asignación de tareas"
+
+msgid "Task doesn't have any collaborators."
+msgstr "La tarea no tiene colaboradores."
+
+msgid "Tasks"
+msgstr "Tareas"
+
+msgid "Team"
+msgstr "Equipo"
+
+msgid "Team Information"
+msgstr "Información del equipo"
+
+msgid "Team Lead"
+msgstr "Líder de equipo"
+
+msgid "Team Members"
+msgstr "Miembros del equipo"
+
+msgid "Team Name"
+msgstr "Nombre del equipo"
+
+msgid "Teams"
+msgstr "Equipos"
+
+msgid "Teams (%d)"
+msgstr "Equipos (%d)"
+
+msgid "Template Set"
+msgstr "Conjunto de plantillas"
+
+msgid "Template Set To Clone"
+msgstr "Conjunto de plantillas a clonar"
+
+msgid "Template information"
+msgstr "Información de la plantilla"
+
+msgid "Templates"
+msgstr "Plantillas"
+
+msgid "Temporary Password"
+msgstr "Contraseña temporal"
+
+msgid "Term too short!"
+msgstr "¡Término demasiado corto!"
+
+msgid "Thank-You Page"
+msgstr "Página de agradecimiento"
+
+msgid "Thanks for registering for an account."
+msgstr "Gracias por registrar una cuenta."
+
+msgid "The order of thread entries"
+msgstr "El orden de las entradas del hilo"
+
+msgid "The search did not match any FAQs."
+msgstr "La búsqueda no encontró preguntas frecuentes."
+
+msgid "Their Signature"
+msgstr "Su firma"
+
+msgid "There are no tasks matching your criteria."
+msgstr "No hay tareas que coincidan con tu criterio."
+
+msgid "These attachments are always available, regardless of the language in which the article is rendered"
+msgstr "Estos adjuntos están siempre disponibles, sin importar el idioma en que se muestre el artículo"
+
+msgid "These attachments are only available when article is rendered in one of the following languages."
+msgstr "Estos adjuntos solo están disponibles cuando el artículo se muestra en alguno de los siguientes idiomas."
+
+msgid "These conditions apply to an entire row in the queue."
+msgstr "Estas condiciones aplican a toda una fila de la cola."
+
+msgid "This Ticket is Merged into another Ticket. Please go to the %s%d%s to reply."
+msgstr "Este ticket está combinado con otro ticket. Andá a %s%d%s para responder."
+
+msgid "This Ticket is already in the list."
+msgstr "Este ticket ya está en la lista."
+
+msgid "This can be selected when replying to a thread"
+msgstr "Esto se puede seleccionar al responder un hilo"
+
+msgid "This category does not have any FAQs."
+msgstr "Esta categoría no tiene preguntas frecuentes."
+
+msgid "This content is translatable"
+msgstr "Este contenido es traducible"
+
+msgid "This field can be disabled which will remove it from the form for new entries, but will preserve the data on all current entries."
+msgstr "Este campo se puede desactivar, lo que lo quita del formulario para entradas nuevas, pero conserva los datos de las entradas actuales."
+
+msgid "This organization doesn't have any users yet"
+msgstr "Esta organización todavía no tiene usuarios"
+
+msgid "This osTicket version is no longer supported. Please consider upgrading"
+msgstr "Esta versión de osTicket ya no tiene soporte. Considerá actualizarla"
+
+msgid "This ticket"
+msgstr "Este ticket"
+
+msgid "This will sign you in to view your ticket."
+msgstr "Esto te va a hacer iniciar sesión para ver tu ticket."
+
+msgid "Thread (%d)"
+msgstr "Hilo (%d)"
+
+msgid "Thread + Internal Notes"
+msgstr "Hilo + Notas internas"
+
+msgid "Thread + Internal Notes + Attachments"
+msgstr "Hilo + Notas internas + Adjuntos"
+
+msgid "Thread + Internal Notes + Attachments + Tasks"
+msgstr "Hilo + Notas internas + Adjuntos + Tareas"
+
+msgid "Thread + Internal Notes + Events"
+msgstr "Hilo + Notas internas + Eventos"
+
+msgid "Thread Entries"
+msgstr "Entradas del hilo"
+
+msgid "Thread Preview"
+msgstr "Vista previa del hilo"
+
+msgid "Thread View Order"
+msgstr "Orden de vista del hilo"
+
+msgid "Thread doesn't have any collaborators."
+msgstr "El hilo no tiene colaboradores."
+
+msgid "Ticket"
+msgstr "Ticket"
+
+msgid "Ticket #"
+msgstr "Ticket #"
+
+msgid "Ticket #%s"
+msgstr "Ticket #%s"
+
+msgid "Ticket Activity"
+msgstr "Actividad del ticket"
+
+msgid "Ticket Assignment"
+msgstr "Asignación de ticket"
+
+msgid "Ticket Assignment Alert"
+msgstr "Alerta de asignación de ticket"
+
+msgid "Ticket Attachment Settings"
+msgstr "Configuración de adjuntos del ticket"
+
+msgid "Ticket Filters"
+msgstr "Filtros de tickets"
+
+msgid "Ticket ID"
+msgstr "ID del ticket"
+
+msgid "Ticket Information"
+msgstr "Información del ticket"
+
+msgid "Ticket Information and Options"
+msgstr "Información y opciones del ticket"
+
+msgid "Ticket Notice"
+msgstr "Aviso del ticket"
+
+msgid "Ticket Number"
+msgstr "Número de ticket"
+
+msgid "Ticket Number Format"
+msgstr "Formato de número de ticket"
+
+msgid "Ticket Overdue Alerts"
+msgstr "Alertas de tickets vencidos"
+
+msgid "Ticket Owner"
+msgstr "Dueño del ticket"
+
+msgid "Ticket Print Options"
+msgstr "Opciones de impresión de tickets"
+
+msgid "Ticket Queues"
+msgstr "Colas de tickets"
+
+msgid "Ticket Settings and Options"
+msgstr "Configuración y opciones de tickets"
+
+msgid "Ticket Sharing"
+msgstr "Compartir tickets"
+
+msgid "Ticket Source"
+msgstr "Origen del ticket"
+
+msgid "Ticket State"
+msgstr "Estado del ticket"
+
+msgid "Ticket Status"
+msgstr "Estado del ticket"
+
+msgid "Ticket Submitter"
+msgstr "Remitente del ticket"
+
+msgid "Ticket Summary"
+msgstr "Resumen del ticket"
+
+msgid "Ticket Thread"
+msgstr "Hilo del ticket"
+
+msgid "Ticket Thread (%d)"
+msgstr "Hilo del ticket (%d)"
+
+msgid "Ticket Transfer Alert"
+msgstr "Alerta de transferencia de ticket"
+
+msgid "Ticket doesn't have any children."
+msgstr "El ticket no tiene hijos."
+
+msgid "Ticket doesn't have any collaborators."
+msgstr "El ticket no tiene colaboradores."
+
+msgid "Ticket is assigned to %s"
+msgstr "El ticket está asignado a %s"
+
+msgid "Ticket is locked by %s"
+msgstr "El ticket está bloqueado por %s"
+
+msgid "Ticket variables are only supported in thank-you pages."
+msgstr "Las variables de ticket solo se soportan en páginas de agradecimiento."
+
+msgid "Ticket will be reopened on message post"
+msgstr "El ticket se reabrirá al publicar un mensaje"
+
+msgid "Tickets"
+msgstr "Tickets"
+
+msgid "Tickets <b>(%d)</b>"
+msgstr "Tickets <b>(%d)</b>"
+
+msgid "Tickets Export"
+msgstr "Exportación de tickets"
+
+msgid "Tickets are marked overdue on grace period violation."
+msgstr "Los tickets se marcan como vencidos al violar el período de gracia."
+
+msgid "Tickets page refresh rate in minutes."
+msgstr "Frecuencia de actualización de la página de tickets en minutos."
+
+msgid "Time Format"
+msgstr "Formato de hora"
+
+msgid "Time Zone"
+msgstr "Zona horaria"
+
+msgid "Time is based on your time\n                        zone"
+msgstr "La hora se basa en tu zona\n                        horaria"
+
+msgid "Time is based on your time zone"
+msgstr "La hora se basa en tu zona horaria"
+
+msgid "Timeline Diagnostics"
+msgstr "Diagnóstico de línea de tiempo"
+
+msgid "Timezone"
+msgstr "Zona horaria"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "To add a plugin into the system, download and place the plugin into the <code>include/plugins</code> folder. Once in the plugin is in the <code>plugins/</code> folder, it will be shown in the list below."
+msgstr "Para agregar un plugin al sistema, descargalo y colocalo en la carpeta <code>include/plugins</code>. Una vez ahí, aparecerá en la lista de abajo."
+
+msgid "To best assist you, we request that you be specific and detailed"
+msgstr "Para ayudarte mejor, te pedimos que seas específico y detallado"
+
+msgid "To better serve you, we encourage our clients to register for an account and verify the email address we have on record."
+msgstr "Para atenderte mejor, te recomendamos registrar una cuenta y verificar la dirección de correo que tenemos registrada."
+
+msgid "To edit or add new pages go to %s Manage &gt; Site Pages %s"
+msgstr "Para editar o agregar páginas nuevas andá a %s Gestionar &gt; Páginas del sitio %s"
+
+msgid "To import items with properties, use the Upload tab."
+msgstr "Para importar ítems con propiedades, usá la pestaña de subida."
+
+msgid "To import more other fields, use the Upload tab."
+msgstr "Para importar más campos, usá la pestaña de subida."
+
+msgid "Toggle"
+msgstr "Alternar"
+
+msgid "Token"
+msgstr "Token"
+
+msgid "Token Information"
+msgstr "Información del token"
+
+msgid "Token Scopes"
+msgstr "Alcances del token"
+
+msgid "Top-Level Category"
+msgstr "Categoría de nivel superior"
+
+msgid "Top-Level Department"
+msgstr "Departamento de nivel superior"
+
+msgid "Top-Level Queue"
+msgstr "Cola de nivel superior"
+
+msgid "Top-Level Ticket Counts"
+msgstr "Conteo de tickets de nivel superior"
+
+msgid "Top-Level Topic"
+msgstr "Tema de nivel superior"
+
+msgid "Topic"
+msgstr "Tema"
+
+msgid "Transfer"
+msgstr "Transferir"
+
+msgid "Transfer Tasks"
+msgstr "Transferir tareas"
+
+msgid "Transient"
+msgstr "Transitorio"
+
+msgid "Two Factor Authentication Email"
+msgstr "Correo de autenticación de dos factores"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Unassigned"
+msgstr "Sin asignar"
+
+msgid "Unban Email <%s>"
+msgstr "Desbloquear correo <%s>"
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgid "Unlock"
+msgstr "Desbloquear"
+
+msgid "Up to date"
+msgstr "Actualizado"
+
+msgid "Update"
+msgstr "Actualizar"
+
+msgid "Update API Key"
+msgstr "Actualizar clave API"
+
+msgid "Update Ban Rule"
+msgstr "Actualizar regla de bloqueo"
+
+msgid "Update Canned Response"
+msgstr "Actualizar respuesta predefinida"
+
+msgid "Update Category"
+msgstr "Actualizar categoría"
+
+msgid "Update Department"
+msgstr "Actualizar departamento"
+
+msgid "Update Email Address"
+msgstr "Actualizar dirección de correo"
+
+msgid "Update FAQ"
+msgstr "Actualizar pregunta frecuente"
+
+msgid "Update Filter"
+msgstr "Actualizar filtro"
+
+msgid "Update Help Topic"
+msgstr "Actualizar tema de ayuda"
+
+msgid "Update Instance"
+msgstr "Actualizar instancia"
+
+msgid "Update Organization"
+msgstr "Actualizar organización"
+
+msgid "Update Page"
+msgstr "Actualizar página"
+
+msgid "Update Role"
+msgstr "Actualizar rol"
+
+msgid "Update SLA Plan"
+msgstr "Actualizar plan SLA"
+
+msgid "Update Schedule"
+msgstr "Actualizar horario"
+
+msgid "Update Team"
+msgstr "Actualizar equipo"
+
+msgid "Update Template"
+msgstr "Actualizar plantilla"
+
+msgid "Update Ticket #%s"
+msgstr "Actualizar ticket #%s"
+
+msgid "Update User"
+msgstr "Actualizar usuario"
+
+msgid "Update custom list"
+msgstr "Actualizar lista personalizada"
+
+msgid "Update form section"
+msgstr "Actualizar sección del formulario"
+
+msgid "Updated"
+msgstr "Actualizado"
+
+msgid "Updated %s"
+msgstr "Actualizado %s"
+
+msgid "Upgrade"
+msgstr "Actualizar"
+
+msgid "Upload"
+msgstr "Subir"
+
+msgid "Upload a new backdrop"
+msgstr "Subir un fondo nuevo"
+
+msgid "Upload a new logo"
+msgstr "Subir un logo nuevo"
+
+msgid "Use Browser Preference"
+msgstr "Usar preferencia del navegador"
+
+msgid "Use Default System Email (above)"
+msgstr "Usar correo del sistema predeterminado (arriba)"
+
+msgid "Use Language Preference"
+msgstr "Usar preferencia de idioma"
+
+msgid "Use a custom backdrop"
+msgstr "Usar un fondo personalizado"
+
+msgid "Use a custom logo"
+msgstr "Usar un logo personalizado"
+
+msgid "Use any available backend"
+msgstr "Usar cualquier backend disponible"
+
+msgid "Use standard columns"
+msgstr "Usar columnas estándar"
+
+msgid "Use standard export fields"
+msgstr "Usar campos de exportación estándar"
+
+msgid "Use the columns shown in the table below. To add more fields, visit the Admin Panel -&gt; Manage -&gt; Forms -&gt; %s page to edit the available fields.  Only fields with `variable` defined can be imported."
+msgstr "Usá las columnas de la tabla de abajo. Para agregar más campos, andá a Panel de administración -&gt; Gestionar -&gt; Formularios -&gt; %s. Solo se pueden importar campos con `variable` definida."
+
+msgid "Use the columns shown in the table below. To add more properties, use the Properties tab.  Only properties with `variable` defined can be imported."
+msgstr "Usá las columnas de la tabla de abajo. Para agregar más propiedades, usá la pestaña de propiedades. Solo se pueden importar propiedades con `variable` definida."
+
+msgid "Use the forms below to create or update the information we have on file for your account"
+msgstr "Usá los formularios de abajo para crear o actualizar la información registrada de tu cuenta"
+
+msgid "Use the forms below to update the information we have on file for your account"
+msgstr "Usá los formularios de abajo para actualizar la información registrada de tu cuenta"
+
+msgid "Used for HTML email processing"
+msgstr "Usado para procesar correo HTML"
+
+msgid "Used for image manipulation and PDF printing"
+msgstr "Usado para manipular imágenes e imprimir PDF"
+
+msgid "Used for ticket and task exporting"
+msgstr "Usado para exportar tickets y tareas"
+
+msgid "Used to detect file types for uploads"
+msgstr "Usado para detectar tipos de archivo en las subidas"
+
+msgid "Useful for email processing"
+msgstr "Útil para procesar correo"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "User + Collaborators"
+msgstr "Usuario + Colaboradores"
+
+msgid "User Account Login"
+msgstr "Inicio de sesión de cuenta de usuario"
+
+msgid "User Directory"
+msgstr "Directorio de usuarios"
+
+msgid "User Email"
+msgstr "Correo del usuario"
+
+msgid "User Excessive Logins"
+msgstr "Intentos de inicio de sesión excesivos del usuario"
+
+msgid "User Information"
+msgstr "Información del usuario"
+
+msgid "User Information Fields"
+msgstr "Campos de información del usuario"
+
+msgid "User Preferences"
+msgstr "Preferencias del usuario"
+
+msgid "User Session Timeout"
+msgstr "Tiempo de espera de sesión del usuario"
+
+msgid "User and Collaborators"
+msgstr "Usuario y colaboradores"
+
+msgid "User cannot change password"
+msgstr "El usuario no puede cambiar la contraseña"
+
+msgid "Username"
+msgstr "Nombre de usuario"
+
+msgid "Users"
+msgstr "Usuarios"
+
+msgid "Users Settings"
+msgstr "Configuración de usuarios"
+
+msgid "Users can always sign in with their email address"
+msgstr "Los usuarios siempre pueden ingresar con su dirección de correo"
+
+msgid "Vacation Mode"
+msgstr "Modo vacaciones"
+
+msgid "Valid email address is required"
+msgstr "Se requiere una dirección de correo válida"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Value and Abbreviation"
+msgstr "Valor y abreviatura"
+
+msgid "Variable"
+msgstr "Variable"
+
+msgid "Verify"
+msgstr "Verificar"
+
+msgid "Verify Email Addresses"
+msgstr "Verificar direcciones de correo"
+
+msgid "Verify email address domain"
+msgstr "Verificar dominio de la dirección de correo"
+
+msgid "Verifying"
+msgstr "Verificando"
+
+msgid "Version"
+msgstr "Versión"
+
+msgid "View Content"
+msgstr "Ver contenido"
+
+msgid "View Task"
+msgstr "Ver tarea"
+
+msgid "View Ticket"
+msgstr "Ver ticket"
+
+msgid "Viewing"
+msgstr "Viendo"
+
+msgid "Visibility"
+msgstr "Visibilidad"
+
+msgid "Visible"
+msgstr "Visible"
+
+msgid "WARN"
+msgstr "AVISO"
+
+msgid "Warnings"
+msgstr "Advertencias"
+
+msgid "We know you're busy, you can close this popup and the export will be sent to %s"
+msgstr "Sabemos que estás ocupado, podés cerrar esta ventana y la exportación se enviará a %s"
+
+msgid "We've just sent you an email to the address you entered. Please follow the link in the email to confirm your account and gain access to your tickets."
+msgstr "Te enviamos un correo a la dirección que ingresaste. Seguí el enlace del correo para confirmar tu cuenta y acceder a tus tickets."
+
+msgid "Web Server Software"
+msgstr "Software del servidor web"
+
+msgid "Welcome, %s."
+msgstr "Bienvenido, %s."
+
+msgid "Working Hours Timeline"
+msgstr "Línea de tiempo de horario laboral"
+
+msgid "Would you also like to remove data currently entered for this field? <em> If you opt not to remove the data now, you will have the option to delete the the data when editing it.</em>"
+msgstr "¿También querés quitar los datos ingresados actualmente en este campo? <em>Si elegís no quitarlos ahora, vas a poder eliminarlos después al editarlo.</em>"
+
+msgid "XML API"
+msgstr "API XML"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "Yes, Delete"
+msgstr "Sí, eliminar"
+
+msgid "Yes, Delete User"
+msgstr "Sí, eliminar usuario"
+
+msgid "Yes, Do it!"
+msgstr "¡Sí, hacelo!"
+
+msgid "Yes, Email Me"
+msgstr "Sí, envíame un correo"
+
+msgid "You are about to delete %s fields."
+msgstr "Estás por eliminar %s campos."
+
+msgid "You do not have access to %s"
+msgstr "No tenés acceso a %s"
+
+msgid "You have made changes that you need to save."
+msgstr "Hiciste cambios que necesitás guardar."
+
+msgid "You need to select at least one item"
+msgstr "Necesitás seleccionar al menos un ítem"
+
+msgid "You sure?"
+msgstr "¿Seguro?"
+
+msgid "You've confirmed your email address and successfully activated your account.  You may proceed to check on previously opened tickets or open a new ticket."
+msgstr "Confirmaste tu dirección de correo y activaste tu cuenta con éxito. Ya podés consultar tickets abiertos previamente o abrir uno nuevo."
+
+msgid "Your friendly support center"
+msgstr "Tu centro de soporte amigable"
+
+msgid "Your query did not match any records"
+msgstr "Tu búsqueda no encontró resultados"
+
+msgid "advanced"
+msgstr "avanzado"
+
+msgid "auto assign on reopen"
+msgstr "autoasignar al reabrir"
+
+msgid "auto claim"
+msgstr "autoreclamar"
+
+msgid "by"
+msgstr "por"
+
+msgid "case-insensitive comparison"
+msgstr "comparación sin distinguir mayúsculas"
+
+msgid "clear"
+msgstr "limpiar"
+
+msgid "current"
+msgstr "actual"
+
+msgid "defunct — missing"
+msgstr "inactivo — faltante"
+
+msgid "e.g."
+msgstr "por ej."
+
+msgid "e.g. 051243"
+msgstr "por ej. 051243"
+
+msgid "e.g. John Doe, john.doe@osticket.com"
+msgstr "por ej. Juan Pérez, juan.perez@ejemplo.com"
+
+msgid "e.g. My Location, MY"
+msgstr "por ej. Mi ubicación, MU"
+
+msgid "e.g. john.doe@osticket.com"
+msgstr "por ej. juan.perez@ejemplo.com"
+
+msgid "e.g. me@mycompany.com"
+msgstr "por ej. yo@miempresa.com"
+
+msgid "failed login attempt(s) allowed before a lock-out is enforced"
+msgstr "intento(s) de inicio de sesión fallidos permitidos antes de bloquear"
+
+msgid "fields available where this form is used"
+msgstr "campos disponibles donde se usa este formulario"
+
+msgid "for version %s"
+msgstr "para la versión %s"
+
+msgid "if public"
+msgstr "si es público"
+
+msgid "if set"
+msgstr "si está definido"
+
+msgid "in hours"
+msgstr "en horas"
+
+msgid "instances"
+msgstr "instancias"
+
+msgid "john.doe@osticket.com"
+msgstr "juan.perez@ejemplo.com"
+
+msgid "link"
+msgstr "enlace"
+
+msgid "merge into this one"
+msgstr "combinar con este"
+
+msgid "minutes"
+msgstr "minutos"
+
+msgid "minutes locked out"
+msgstr "minutos bloqueado"
+
+msgid "never"
+msgstr "nunca"
+
+msgid "next"
+msgstr "siguiente"
+
+msgid "not recommended"
+msgstr "no recomendado"
+
+msgid "or %s register for an account %s for the best experience on our help desk."
+msgstr "o %s registrá una cuenta %s para la mejor experiencia en nuestra mesa de ayuda."
+
+msgid "or %s register for an account %s to access all your tickets."
+msgstr "o %s registrá una cuenta %s para acceder a todos tus tickets."
+
+msgid "osTicket Version"
+msgstr "Versión de osTicket"
+
+msgid "osTicket no longer supports Internet Explorer."
+msgstr "osTicket ya no soporta Internet Explorer."
+
+msgid "per end user"
+msgstr "por usuario final"
+
+msgid "per page."
+msgstr "por página."
+
+msgid "period"
+msgstr "período"
+
+msgid "properties definable for each item"
+msgstr "propiedades definibles para cada ítem"
+
+msgid "selected"
+msgstr "seleccionado"
+
+msgid "show %s records"
+msgstr "mostrar %s registros"
+
+msgid "sign in here"
+msgstr "iniciá sesión acá"
+
+msgid "system default"
+msgstr "predeterminado del sistema"
+
+msgid "this FAQ article"
+msgstr "este artículo de preguntas frecuentes"
+
+msgid "this department"
+msgstr "este departamento"
+
+msgid "this email"
+msgstr "este correo"
+
+msgid "this task"
+msgstr "esta tarea"
+
+msgid "this team"
+msgstr "este equipo"
+
+msgid "this template"
+msgstr "esta plantilla"
+
+msgid "this ticket"
+msgstr "este ticket"
+
+msgid "vacation"
+msgstr "vacaciones"
+
+msgid "API"
+msgstr "API"
+
+msgid "Admin Dashboard"
+msgstr "Panel de administración"
+
+msgid "Agent Dashboard"
+msgstr "Panel del agente"
+
+msgid "Agent Directory"
+msgstr "Directorio de agentes"
+
+msgid "Applications"
+msgstr "Aplicaciones"
+
+msgid "Audit Logs"
+msgstr "Registros de auditoría"
+
+msgid "Banlist"
+msgstr "Lista de bloqueados"
+
+msgid "Banned Emails"
+msgstr "Correos bloqueados"
+
+msgid "Company"
+msgstr "Empresa"
+
+msgid "Dashboard"
+msgstr "Panel"
+
+msgid "Email Diagnostic"
+msgstr "Diagnóstico de correo"
+
+msgid "Email Settings"
+msgstr "Configuración de correo"
+
+msgid "Email Templates"
+msgstr "Plantillas de correo"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "Information"
+msgstr "Información"
+
+msgid "Knowledgebase"
+msgstr "Base de conocimientos"
+
+msgid "Lists"
+msgstr "Listas"
+
+msgid "Manage Agents"
+msgstr "Gestionar agentes"
+
+msgid "Manage Options"
+msgstr "Gestionar opciones"
+
+msgid "My Profile"
+msgstr "Mi perfil"
+
+msgid "Pages"
+msgstr "Páginas"
+
+msgid "Show all tickets"
+msgstr "Mostrar todos los tickets"
+
+msgid "Support Center Home"
+msgstr "Inicio del centro de soporte"
+
+msgid "System Settings"
+msgstr "Configuración del sistema"
+
+msgid "Task Queue"
+msgstr "Cola de tareas"
+
+msgid "Ticket Queue"
+msgstr "Cola de tickets"
+
+msgid "Tickets (%d)"
+msgstr "Tickets (%d)"
+
+msgid "View Ticket Thread"
+msgstr "Ver hilo del ticket"
+
+msgid "View ticket status"
+msgstr "Ver estado del ticket"
