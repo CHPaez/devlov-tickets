@@ -213,9 +213,13 @@ button:hover {
     background: #eceae5;
 }
 /* Primary call-to-action — same pill shape and orange fill as the "Ingresar"
-   button on login, so the primary action reads identically on every form. */
-#ticket-create input[type="submit"],
-input[value="Create Ticket"] {
+   button on login, so the primary action reads identically on every form.
+   `.btn` is osTicket's own convention for a form's main submit (login,
+   access-link request, password reset) — matched on class, not the
+   translated button text, so it works in Spanish too. `p.buttons` is the
+   "Create Ticket" wrapper on open.php (its only [type=submit]). */
+.btn,
+p.buttons input[type="submit"] {
     background: var(--dl-orange);
     border-color: var(--dl-orange);
     color: #fff;
@@ -223,7 +227,8 @@ input[value="Create Ticket"] {
     border-radius: var(--dl-radius-pill);
     padding: 12px 28px;
 }
-input[value="Create Ticket"]:hover {
+.btn:hover,
+p.buttons input[type="submit"]:hover {
     background: var(--dl-orange-hover);
     box-shadow: 0 4px 14px rgba(255,157,77,0.28);
 }
@@ -385,17 +390,12 @@ a.login-tab:hover {
     gap: 20px;
     margin-top: 12px;
 }
+/* .btn already gets the shared pill/orange treatment above — on the dark
+   login panel, swap the label to dark ink instead of white for contrast. */
 .login-form-actions .btn {
-    background: var(--dl-orange);
     border: none;
     color: var(--dl-dark);
-    font-weight: 600;
     padding: 12px 30px;
-    border-radius: var(--dl-radius-pill);
-}
-.login-form-actions .btn:hover {
-    background: var(--dl-orange-hover);
-    box-shadow: 0 4px 14px rgba(255,157,77,0.28);
 }
 .login-forgot {
     font-size: 13px;
