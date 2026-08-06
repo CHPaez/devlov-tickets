@@ -199,21 +199,165 @@ input[value="Create Ticket"]:hover {
     background: #ff8a2e;
 }
 
-/* Login page — widen the two-column split proportionally with the container */
-#clientLogin {
-    margin-top: 28px;
-    padding: 36px;
+/* Login page — modern split card (branding + actions on the left, form on the right) */
+.login-shell {
+    display: flex;
+    align-items: stretch;
+    margin-top: 8px;
+    min-height: 460px;
+    background: #fff;
+    border: 1px solid rgba(21,22,29,0.08);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(21,22,29,0.08);
+    overflow: hidden;
 }
-.login-box {
-    width: 46%;
-    padding: 16px 40px 16px 0;
+.login-brand {
+    flex: 0 0 42%;
+    padding: 56px 44px;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(127,107,242,0.16), transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(255,157,77,0.16), transparent 55%),
+        #f5f4f1;
+    border-right: 1px solid rgba(21,22,29,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#clientLogin div[style*="table-cell"] {
-    padding: 16px 0 16px 40px !important;
+.login-brand-heart {
+    width: 64px;
+    height: auto;
+    margin-bottom: 20px;
 }
-#clientLogin input[type=text],
-#clientLogin input[type=password] {
+.login-brand-title {
+    margin: 0 0 12px;
+    font-size: 32px;
+}
+.login-brand-tagline {
+    margin: 0 0 32px;
+    color: rgba(21,22,29,0.65);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.login-brand-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.login-action-btn {
+    display: block;
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.login-action-btn:hover {
+    border-bottom: none;
+    transform: translateY(-1px);
+}
+.login-action-new {
+    background: #7f6bf2;
+    color: #fff;
+}
+.login-action-new:hover {
+    background: #6b54e8;
+    box-shadow: 0 4px 14px rgba(127,107,242,0.35);
+}
+.login-action-status {
+    background: #fff;
+    color: #15161d;
+    border: 1px solid rgba(21,22,29,0.15);
+}
+.login-action-status:hover {
+    border-color: #ff9d4d;
+    color: #ff9d4d;
+    box-shadow: 0 4px 14px rgba(255,157,77,0.2);
+}
+
+.login-panel {
+    flex: 1;
+    padding: 56px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-panel-title {
+    margin: 0 0 28px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(21,22,29,0.5);
+}
+.login-form {
+    max-width: 380px;
+}
+.login-error {
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba(220,60,60,0.1);
+    color: #b32d2d;
+    font-size: 14px;
+}
+.login-field {
     margin-bottom: 18px;
+}
+.login-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(21,22,29,0.6);
+}
+.login-field input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-form-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+}
+.login-form-actions .btn {
+    background: #ff9d4d;
+    border-color: #ff9d4d;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 28px;
+}
+.login-form-actions .btn:hover {
+    background: #ff8a2e;
+}
+.login-forgot {
+    font-size: 13px;
+}
+.login-ext-auth {
+    margin-top: 18px;
+}
+.login-panel-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(21,22,29,0.08);
+    font-size: 13.5px;
+    color: rgba(21,22,29,0.65);
+}
+.login-panel-footer p {
+    margin: 0 0 6px;
+}
+@media (max-width: 780px) {
+    .login-shell {
+        flex-direction: column;
+    }
+    .login-brand {
+        border-right: none;
+        border-bottom: 1px solid rgba(21,22,29,0.08);
+        padding: 40px 32px;
+    }
+    .login-panel {
+        padding: 40px 32px;
+    }
 }
 
 /* Ticket form — more generous label column and reply/description width */

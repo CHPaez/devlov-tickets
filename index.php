@@ -15,6 +15,13 @@
 **********************************************************************/
 require('client.inc.php');
 
+// DevLov: login is the front door now — bounce root straight to the
+// right place instead of showing the old landing page first.
+if ($thisclient && is_object($thisclient) && $thisclient->isValid())
+    Http::redirect('tickets.php');
+else
+    Http::redirect('login.php');
+
 require_once INCLUDE_DIR . 'class.page.php';
 
 $section = 'home';
