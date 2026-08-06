@@ -1,0 +1,163 @@
+/* DevLov — client portal overrides. Loaded AFTER assets/default/css/theme.css.
+   Never edit theme.css directly — it's vendor code, this file survives osTicket upgrades. */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* Typography & links */
+a, .link {
+  color: #7f6bf2;
+}
+a:hover, .link:hover {
+  border-bottom: 1px dotted #7f6bf2;
+}
+h1 {
+  color: #15161d;
+  font-weight: normal;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 26px;
+}
+
+/* Buttons */
+.button,
+.button:visited,
+.green.button,
+.green.button:visited {
+  background-color: #ff9d4d;
+}
+.green.button:hover {
+  background-color: #ff8a2e;
+}
+.blue.button,
+.blue.button:visited {
+  background-color: #7f6bf2;
+}
+.blue.button:hover {
+  background-color: #6b54e8;
+}
+
+/* Page & container */
+body {
+  background: #f5f4f1;
+  font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+}
+#container {
+  background: rgba(255,255,255,0.6);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  margin: 40px auto;
+  border-radius: 16px;
+  border: 1px solid rgba(21,22,29,0.1);
+  box-shadow: 0 4px 24px rgba(21,22,29,0.06);
+}
+
+/* Header / brand */
+.brand-wordmark {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 30px;
+  color: #15161d;
+  text-decoration: none;
+}
+.brand-heart {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Nav */
+#nav {
+  background: none;
+  border-top: 1px solid rgba(21,22,29,0.08);
+  border-bottom: 1px solid rgba(21,22,29,0.08);
+  box-shadow: none;
+}
+#nav li a.active,
+#nav li a:hover {
+  background-color: rgba(127,107,242,0.12);
+  color: #15161d;
+}
+#nav li a:hover {
+  color: #7f6bf2;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  padding: 24px 0 8px;
+  border-top: 1px solid rgba(21,22,29,0.08);
+}
+.footer-heart {
+  width: 26px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+.footer-tagline {
+  font-size: 12.5px;
+  color: rgba(21,22,29,0.65);
+  margin: 0 0 4px;
+}
+.footer-copy {
+  font-size: 11px;
+  color: rgba(21,22,29,0.45);
+  margin: 0;
+}
+
+/* Form controls */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid rgba(21,22,29,0.18);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+    color: #15161d;
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7f6bf2;
+    box-shadow: 0 0 0 3px rgba(127,107,242,0.15);
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+    border: 1px solid rgba(21,22,29,0.15);
+    border-radius: 8px;
+    background: #f5f4f1;
+    color: #15161d;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+input[type="submit"]:hover,
+button:hover {
+    background: #eceae5;
+}
+#ticket-create input[type="submit"],
+input[value="Create Ticket"] {
+    background: #ff9d4d;
+    border-color: #ff9d4d;
+    color: #fff;
+    font-weight: 600;
+}
+input[value="Create Ticket"]:hover {
+    background: #ff8a2e;
+}
