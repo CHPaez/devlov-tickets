@@ -139,6 +139,13 @@ h1 {
     display: inline-block;
     vertical-align: middle;
 }
+.brand-heart {
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    width: auto;
+    margin-right: 10px;
+}
 
 h3 {
     margin:1em 0;

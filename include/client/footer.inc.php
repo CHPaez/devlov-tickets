@@ -1,9 +1,10 @@
         </div>
     </div>
     <div id="footer">
-        <p><?php echo __('Copyright &copy;'); ?> <?php echo date('Y'); ?> <?php
-        echo Format::htmlchars((string) $ost->company ?: 'osTicket.com'); ?> - <?php echo __('All rights reserved.'); ?></p>
-        <a id="poweredBy" href="https://osticket.com" target="_blank"><?php echo __('Helpdesk software - powered by osTicket'); ?></a>
+        <img src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="" class="footer-heart">
+        <p class="footer-tagline"><?php echo __('Código con sentido, software con pasión.'); ?></p>
+        <p class="footer-copy"><?php echo __('Copyright &copy;'); ?> <?php echo date('Y'); ?> <?php
+        echo Format::htmlchars((string) $ost->company ?: 'DevLov'); ?></p>
     </div>
 <div id="overlay"></div>
 <div id="loading">

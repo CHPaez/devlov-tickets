@@ -294,7 +294,9 @@ body {
   font-family: 'Space Grotesk', helvetica, arial, sans-serif;
 }
 #container {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   width: 840px;
   margin: 40px auto;
   border-radius: 16px;
@@ -322,6 +324,13 @@ body {
     height: 100%;
     display: inline-block;
     vertical-align: middle;
+}
+.brand-heart {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
 }
 #header p {
   width: 400px;
@@ -399,24 +408,23 @@ body {
 }
 #footer {
   text-align: center;
+  padding: 24px 0 8px;
+  border-top: 1px solid rgba(21,22,29,0.08);
+}
+.footer-heart {
+  width: 26px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+.footer-tagline {
+  font-size: 12.5px;
+  color: rgba(21,22,29,0.65);
+  margin: 0 0 4px;
+}
+.footer-copy {
   font-size: 11px;
-  color: #333;
-}
-#footer a {
-  color: #333;
-}
-#footer p {
-  margin: 10px 0 0 0;
-}
-#footer #poweredBy {
-  display: block;
-  width: 126px;
-  height: 23px;
-  outline: none;
-  text-indent: -9999px;
-  margin: 0 auto;
-  background: url('../images/poweredby.png') top left no-repeat;
-  background-size: auto 20px;
+  color: rgba(21,22,29,0.45);
+  margin: 0;
 }
 .front-page-button {
 }

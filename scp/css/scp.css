@@ -129,7 +129,9 @@ a time {
 #container {
     width:960px;
     margin:20px auto 20px auto;
-    background: #fff;
+    background: rgba(255,255,255,0.6);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     border-radius: 16px;
     border: 1px solid rgba(21,22,29,0.1);
     box-shadow: 0 4px 24px rgba(21,22,29,0.06);
@@ -140,7 +142,7 @@ a time {
     height:76px;
     border-left:none;
     border-right:none;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: none;
     border-bottom: 1px solid rgba(21,22,29,0.08);
 }
@@ -165,6 +167,13 @@ a time {
     height: 100%;
     display: inline-block;
     vertical-align: middle;
+}
+.brand-heart {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    width: auto;
+    margin-right: 10px;
 }
 
 #header p {

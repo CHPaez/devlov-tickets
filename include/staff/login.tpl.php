@@ -14,6 +14,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
     </div>
     <h1 id="logo"><a href="index.php">
         <span class="valign-helper"></span>
+        <img class="brand-heart" src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="">
         <span class="brand-wordmark">DevLov Tickets</span>
     </a></h1>
     <h3 id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
@@ -69,14 +70,9 @@ if (($bks=StaffAuthenticationBackend::getExternal())) { ?>
 
     <div id="company">
         <div class="content">
-            <?php echo __('Copyright'); ?> &copy; <?php echo Format::htmlchars($ost->company) ?: date('Y'); ?>
+            <?php echo __('Copyright'); ?> &copy; <?php echo date('Y'); ?> DevLov
         </div>
     </div>
-</div>
-<div id="poweredBy"><?php echo __('Powered by'); ?>
-    <a href="http://www.osticket.com" target="_blank">
-        <img alt="osTicket" src="images/osticket-grey.png" class="osticket-logo">
-    </a>
 </div>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
