@@ -264,7 +264,24 @@ if ($closedTickets) {?>
         }
 
      } else {
-         echo '<tr><td colspan="5">'.__('Your query did not match any records').'</td></tr>';
+        $hasFilter = $settings['keywords'] || $settings['topic_id'] || $_REQUEST['sort'];
+        ?>
+        <tr><td colspan="5">
+            <div class="empty-state">
+                <svg class="empty-state-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="14" y="20" width="52" height="44" rx="8" stroke="currentColor" stroke-width="3"/>
+                    <path d="M14 34 H30 C31 34 32 35 32.5 36 L34 40 H46 L47.5 36 C48 35 49 34 50 34 H66" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                </svg>
+                <?php if ($hasFilter) { ?>
+                <p class="empty-state-title"><?php echo __('Your query did not match any records'); ?></p>
+                <p class="empty-state-hint"><a href="?clear"><?php echo __('Clear all filters and sort'); ?></a></p>
+                <?php } else { ?>
+                <p class="empty-state-title">Todavía no tenés tickets</p>
+                <p class="empty-state-hint"><a href="<?php echo ROOT_PATH; ?>open.php"><?php echo __('Open a New Ticket'); ?></a></p>
+                <?php } ?>
+            </div>
+        </td></tr>
+        <?php
      }
     ?>
     </tbody>

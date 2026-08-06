@@ -683,3 +683,28 @@ a.login-tab:hover {
 .thankyou-lottie svg {
     display: block;
 }
+
+/* Tickets list empty state (tickets.inc.php) — replaces the bare
+   "no records" table row. Plain inline SVG (not Lottie) so it stays in the
+   same thin-line-art language as the login illustration without pulling in
+   a mismatched third-party asset for one small, low-traffic state. */
+.empty-state {
+    text-align: center;
+    padding: 48px 20px;
+}
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--dl-violet);
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+.empty-state-title {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--dl-ink-soft);
+}
+.empty-state-hint {
+    margin: 0;
+    font-size: 14px;
+}
