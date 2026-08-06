@@ -10,7 +10,9 @@ $plots = $report->getPlotData();
 <script type="text/javascript" src="js/dashboard.inc.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo ROOT_PATH; ?>assets/devlov/dashboard-overrides.css"/>
 
+<div id="dashboard-page">
 <form method="post" action="dashboard.php">
 <div id="basic_search">
     <div style="min-height:25px;">
@@ -165,6 +167,7 @@ foreach ($groups as $g=>$desc) {
 }
 ?>
 </form>
+</div>
 <script>
     $.drawPlots(<?php echo JsonDataEncoder::encode($report->getPlotData()); ?>);
     // Set Selected Period For Dashboard Stats and Export
