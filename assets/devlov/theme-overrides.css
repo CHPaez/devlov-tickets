@@ -588,6 +588,53 @@ a.login-tab:hover {
     }
 }
 
+/* Check Ticket Status (accesslink.inc.php) — single-column form matching
+   the rest of the portal's field/button language; the sidebar already
+   carries navigation so the old two-column table-cell layout (form +
+   "have an account" aside) was dropped in favor of one clear column. */
+.access-form {
+    max-width: 420px;
+    margin-top: 24px;
+}
+.form-error {
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    border-radius: var(--dl-radius);
+    background: rgba(220,60,60,0.08);
+    color: #b32d2d;
+    font-size: 14px;
+}
+.form-field {
+    margin-bottom: 18px;
+}
+.form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dl-ink-soft);
+}
+.form-field input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-actions {
+    margin-top: 8px;
+}
+.access-form-hint {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--dl-border);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--dl-ink-soft);
+}
+.access-form-footer {
+    margin-top: 28px;
+    font-size: 14px;
+    color: var(--dl-ink-soft);
+}
+
 /* Ticket form — more generous label column and reply/description width */
 #ticketForm > table td {
     width: 200px;

@@ -17,44 +17,42 @@ if ($cfg->isClientEmailVerificationRequired())
 else
     echo ' '.__('This will sign you in to view your ticket.');
 ?></p>
-<form action="login.php" method="post" id="accessLinkForm">
+
+<form action="login.php" method="post" id="accessLinkForm" class="access-form">
     <?php csrf_token(); ?>
-<div style="display:table-row">
-    <div class="login-box">
-    <div><strong><?php echo Format::htmlchars($errors['login']); ?></strong></div>
-    <div>
-        <label for="email"><?php echo __('Email Address'); ?>:
+<?php if ($errors['login']) { ?>
+    <div class="form-error"><?php echo Format::htmlchars($errors['login']); ?></div>
+<?php } ?>
+    <div class="form-field">
+        <label for="email"><?php echo __('Email Address'); ?></label>
         <input id="email" placeholder="<?php echo __('e.g. john.doe@osticket.com'); ?>" type="text"
-            name="lemail" size="30" value="<?php echo $email; ?>" class="nowarn"></label>
+            name="lemail" size="30" value="<?php echo $email; ?>" class="nowarn">
     </div>
-    <div>
-        <label for="ticketno"><?php echo __('Ticket Number'); ?>:
+    <div class="form-field">
+        <label for="ticketno"><?php echo __('Ticket Number'); ?></label>
         <input id="ticketno" type="text" name="lticket" placeholder="<?php echo __('e.g. 051243'); ?>"
-            size="30" value="<?php echo $ticketid; ?>" class="nowarn"></label>
+            size="30" value="<?php echo $ticketid; ?>" class="nowarn">
     </div>
-    <p>
+    <div class="form-actions">
         <input class="btn" type="submit" value="<?php echo $button; ?>">
-    </p>
     </div>
-    <div class="instructions">
 <?php if ($cfg && $cfg->getClientRegistrationMode() !== 'disabled') { ?>
+    <p class="access-form-hint">
         <?php echo __('Have an account with us?'); ?>
-        <a href="login.php"><?php echo __('Sign In'); ?></a> <?php
-    if ($cfg->isClientRegistrationEnabled()) { ?>
-<?php echo sprintf(__('or %s register for an account %s to access all your tickets.'),
-    '<a href="account.php?do=create">','</a>');
-    }
-}?>
-    </div>
-</div>
+        <a href="login.php"><?php echo __('Sign In'); ?></a>
+    <?php if ($cfg->isClientRegistrationEnabled()) { ?>
+        <?php echo sprintf(__('or %s register for an account %s to access all your tickets.'),
+            '<a href="account.php?do=create">','</a>'); ?>
+    <?php } ?>
+    </p>
+<?php } ?>
 </form>
-<br>
-<p>
-<?php
-if ($cfg->getClientRegistrationMode() != 'disabled'
-    || !$cfg->isClientLoginRequired()) {
-    echo sprintf(
+
+<?php if ($cfg->getClientRegistrationMode() != 'disabled'
+    || !$cfg->isClientLoginRequired()) { ?>
+<p class="access-form-footer">
+    <?php echo sprintf(
     __("If this is your first time contacting us or you've lost the ticket number, please %s open a new ticket %s"),
-        '<a href="open.php">','</a>');
-} ?>
+        '<a href="open.php">','</a>'); ?>
 </p>
+<?php } ?>
