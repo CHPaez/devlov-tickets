@@ -639,6 +639,17 @@ a.login-tab:hover {
     padding: 10px 12px;
 }
 
+/* Ticket list sortable column headers — brand violet instead of the
+   vendor's #000 (theme.css #ticketTable th a), incl. the hover
+   dotted-underline color (a:hover in theme.css). */
+#ticketTable th a {
+    color: var(--dl-violet);
+}
+#ticketTable th a:hover {
+    color: var(--dl-violet-hover);
+    border-bottom-color: var(--dl-violet-hover);
+}
+
 /* Loading indicator — replaces the vendor spinner GIF with the self-hosted
    Lottie ring (assets/devlov/lottie/loading-spinner.json, played/stopped by
    assets/devlov/lottie-init.js on form submit). Keep display:none as the
