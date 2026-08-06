@@ -71,16 +71,24 @@ if (osTicket::is_ie())
         echo sprintf('<div id="notice_bar">%s</div>', $ost->getNotice());
     ?>
     <div id="header">
-        <p id="info" class="pull-right no-pjax"><?php echo sprintf(__('Welcome, %s.'), '<strong>'.$thisstaff->getFirstName().'</strong>'); ?>
-           <?php
-            if($thisstaff->isAdmin() && !defined('ADMINPAGE')) { ?>
-            | <a href="<?php echo ROOT_PATH ?>scp/admin.php" class="no-pjax"><?php echo __('Admin Panel'); ?></a>
-            <?php }else{ ?>
-            | <a href="<?php echo ROOT_PATH ?>scp/index.php" class="no-pjax"><?php echo __('Agent Panel'); ?></a>
-            <?php } ?>
-            | <a href="<?php echo ROOT_PATH ?>scp/profile.php"><?php echo __('Profile'); ?></a>
-            | <a href="<?php echo ROOT_PATH ?>scp/logout.php?auth=<?php echo $ost->getLinkToken(); ?>" class="no-pjax"><?php echo __('Log Out'); ?></a>
-        </p>
+        <div id="account-menu" class="account-menu pull-right no-pjax">
+            <button type="button" class="account-menu-trigger" aria-haspopup="true" aria-expanded="false">
+                <span class="account-menu-avatar"><?php echo Format::htmlchars(mb_strtoupper(mb_substr($thisstaff->getFirstName(), 0, 1))); ?></span>
+                <span class="account-menu-name"><?php echo Format::htmlchars($thisstaff->getFirstName()); ?></span>
+                <span class="account-menu-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="account-menu-dropdown">
+                <div class="account-menu-header"><?php echo sprintf(__('Welcome, %s.'), Format::htmlchars($thisstaff->getFirstName())); ?></div>
+                <?php
+                if($thisstaff->isAdmin() && !defined('ADMINPAGE')) { ?>
+                <a href="<?php echo ROOT_PATH ?>scp/admin.php" class="no-pjax"><?php echo __('Admin Panel'); ?></a>
+                <?php }else{ ?>
+                <a href="<?php echo ROOT_PATH ?>scp/index.php" class="no-pjax"><?php echo __('Agent Panel'); ?></a>
+                <?php } ?>
+                <a href="<?php echo ROOT_PATH ?>scp/profile.php"><?php echo __('Profile'); ?></a>
+                <a href="<?php echo ROOT_PATH ?>scp/logout.php?auth=<?php echo $ost->getLinkToken(); ?>" class="no-pjax"><?php echo __('Log Out'); ?></a>
+            </div>
+        </div>
     </div>
     <div id="pjax-container" class="<?php if ($_POST) echo 'no-pjax'; ?>">
 <?php } else {

@@ -28,3 +28,11 @@ UPDATE ost_help_topic SET topic = 'Reportar un Problema' WHERE topic_id = 10;
 UPDATE ost_help_topic SET topic = 'Problema de Acceso' WHERE topic_id = 11;
 
 UPDATE ost_config SET value='es' WHERE `key`='system_language';
+
+-- Default queue title, seeded from include/i18n/en_US/queue.yaml at
+-- install time (not gettext-driven, same DB-content pattern as
+-- ost_help_topic above). Only this one queue title fixed for now — the
+-- sibling default queues (Open/Answered/Overdue/Closed/Assigned to
+-- Me/etc, ids 1-4/6-14) are ALSO still English, left untouched as a
+-- known follow-up, not part of this pass.
+UPDATE ost_queue SET title = 'Mis Tickets' WHERE id = 5;

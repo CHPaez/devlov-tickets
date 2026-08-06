@@ -128,7 +128,7 @@ a time {
 
 
 #container {
-    width:960px;
+    width:1400px;
     margin:20px auto 20px auto;
     background: rgba(255,255,255,0.6);
     -webkit-backdrop-filter: blur(14px);
@@ -137,6 +137,11 @@ a time {
     border: 1px solid rgba(21,22,29,0.1);
     box-shadow: 0 4px 24px rgba(21,22,29,0.06);
     overflow: hidden;
+}
+@media (max-width: 1450px) {
+    #container {
+        width: 94%;
+    }
 }
 
 #header {
@@ -149,8 +154,97 @@ a time {
     border-bottom: 1px solid rgba(21,22,29,0.08);
     padding: 0 20px;
 }
-#header p#info {
-    margin: 0;
+/* Top-right account menu — GitHub-style avatar + click-to-open dropdown,
+   replacing the old always-visible "Welcome, X | Admin Panel | Profile |
+   Log Out" pipe-separated text. Toggle behavior in
+   assets/devlov/staff-account-menu.js (open/close class only; no other
+   effect on layout if JS fails to load — the trigger is still a real
+   button, dropdown just won't be reachable without JS, acceptable for a
+   staff-only admin tool already dependent on jQuery/redactor/etc). */
+#header {
+    position: relative;
+}
+.account-menu {
+    position: relative;
+}
+.account-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    margin-top: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+    border-radius: var(--dl-radius-sm);
+    color: var(--dl-ink);
+    font-family: var(--dl-font-body);
+    font-size: 13px;
+}
+.account-menu-trigger:hover,
+.account-menu.open .account-menu-trigger {
+    background: var(--dl-violet-tint);
+}
+.account-menu-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--dl-violet);
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    flex: 0 0 auto;
+}
+.account-menu-name {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.account-menu-caret {
+    font-size: 10px;
+    color: var(--dl-ink-faint);
+}
+.account-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 200px;
+    background: var(--dl-surface);
+    border: 1px solid var(--dl-border);
+    border-radius: var(--dl-radius);
+    box-shadow: 0 8px 24px rgba(21,22,29,0.14);
+    padding: 6px;
+    display: none;
+    flex-direction: column;
+    z-index: 100;
+}
+.account-menu.open .account-menu-dropdown {
+    display: flex;
+}
+.account-menu-header {
+    padding: 8px 10px 10px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: var(--dl-ink-soft);
+    border-bottom: 1px solid var(--dl-border);
+}
+.account-menu-dropdown a {
+    padding: 8px 10px;
+    border-radius: var(--dl-radius-sm);
+    color: var(--dl-ink);
+    font-size: 13.5px;
+    text-decoration: none;
+    display: block;
+}
+.account-menu-dropdown a:hover {
+    background: var(--dl-violet-tint);
+    color: var(--dl-violet);
+    border-bottom: none;
 }
 
 /* --- Sidebar layout --- */
@@ -319,9 +413,19 @@ a time {
                  Start Custom Queues Menu System
 /***********************************************************************/
 
+/* #sub_nav (per-section secondary nav: Users/Orgs, Tasks, Staff/Teams/
+   Roles/Departments, KB, etc) and #customQ_nav's overflow-menu (the
+   ticket queue's own Open/Mis Tickets/Closed/... selector — vendor CSS
+   already groups both under the same selectors below, confirming they're
+   meant to read as one system) — underline-active treatment matching the
+   dashboard stats tabs and the login Ingresar/Crear cuenta tabs. Layout
+   (height/padding/display) intentionally left untouched: #customQ_nav is
+   driven by scp/js/jb.overflow.menu.js, which measures item widths to
+   decide what collapses into an overflow dropdown — only colors/borders
+   change here, nothing that CSS layout the plugin depends on. */
 #sub_nav {
-    background:#f7f7f7;
-    border-bottom:1px solid #bebebe;
+    background: none;
+    border-bottom: 1px solid var(--dl-border);
     padding: 2px 20px;
     height: 26px;
     line-height: 26px;
@@ -363,27 +467,33 @@ a time {
     padding:0 10px 0 21px;
     background-position:0 50%;
     background-repeat:no-repeat;
-    color:#000;
+    color: var(--dl-ink-soft);
+    border-bottom: 2px solid transparent;
 }
 
 #customQ_nav .jb-overflowmenu-menu-primary li.item:hover {
     padding:2px 5px 3px;
-    color:#E65524;
-    background-color: #fff;
-    border-left:1px solid #bebebe;
-    border-top:1px solid #bebebe;
-    border-right:1px solid #bebebe;
+    color: var(--dl-violet);
+    background-color: transparent;
+    border-left: none;
+    border-top: none;
+    border-right: none;
 }
 
 #sub_nav > li > a:hover,
 #customQ_nav .jb-overflowmenu-menu-primary li.item:hover > a {
-    color:#E65524;
+    color: var(--dl-violet);
     text-decoration: none;
 }
 
-#sub_nav a.active, #sub_nav li.active > a, #sub_nav li.child.active > a
-#customQ_nav .jb-overflowmenu-menu-primary li.item > a.active {
-    font-weight:bold;
+#sub_nav a.active,
+#sub_nav li.active > a,
+#sub_nav li.child.active > a,
+#customQ_nav .jb-overflowmenu-menu-primary li.item > a.active,
+#customQ_nav .jb-overflowmenu-menu-primary li.item.active > a {
+    font-weight: 600;
+    color: var(--dl-ink);
+    border-bottom-color: var(--dl-orange);
 }
 
 #sub_nav li.child.active > a {
@@ -1088,6 +1198,14 @@ a.Icon:hover {
     border-bottom:3px solid #bbb;
     padding:10px 10px 20px 10px;
     background:#fff;
+    /* Safety net: a wide table (ticket queue, many columns) scrolls
+       horizontally inside its own card instead of visually spilling past
+       the edge of #main-panel — same reasoning as the dashboard's own
+       .tab_content overflow-x:auto. overflow-y is pinned to visible so
+       this doesn't accidentally turn #content into its own vertical
+       scroll container (page scroll stays on the whole document). */
+    overflow-x: auto;
+    overflow-y: visible;
 }
 
 #footer {
@@ -1716,55 +1834,56 @@ img.avatar {
     padding:0 10px;
 }
 
+/* ul.tabs — the shared vendor sub-navigation tab class used sitewide
+   across the staff panel (dashboard, users, tasks, tickets, ticket
+   detail, knowledgebase, etc). Underline-active style, matching the
+   pattern already used for the dashboard stats tabs (see
+   assets/devlov/dashboard-overrides.css's #dashboard-page ul.tabs,
+   which stays MORE specific and keeps winning there unchanged) and the
+   login page's Ingresar/Crear cuenta tabs. This is the sitewide base. */
 ul.tabs {
-    padding:4px 0 0 20px;
-    margin:0;
-    text-align:left;
-    height:29px;
-    border-bottom:1px solid #aaa;
-    background: var(--dl-violet-tint);
+    padding: 0;
+    margin: 0 0 16px;
+    text-align: left;
+    height: auto;
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--dl-border);
+    background: none;
     position: relative;
-    box-shadow: inset 0 -5px 10px -9px rgba(0,0,0,0.3);
+    box-shadow: none;
 }
 
 #response_options ul.tabs {
 }
 
 ul.tabs li {
-    margin:0;
-    padding:0;
-    display:inline-block;
-    list-style:none;
-    text-align:center;
-    min-width:130px;
-    font-weight:bold;
-    height:28px;
-    line-height:20px;
-    color:#444;
-    display:inline-block;
-    outline:none;
-    position:relative;
-    bottom:1px;
-    background:#fbfbfb;
-    background-color: rgba(251, 251, 251, 0.5);
-    border:1px solid #ccc;
-    border:1px solid rgba(204, 204, 204, 0.5);
-    border-bottom:none;
+    margin: 0;
+    padding: 0 4px;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    min-width: 0;
+    font-weight: 400;
+    height: auto;
+    line-height: normal;
+    color: var(--dl-ink-soft);
+    outline: none;
     position: relative;
-    bottom: 1px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    bottom: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
     font-size: 95%;
 }
 ul.tabs li.active {
     color: var(--dl-violet);
-    background-color:#f9f9f9;
-    border:1px solid #aaa;
-    border-bottom:none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--dl-orange);
     text-align: center;
-    border-top:2px solid #81a9d7;
     bottom: 0;
-    box-shadow: 4px -1px 6px -3px rgba(0,0,0,0.2);
+    box-shadow: none;
 }
 li.error {
   border-top: 2px solid rgba(255, 0, 0, 0.3) !important;
@@ -1783,8 +1902,8 @@ li.error a:before {
   position: absolute;
 }
 ul.tabs li:not(.active) {
-    box-shadow: inset 0 -5px 10px -9px rgba(0,0,0,0.2);
-    bottom: 2px;
+    box-shadow: none;
+    bottom: 0;
 }
 ul.tabs.clean li.active {
     background-color: white;
@@ -1792,21 +1911,20 @@ ul.tabs.clean li.active {
 
 ul.tabs li a {
     font-weight: 400;
-    line-height: 20px;
-    color: #444;
-    color: rgba(0,0,0,0.6);
+    line-height: normal;
+    color: var(--dl-ink-soft);
     display: block;
     outline: none;
-    padding: 5px 10px;
+    padding: 8px 10px;
 }
 ul.tabs li a:hover {
     text-decoration: none;
+    color: var(--dl-ink);
 }
 
 ul.tabs li.active a {
-    font-weight: bold;
-    color: #222;
-    color: rgba(0,0,0,0.8);
+    font-weight: 600;
+    color: var(--dl-ink);
 }
 
 ul.tabs li.empty {
