@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 body {
-  font-family: "Lato", "Helvetica Neue", arial, helvetica, sans-serif;
+  font-family: 'Space Grotesk', "Helvetica Neue", arial, helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 0.15px;
   -webkit-font-smoothing:antialiased;
           font-smoothing:antialiased;
 }
 body, html {
-    background:#eee;
-    color:#000;
+    background:#f5f4f1;
+    color:#15161d;
     font-size:14px;
     margin:0;
     padding:0;
@@ -15,7 +16,7 @@ body, html {
 
 .link,
 a {
-    color:#184E81;
+    color:#7f6bf2;
     text-decoration:none;
     display: inline-block;
 }
@@ -33,7 +34,7 @@ a:hover i[class^="icon-"],
 }
 
 div#header a {
-    color:#E65524;
+    color:#7f6bf2;
 }
 
 .centered {
@@ -127,15 +128,21 @@ a time {
 
 #container {
     width:960px;
-    margin:0 auto 20px auto;
+    margin:20px auto 20px auto;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(21,22,29,0.1);
+    box-shadow: 0 4px 24px rgba(21,22,29,0.06);
+    overflow: hidden;
 }
 
 #header {
     height:76px;
-    border-left:1px solid #aaa;
-    border-right:1px solid #aaa;
-    background-color: rgb(248,248,248);
-    box-shadow: inset 0 -10px 8px -5px rgba(0,0,0,0.1);
+    border-left:none;
+    border-right:none;
+    background-color: #fff;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(21,22,29,0.08);
 }
 
 #logo {
@@ -146,14 +153,13 @@ a time {
     max-width: 400px;
     padding: 5px 0 7px 5px;
 }
-#logo img {
-    max-height: 66px;
-    max-width: 300px;
-    height: auto;
-    width: auto;
+.brand-wordmark {
+    display: inline-block;
     vertical-align: middle;
-    outline: none;
-    border: none;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+    font-size: 26px;
+    color: #15161d;
 }
 .valign-helper {
     height: 100%;
@@ -178,8 +184,8 @@ a time {
     padding:0 20px;
     height:26px;
     line-height:26px;
-    border-left:1px solid #aaa;
-    border-right:1px solid #aaa;
+    border-left:none;
+    border-right:none;
     white-space: nowrap;
 }
 
@@ -190,11 +196,11 @@ a time {
 }
 
 #nav {
-    background:#eee;
+    background:#fff;
     padding-top:4px;
     z-index:200;
-    border-top:1px solid #ddd;
-    border-bottom:1px solid #c5d9ec;
+    border-top:none;
+    border-bottom:1px solid rgba(21,22,29,0.08);
 }
 
 #nav .active, #nav .inactive {
@@ -220,7 +226,7 @@ a time {
 }
 
 #nav .active a {
-    color:#004a80;
+    color:#7f6bf2;
     font-weight:bold;
 }
 
@@ -229,14 +235,14 @@ a time {
 }
 
 #nav li.active, #nav li.inactive:hover {
-    box-shadow: 4px -3px 6px -3px rgba(0,0,0,0.3);
-    border-color: #c5d9ec;
+    box-shadow: none;
+    border-color: rgba(127,107,242,0.2);
 }
 #nav li.active {
-    background-color: #f7f7f7;
+    background-color: rgba(127,107,242,0.1);
 }
 #nav li.inactive:hover {
-    background-color: #fbfbfb;
+    background-color: rgba(21,22,29,0.03);
 }
 
 #nav li.inactive > ul {
@@ -2563,8 +2569,9 @@ select + .button {
 
 button[type=submit], input[type="submit"], .primary.button {
     font-weight: normal;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.45) inset;
-    background-color: rgba(0,0,0,0.07);
+    box-shadow: none;
+    background-color: #7f6bf2;
+    color: #fff;
 }
 
 .save.pending {
@@ -2593,9 +2600,8 @@ input[type=reset]:hover, input[type=reset]:active {
 
 button[type=submit]:hover, input[type=submit]:hover, input[type=submit]:active {
   color: white;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.7) inset;
-  background-color: #888;
-  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  background-color: #6b54e8;
 }
 
 .button:disabled, .action-button:disabled,
