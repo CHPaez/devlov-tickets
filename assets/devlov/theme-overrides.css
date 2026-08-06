@@ -3,21 +3,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 
+/* Shared design tokens — one source of truth so the login screen and every
+   other client-portal form (open ticket, check status, ticket list...) read
+   as the same product instead of two different visual systems. */
+:root {
+  --dl-violet: #7f6bf2;
+  --dl-orange: #ff9d4d;
+  --dl-orange-hover: #ffb066;
+  --dl-ink: #15161d;
+  --dl-ink-soft: rgba(21,22,29,0.62);
+  --dl-ink-faint: rgba(21,22,29,0.42);
+  --dl-surface: #ffffff;
+  --dl-neutral: #f5f4f1;
+  --dl-border: rgba(21,22,29,0.14);
+  --dl-dark: #241f33;
+  --dl-dark-border: rgba(255,255,255,0.14);
+  --dl-radius-sm: 10px;
+  --dl-radius: 12px;
+  --dl-radius-pill: 999px;
+  --dl-font-body: 'Space Grotesk', helvetica, arial, sans-serif;
+  --dl-font-display: 'Instrument Serif', Georgia, serif;
+}
+
 /* Typography & links */
 body {
   font-size: 15px;
   line-height: 1.6;
 }
 a, .link {
-  color: #7f6bf2;
+  color: var(--dl-violet);
 }
 a:hover, .link:hover {
-  border-bottom: 1px dotted #7f6bf2;
+  border-bottom: 1px dotted var(--dl-violet);
 }
 h1 {
-  color: #15161d;
+  color: var(--dl-ink);
   font-weight: normal;
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: var(--dl-font-display);
   font-style: italic;
   font-size: 34px;
 }
@@ -33,14 +55,14 @@ h3 {
 .button:visited,
 .green.button,
 .green.button:visited {
-  background-color: #ff9d4d;
+  background-color: var(--dl-orange);
 }
 .green.button:hover {
-  background-color: #ff8a2e;
+  background-color: var(--dl-orange-hover);
 }
 .blue.button,
 .blue.button:visited {
-  background-color: #7f6bf2;
+  background-color: var(--dl-violet);
 }
 .blue.button:hover {
   background-color: #6b54e8;
@@ -142,7 +164,9 @@ body {
   margin: 0;
 }
 
-/* Form controls */
+/* Form controls — same shape language (radius, padding, focus ring) used on
+   every client page, light or dark, so login/open-ticket/check-status feel
+   like one product. */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -150,13 +174,13 @@ input[type="tel"],
 input[type="number"],
 select,
 textarea {
-    border: 1px solid rgba(21,22,29,0.18);
-    border-radius: 10px;
+    border: 1px solid var(--dl-border);
+    border-radius: var(--dl-radius);
     padding: 12px 14px;
     font-size: 15px;
-    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
-    color: #15161d;
-    background: #fff;
+    font-family: var(--dl-font-body);
+    color: var(--dl-ink);
+    background: var(--dl-surface);
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 input[type="text"]:focus,
@@ -167,36 +191,41 @@ input[type="number"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #7f6bf2;
-    box-shadow: 0 0 0 3px rgba(127,107,242,0.15);
+    border-color: var(--dl-violet);
+    box-shadow: 0 0 0 3px rgba(127,107,242,0.12);
 }
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-    font-family: 'Space Grotesk', helvetica, arial, sans-serif;
-    border: 1px solid rgba(21,22,29,0.15);
-    border-radius: 10px;
-    background: #f5f4f1;
-    color: #15161d;
+    font-family: var(--dl-font-body);
+    border: 1px solid var(--dl-border);
+    border-radius: var(--dl-radius);
+    background: var(--dl-neutral);
+    color: var(--dl-ink);
     padding: 11px 22px;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 input[type="submit"]:hover,
 button:hover {
     background: #eceae5;
 }
+/* Primary call-to-action — same pill shape and orange fill as the "Ingresar"
+   button on login, so the primary action reads identically on every form. */
 #ticket-create input[type="submit"],
 input[value="Create Ticket"] {
-    background: #ff9d4d;
-    border-color: #ff9d4d;
+    background: var(--dl-orange);
+    border-color: var(--dl-orange);
     color: #fff;
     font-weight: 600;
+    border-radius: var(--dl-radius-pill);
+    padding: 12px 28px;
 }
 input[value="Create Ticket"]:hover {
-    background: #ff8a2e;
+    background: var(--dl-orange-hover);
+    box-shadow: 0 4px 14px rgba(255,157,77,0.28);
 }
 
 /* Login page — true split screen: flat brand panel + dark minimal form panel, flush (no seam/card) */
@@ -218,8 +247,9 @@ hr:has(+ #content .login-shell) {
     flex: 0 0 46%;
     position: relative;
     padding: 44px 48px;
-    background: linear-gradient(160deg, #2c1f66 0%, #4c3aa3 55%, #b8703f 140%);
-    color: #fff;
+    background: var(--dl-neutral);
+    border-right: 1px solid var(--dl-border);
+    color: var(--dl-ink);
     display: flex;
     flex-direction: column;
 }
@@ -232,23 +262,21 @@ hr:has(+ #content .login-shell) {
     width: 26px;
     height: auto;
     margin-right: 8px;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
 }
 .login-brand-wordmark {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: var(--dl-font-display);
     font-style: italic;
     font-size: 20px;
-    color: #fff;
+    color: var(--dl-ink);
 }
 .login-brand-title {
     margin: 40px 0 12px;
     font-size: 30px;
-    color: #fff;
+    color: var(--dl-ink);
 }
 .login-brand-tagline {
     margin: 0 0 28px;
-    color: rgba(255,255,255,0.85);
+    color: var(--dl-ink-soft);
     font-size: 15px;
     line-height: 1.6;
     max-width: 320px;
@@ -259,19 +287,20 @@ hr:has(+ #content .login-shell) {
     gap: 10px;
 }
 .login-brand-link {
-    color: #fff;
+    color: var(--dl-violet);
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
     width: fit-content;
+    border-bottom: 1px dotted transparent;
 }
 .login-brand-link:hover {
-    border-bottom-color: #fff;
+    border-bottom-color: var(--dl-violet);
 }
 .login-illustration {
     margin-top: 28px;
-    color: #fff;
-    opacity: 0.8;
+    color: var(--dl-violet);
+    opacity: 0.3;
 }
 .login-illustration svg {
     width: 160px;
@@ -281,7 +310,7 @@ hr:has(+ #content .login-shell) {
 .login-panel {
     flex: 1;
     padding: 56px 60px;
-    background: #1a1b23;
+    background: var(--dl-dark);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -301,7 +330,7 @@ hr:has(+ #content .login-shell) {
 .login-tab-active {
     color: #fff;
     font-weight: 600;
-    border-bottom: 2px solid #ff9d4d;
+    border-bottom: 2px solid var(--dl-orange);
 }
 a.login-tab:hover {
     color: rgba(255,255,255,0.8);
@@ -333,20 +362,22 @@ a.login-tab:hover {
 .login-field input {
     width: 100%;
     box-sizing: border-box;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
-    border-radius: 0;
-    padding: 6px 2px 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--dl-dark-border);
+    border-radius: var(--dl-radius);
+    padding: 12px 14px;
     color: #fff;
     font-size: 15px;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
 .login-field input::placeholder {
     color: rgba(255,255,255,0.3);
 }
 .login-field input:focus {
-    border-bottom-color: #ff9d4d;
-    box-shadow: none;
+    outline: none;
+    border-color: var(--dl-orange);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 3px rgba(255,157,77,0.16);
 }
 .login-form-actions {
     display: flex;
@@ -355,15 +386,16 @@ a.login-tab:hover {
     margin-top: 12px;
 }
 .login-form-actions .btn {
-    background: #ff9d4d;
+    background: var(--dl-orange);
     border: none;
-    color: #1a1b23;
+    color: var(--dl-dark);
     font-weight: 600;
     padding: 12px 30px;
-    border-radius: 24px;
+    border-radius: var(--dl-radius-pill);
 }
 .login-form-actions .btn:hover {
-    background: #ffb066;
+    background: var(--dl-orange-hover);
+    box-shadow: 0 4px 14px rgba(255,157,77,0.28);
 }
 .login-forgot {
     font-size: 13px;
