@@ -22,4 +22,9 @@ Se creó tu solicitud de ticket y un representante se va a comunicar con vos a l
 <br>
 Equipo de soporte
 </div>' WHERE id = 2;
+UPDATE ost_help_topic SET topic = 'Consulta General' WHERE topic_id = 1;
+UPDATE ost_help_topic SET topic = 'Comentarios' WHERE topic_id = 2;
+UPDATE ost_help_topic SET topic = 'Reportar un Problema' WHERE topic_id = 10;
+UPDATE ost_help_topic SET topic = 'Problema de Acceso' WHERE topic_id = 11;
+
 UPDATE ost_config SET value='es' WHERE `key`='system_language';
