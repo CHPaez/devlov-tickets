@@ -4151,6 +4151,7 @@ img.avatar + img.avatar {
 [data-theme="dark"] .redactor-toolbar a,
 [data-theme="dark"] .redactor-air a {
     color: var(--dl-ink-soft);
+    background-color: transparent !important;
 }
 [data-theme="dark"] .redactor-toolbar a.redactor-button-active {
     background: rgba(255,255,255,0.1);
