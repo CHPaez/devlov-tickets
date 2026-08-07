@@ -5,6 +5,7 @@ header("Content-Security-Policy: frame-ancestors ".$cfg->getAllowIframes()."; sc
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+    <script>(function(){try{var t=localStorage.getItem('dl_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="refresh" content="7200" />
     <title>osTicket :: <?php echo __('Agent Login'); ?></title>

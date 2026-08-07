@@ -36,3 +36,31 @@
   --dl-font-body: 'Space Grotesk', helvetica, arial, sans-serif;
   --dl-font-display: 'Instrument Serif', Georgia, serif;
 }
+
+/* "Modo creativo" — dark theme. Values sourced from DevLov's own existing
+   dark identity in F:\IA\devlov-app\src\theme.ts (COLORS), not invented:
+   near-black radial-gradient bg (#07080e/#020208/#000000), white primary
+   text, muted text at the same alpha DevLov already uses there
+   (textMuted: rgba(255,255,255,0.55), rounded up slightly to 0.62/0.42 to
+   match this file's existing light-mode alpha steps exactly). Accent
+   colors (--dl-violet/--dl-orange) are DELIBERATELY UNCHANGED — devlov-app
+   uses the identical accent hex in both its light and dark modes
+   (LIGHT_COLORS.accent === COLORS.accent), so brand accent doesn't shift
+   between themes here either. --dl-surface reuses --dl-dark-staff
+   (#1a1b23, the staff sidebar's existing proven-live dark tone) as a
+   single shared card surface for both panels in dark mode — a
+   simplification over maintaining the client/staff surface split through
+   a second theme dimension, called out explicitly rather than silently
+   decided. --dl-dark/--dl-dark-staff/--dl-dark-border are already-dark
+   values used by the always-dark login split-screen panel and stay as
+   they are regardless of theme. */
+:root[data-theme="dark"] {
+  --dl-violet-tint: rgba(127,107,242,0.16);
+  --dl-violet-tint-strong: rgba(127,107,242,0.32);
+  --dl-ink: #ffffff;
+  --dl-ink-soft: rgba(255,255,255,0.62);
+  --dl-ink-faint: rgba(255,255,255,0.42);
+  --dl-surface: #1a1b23;
+  --dl-neutral: #07080e;
+  --dl-border: rgba(255,255,255,0.14);
+}

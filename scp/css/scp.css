@@ -138,6 +138,11 @@ a time {
     box-shadow: 0 4px 24px rgba(21,22,29,0.06);
     overflow: hidden;
 }
+[data-theme="dark"] #container {
+    background: rgba(26,27,35,0.7);
+    border-color: var(--dl-border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
 @media (max-width: 1450px) {
     #container {
         width: 94%;
@@ -389,6 +394,46 @@ a time {
    (no horizontal room) — items are just click-through links now. */
 #nav li.inactive > ul {
     display: none;
+}
+
+/* "Vista clásica" / "Modo creativo" toggle — same treatment as the client
+   sidebar's version (assets/devlov/theme-overrides.css), mirrored here
+   since the staff panel is a separate CSS file. Icon swap and label text
+   handled by assets/devlov/theme-toggle.js. */
+.dl-theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 12px;
+    padding: 9px 12px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--dl-radius-nav);
+    background: none;
+    color: rgba(255,255,255,0.75);
+    font-family: var(--dl-font-body);
+    font-size: 13.5px;
+    cursor: pointer;
+    text-align: left;
+}
+.dl-theme-toggle:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
+}
+.dl-theme-toggle-icon {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+}
+.dl-theme-toggle-sun {
+    display: none;
+}
+[data-theme="dark"] .dl-theme-toggle-moon {
+    display: none;
+}
+[data-theme="dark"] .dl-theme-toggle-sun {
+    display: block;
 }
 
 .ieshadow {
@@ -1244,6 +1289,11 @@ a.Icon:hover {
     overflow-x: auto;
     overflow-y: visible;
 }
+[data-theme="dark"] #content {
+    border-color: var(--dl-border);
+    border-bottom-color: var(--dl-border);
+    background: var(--dl-surface);
+}
 
 #footer {
     clear:both;
@@ -1328,7 +1378,7 @@ table.list thead th a.asc { background: url('../images/asc.gif') 100% 50% no-rep
 table.list thead th a.desc { background: url('../images/desc.gif') 100% 50% no-repeat var(--dl-violet-tint-strong); }
 
 table.list tbody td {
-    background: #fff;
+    background: var(--dl-surface);
     border: 1px solid var(--dl-border);
     padding: 6px 8px;
     vertical-align: top;
@@ -1501,6 +1551,14 @@ input[type=text], input[type=password], textarea, input {
     border-radius:4px;
    -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
+}
+[data-theme="dark"] input[type=text],
+[data-theme="dark"] input[type=password],
+[data-theme="dark"] textarea,
+[data-theme="dark"] input {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
 }
 
 .form_table input[type=radio], .form_table input[type=checkbox] {
@@ -3834,6 +3892,10 @@ table.grid.form caption {
   border-bottom: 1px dotted #aaa;
   border-radius: 0 0 5px 5px;
 }
+[data-theme="dark"] #basic_search {
+  background-color: rgba(255,255,255,0.04);
+  border-bottom-color: var(--dl-border);
+}
 
 #basic-ticket-search {
   border: 1px solid #999;
@@ -3852,6 +3914,11 @@ select {
     border-radius:4px;
    -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
+}
+[data-theme="dark"] select {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
 }
 
 #cannedResp {

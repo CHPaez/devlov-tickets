@@ -105,11 +105,11 @@ body, input {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: var(--dl-surface);
     border-radius: 16px;
     z-index: -1;
     mix-blend-mode: normal;
-    border: 1px solid rgba(21,22,29,0.1);
+    border: 1px solid var(--dl-border);
 }
 /* IE 9-10 */
 @media screen\0 {

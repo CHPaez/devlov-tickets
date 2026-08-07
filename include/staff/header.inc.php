@@ -21,6 +21,7 @@ if (osTicket::is_ie())
     $ost->setWarning(__('osTicket no longer supports Internet Explorer.'));
 ?>>
 <head>
+    <script>(function(){try{var t=localStorage.getItem('dl_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="cache-control" content="no-cache" />
@@ -118,6 +119,16 @@ if (osTicket::is_ie())
     <ul id="nav">
 <?php include STAFFINC_DIR . "templates/navigation.tmpl.php"; ?>
     </ul>
+    <button type="button" class="dl-theme-toggle" title="Modo creativo">
+        <svg class="dl-theme-toggle-icon dl-theme-toggle-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg class="dl-theme-toggle-icon dl-theme-toggle-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a7 7 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <span class="dl-theme-toggle-label">Modo creativo</span>
+    </button>
     </div>
     <div id="main-panel">
     <?php include STAFFINC_DIR . "templates/sub-navigation.tmpl.php"; ?>
