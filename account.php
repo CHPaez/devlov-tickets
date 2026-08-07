@@ -133,6 +133,10 @@ elseif ($_POST) {
         $user->delete();
 }
 
+// Low-density hero background — same pattern as open.php/view.php. All
+// three states this page can render (register/confirm/confirmed) are
+// sparse single-purpose forms, never data listings.
+$dl_starfield = true;
 include(CLIENTINC_DIR.'header.inc.php');
 include(CLIENTINC_DIR.$inc);
 include(CLIENTINC_DIR.'footer.inc.php');
