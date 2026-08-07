@@ -11,7 +11,20 @@
    [data-dl-starfield] — deliberately NOT applied to data-dense screens
    (ticket lists, admin tables), matching the low-density-only decoration
    boundary already established for this app's Lottie animations and
-   login ambient glow blobs. Respects prefers-reduced-motion.
+   login ambient glow blobs.
+
+   Respects prefers-reduced-motion, but NOT by rendering nothing — a user
+   reported the starfield invisible on every desktop browser but working
+   fine on their phone; turned out to be Windows' system-level "Show
+   animations" accessibility toggle, which makes every browser on that
+   machine report prefers-reduced-motion:reduce identically (mobile OSes
+   have their own separate, usually-off-by-default setting, hence the
+   phone/desktop split). The original version treated that as "don't draw
+   at all," which meant users who'd never consciously opted into hiding
+   this decoration just never saw it. Now: a static single-frame render
+   (stars placed once, no twinkle, no animation loop, no cursor-glow
+   interaction) is drawn instead — motion is suppressed, the decoration
+   isn't erased.
 
    Intensity: an optional [data-dl-starfield-intensity="low"] on the same
    container scales density/brightness down (used on login.php, where
@@ -81,6 +94,28 @@
             canvas.style.height = height + 'px';
             ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
             stars = makeStars(width, height, cfg);
+            if (prefersReducedMotion()) drawStatic();
+        }
+
+        function drawStars(alphaFor, radiusFor) {
+            ctx.clearRect(0, 0, width, height);
+            for (var i = 0; i < stars.length; i++) {
+                var s = stars[i];
+                var alpha = alphaFor(s);
+                var radius = radiusFor(s);
+                var rgb = TINT_RGB[s.tint];
+                ctx.shadowColor = 'rgba(' + rgb + ',' + Math.min(1, alpha + 0.15) + ')';
+                ctx.shadowBlur = radius * 3 * cfg.glow;
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(' + rgb + ',' + alpha + ')';
+                ctx.arc(s.x, s.y, radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        function drawStatic() {
+            drawStars(function (s) { return s.baseAlpha; }, function (s) { return s.r; });
         }
 
         function onMove(e) {
@@ -117,13 +152,17 @@
         }
 
         function start() {
-            if (running || prefersReducedMotion()) return;
+            if (running) return;
             running = true;
             resize();
             window.addEventListener('resize', resize);
-            container.addEventListener('pointermove', onMove);
-            container.addEventListener('pointerleave', onLeave);
-            raf = requestAnimationFrame(frame);
+            if (!prefersReducedMotion()) {
+                container.addEventListener('pointermove', onMove);
+                container.addEventListener('pointerleave', onLeave);
+                raf = requestAnimationFrame(frame);
+            }
+            // else: resize() already called drawStatic() — no rAF loop,
+            // no pointer listeners, nothing moves.
         }
         function stop() {
             if (!running) return;
@@ -136,13 +175,22 @@
         }
 
         function sync() {
-            if (isDark()) { start(); } else { stop(); }
+            // Fully restart on a reduced-motion change (not just a theme
+            // change) so switching the OS setting while the page is open
+            // flips between animated and static without a refresh.
+            if (running) stop();
+            if (isDark()) start();
         }
         sync();
 
         new MutationObserver(sync).observe(document.documentElement, {
             attributes: true, attributeFilter: ['data-theme']
         });
+        if (window.matchMedia) {
+            var rmq = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if (rmq.addEventListener) rmq.addEventListener('change', sync);
+            else if (rmq.addListener) rmq.addListener(sync); // older Safari
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
