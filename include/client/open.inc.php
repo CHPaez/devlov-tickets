@@ -62,16 +62,6 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
         <p><strong>Seguí el estado cuando quieras</strong><br>Volvé a &ldquo;Tickets&rdquo; para ver las novedades.</p>
     </div>
 </div>
-<script>
-(function () {
-    try {
-        if (localStorage.getItem('dl_seen_ticket_guide')) {
-            var el = document.getElementById('dl-ticket-guide');
-            if (el && el.parentNode) el.parentNode.removeChild(el);
-        }
-    } catch (e) {}
-})();
-</script>
 
 <form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
   <?php csrf_token(); ?>

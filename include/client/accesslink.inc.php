@@ -18,6 +18,40 @@ else
     echo ' '.__('This will sign you in to view your ticket.');
 ?></p>
 
+<div id="dl-access-guide" class="dl-ticket-guide">
+    <button type="button" class="dl-ticket-guide-dismiss" aria-label="Cerrar">&times;</button>
+    <div class="dl-ticket-guide-step">
+        <svg class="dl-ticket-guide-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="8" width="30" height="40" rx="4" stroke="currentColor" stroke-width="3"/>
+            <path d="M18 20h14M18 28h14M18 36h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="42" cy="42" r="10" stroke="currentColor" stroke-width="3"/>
+            <path d="M49.5 49.5L57 57" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p><strong>Ingresá tu correo y número de ticket</strong><br>Los mismos datos que usaste al crearlo.</p>
+    </div>
+    <div class="dl-ticket-guide-arrow" aria-hidden="true">&rarr;</div>
+    <div class="dl-ticket-guide-step">
+        <svg class="dl-ticket-guide-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="16" width="48" height="34" rx="5" stroke="currentColor" stroke-width="3"/>
+            <path d="M10 20l22 16 22-16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+<?php if ($cfg->isClientEmailVerificationRequired()) { ?>
+        <p><strong>Te enviamos un enlace de acceso</strong><br>Revisá tu correo para ingresar de forma segura.</p>
+<?php } else { ?>
+        <p><strong>Te mostramos el estado actual</strong><br>Accedés directamente, sin pasos extra.</p>
+<?php } ?>
+    </div>
+    <div class="dl-ticket-guide-arrow" aria-hidden="true">&rarr;</div>
+    <div class="dl-ticket-guide-step">
+        <svg class="dl-ticket-guide-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="34" r="20" stroke="currentColor" stroke-width="3"/>
+            <path d="M32 22v12l9 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 8h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p><strong>Vas a poder ver las respuestas</strong><br>Todo el historial y las novedades del agente.</p>
+    </div>
+</div>
+
 <form action="login.php" method="post" id="accessLinkForm" class="access-form">
     <?php csrf_token(); ?>
 <?php if ($errors['login']) { ?>
