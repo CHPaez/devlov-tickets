@@ -4103,3 +4103,56 @@ img.avatar + img.avatar {
 [data-theme="dark"] table.list td[style*="background-color"] div {
     background-color: transparent !important;
 }
+
+/* ============================================================
+   "Modo creativo" — ticket thread / reply screen. Untouched until now:
+   the sticky "Hilo del ticket" tab bar, the thread-event type icon, the
+   reply/note form wrapper, and the redactor rich-text editor all kept
+   their vendor light backgrounds with no dark counterpart. The worst of
+   these was the editor itself: --dl-ink resolves to white in dark mode,
+   so its white background + white (inherited) text meant staff couldn't
+   see what they were typing while replying to a ticket.
+   .thread-body (the message content bubble itself) is deliberately left
+   white/light — matches the common "message stays on its own light card"
+   pattern and was already fully readable (dark text on white), not a bug.
+   ============================================================ */
+[data-theme="dark"] .sticky.bar.fixed,
+[data-theme="dark"] .sticky.bar.opaque {
+    background: var(--dl-surface);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] ul.tabs.clean li.active {
+    background-color: var(--dl-surface);
+}
+[data-theme="dark"] .type-icon {
+    background-color: rgba(255,255,255,0.08);
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] #ticket_notes td,
+[data-theme="dark"] .thread-entry .info,
+[data-theme="dark"] #ticket_notes .info {
+    background: var(--dl-surface);
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] #response_options > form {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+}
+
+/* Redactor rich-text editor (ticket reply / internal note box) */
+[data-theme="dark"] .redactor-box.redactor-styles-on {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .redactor-box.redactor-styles-on .redactor-toolbar.redactor-toolbar {
+    background-color: rgba(255,255,255,0.04);
+}
+[data-theme="dark"] .redactor-toolbar a,
+[data-theme="dark"] .redactor-air a {
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] .redactor-toolbar a.redactor-button-active {
+    background: rgba(255,255,255,0.1);
+    color: var(--dl-ink);
+}
