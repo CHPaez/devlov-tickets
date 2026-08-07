@@ -396,46 +396,6 @@ a time {
     display: none;
 }
 
-/* "Vista clásica" / "Modo creativo" toggle — same treatment as the client
-   sidebar's version (assets/devlov/theme-overrides.css), mirrored here
-   since the staff panel is a separate CSS file. Icon swap and label text
-   handled by assets/devlov/theme-toggle.js. */
-.dl-theme-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    margin-top: 12px;
-    padding: 9px 12px;
-    border: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--dl-radius-nav);
-    background: none;
-    color: rgba(255,255,255,0.75);
-    font-family: var(--dl-font-body);
-    font-size: 13.5px;
-    cursor: pointer;
-    text-align: left;
-}
-.dl-theme-toggle:hover {
-    background-color: rgba(255,255,255,0.08);
-    color: #fff;
-}
-.dl-theme-toggle-icon {
-    flex: 0 0 auto;
-    width: 17px;
-    height: 17px;
-}
-.dl-theme-toggle-sun {
-    display: none;
-}
-[data-theme="dark"] .dl-theme-toggle-moon {
-    display: none;
-}
-[data-theme="dark"] .dl-theme-toggle-sun {
-    display: block;
-}
-
 .ieshadow {
     display: none;
 }

@@ -164,5 +164,6 @@ if (($bks=StaffAuthenticationBackend::getExternal())) { ?>
     </style>
     <![endif]-->
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-ui-1.13.2.custom.min.js"></script>
+    <script type="text/javascript" src="<?php echo ROOT_PATH; ?>assets/devlov/theme-toggle.js"></script>
 </body>
 </html>

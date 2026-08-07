@@ -177,6 +177,14 @@ fieldset input {
     padding:2px 4px;
     width: 100%;
 }
+/* Text color already follows --dl-ink (body, input rule above), but the
+   background here was hardcoded to a light/white fill regardless of
+   theme — in dark mode that meant white text on a near-white
+   translucent field, unreadable. */
+[data-theme="dark"] fieldset input {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dl-border);
+}
 
 hr {
     margin: 20px;

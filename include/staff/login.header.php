@@ -25,4 +25,13 @@ header("Content-Security-Policy: frame-ancestors ".$cfg->getAllowIframes()."; sc
     </script>
 </head>
 <body id="loginBody">
+    <button type="button" class="dl-theme-toggle dl-theme-toggle-fixed" title="Modo creativo">
+        <svg class="dl-theme-toggle-icon dl-theme-toggle-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg class="dl-theme-toggle-icon dl-theme-toggle-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a7 7 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+    </button>
 

@@ -64,3 +64,61 @@
   --dl-neutral: #07080e;
   --dl-border: rgba(255,255,255,0.14);
 }
+
+/* "Vista clásica" / "Modo creativo" toggle — a single fixed, always-on-top
+   control, top-right of the viewport, present on every page this file is
+   loaded on (client portal, staff panel, AND staff login — the three
+   places that <link> tokens.css). Deliberately NOT tied to the sidebar or
+   any header bar: those don't render on every page (login screens have
+   neither), so this is the one placement guaranteed reachable everywhere.
+   Icon swap is pure CSS; click/localStorage wiring is
+   assets/devlov/theme-toggle.js, which finds it via the shared
+   .dl-theme-toggle class like every other toggle instance. */
+.dl-theme-toggle-fixed {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--dl-border);
+  background: var(--dl-violet-tint);
+  backdrop-filter: blur(6px);
+  color: var(--dl-ink-soft);
+  cursor: pointer;
+}
+.dl-theme-toggle-fixed:hover {
+  background: var(--dl-violet-tint-strong);
+  color: var(--dl-ink);
+}
+.dl-theme-toggle-fixed .dl-theme-toggle-icon {
+  /* flex: 0 0 18px (not just width:18px) — on the client portal specifically,
+     this SVG was collapsing to 0 width (height stayed correct at 18px)
+     because as a flex child its default min-width:auto/flex-shrink:1 let it
+     shrink away; forcing a fixed flex-basis with no grow/shrink sidesteps
+     that resolution entirely regardless of root cause. */
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+}
+.dl-theme-toggle-fixed .dl-theme-toggle-sun {
+  display: none;
+}
+[data-theme="dark"] .dl-theme-toggle-fixed .dl-theme-toggle-moon {
+  display: none;
+}
+[data-theme="dark"] .dl-theme-toggle-fixed .dl-theme-toggle-sun {
+  display: block;
+}
+@media (max-width: 480px) {
+  .dl-theme-toggle-fixed {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
