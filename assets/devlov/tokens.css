@@ -132,7 +132,17 @@
    stacking context above the canvas — per CSS2.1 painting order, a
    position:absolute z-index:0 canvas would otherwise paint ABOVE plain
    static-flow siblings, not below them. Same z-index:1-on-children
-   technique already used for the login glow blobs (.login-brand > *). */
+   technique already used for the login glow blobs (.login-brand > *).
+
+   Real bug hit shipping this on login.php: .login-brand > * / .login-panel
+   > * (theme-overrides.css, pre-existing, sets position:relative on EVERY
+   child including the canvas) has the exact same specificity as a plain
+   .dl-starfield-canvas rule and loads later in the cascade, so it won —
+   flipping the canvas from absolute to relative, which turned it into a
+   real ~800px-tall block in normal flow and pushed the entire login form
+   off-screen. .dl-starfield-canvas's positioning rules are scoped with
+   the parent attribute selector below specifically to always outrank any
+   plain `> *` rule regardless of source order or which page adds one next. */
 [data-dl-starfield] {
   position: relative;
 }
@@ -141,9 +151,11 @@
   z-index: 1;
 }
 .dl-starfield-canvas {
+  display: block;
+  pointer-events: none;
+}
+[data-dl-starfield] > .dl-starfield-canvas {
   position: absolute;
   inset: 0;
   z-index: 0;
-  display: block;
-  pointer-events: none;
 }

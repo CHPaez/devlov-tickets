@@ -18,7 +18,7 @@ $can_open_ticket = ($cfg->getClientRegistrationMode() != 'disabled'
     || !$cfg->isClientLoginRequired());
 ?>
 <div class="login-shell">
-    <div class="login-brand">
+    <div class="login-brand" data-dl-starfield data-dl-starfield-intensity="low">
         <div class="login-brand-logo">
             <img class="login-brand-heart" src="<?php echo ROOT_PATH; ?>images/devlo-heart-icon.png" alt="">
             <span class="login-brand-wordmark"><?php echo $ost->getConfig()->getTitle(); ?></span>
@@ -48,7 +48,7 @@ $can_open_ticket = ($cfg->getClientRegistrationMode() != 'disabled'
         </div>
     </div>
 
-    <div class="login-panel">
+    <div class="login-panel" data-dl-starfield data-dl-starfield-intensity="low">
         <div class="login-tabs">
             <span class="login-tab login-tab-active"><?php echo __('Sign In'); ?></span>
 <?php if ($cfg && $cfg->isClientRegistrationEnabled()) { ?>

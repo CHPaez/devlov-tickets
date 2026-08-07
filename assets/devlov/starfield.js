@@ -11,10 +11,22 @@
    [data-dl-starfield] — deliberately NOT applied to data-dense screens
    (ticket lists, admin tables), matching the low-density-only decoration
    boundary already established for this app's Lottie animations and
-   login ambient glow blobs. Respects prefers-reduced-motion. */
+   login ambient glow blobs. Respects prefers-reduced-motion.
+
+   Intensity: an optional [data-dl-starfield-intensity="low"] on the same
+   container scales density/brightness down (used on login.php, where
+   stars are layered UNDERNEATH the existing glow-blob decoration rather
+   than competing with it). Default ("full", used on open.php/view.php)
+   is deliberately brighter/denser than the first version shipped here —
+   the initial pass read as barely-visible flecks rather than a
+   recognizable starfield. */
 (function () {
     var TINT_RGB = { white: '255,255,255', accent: '255,157,77', violet: '152,132,245' };
-    var PROXIMITY_RADIUS = 150;
+    var PROXIMITY_RADIUS = 160;
+    var INTENSITY = {
+        full: { density: 6000, minCount: 70, maxCount: 220, rMin: 1.4, rMax: 3.2, aMin: 0.65, aMax: 1.0, glow: 1 },
+        low:  { density: 11000, minCount: 30, maxCount: 90, rMin: 1.1, rMax: 2.4, aMin: 0.35, aMax: 0.6, glow: 0.6 }
+    };
 
     function prefersReducedMotion() {
         return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -24,8 +36,8 @@
         return document.documentElement.getAttribute('data-theme') === 'dark';
     }
 
-    function makeStars(width, height) {
-        var count = Math.min(160, Math.max(40, Math.floor((width * height) / 9000)));
+    function makeStars(width, height, cfg) {
+        var count = Math.min(cfg.maxCount, Math.max(cfg.minCount, Math.floor((width * height) / cfg.density)));
         var stars = [];
         for (var i = 0; i < count; i++) {
             var roll = Math.random();
@@ -33,8 +45,8 @@
             stars.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                r: 1 + Math.random() * 1.8,
-                baseAlpha: 0.5 + Math.random() * 0.4,
+                r: cfg.rMin + Math.random() * (cfg.rMax - cfg.rMin),
+                baseAlpha: cfg.aMin + Math.random() * (cfg.aMax - cfg.aMin),
                 phase: Math.random() * Math.PI * 2,
                 speed: 0.3 + Math.random() * 0.6,
                 tint: tint
@@ -46,6 +58,9 @@
     function mount(container) {
         if (container.__dlStarfieldMounted) return;
         container.__dlStarfieldMounted = true;
+
+        var intensityKey = container.getAttribute('data-dl-starfield-intensity');
+        var cfg = INTENSITY[intensityKey] || INTENSITY.full;
 
         var canvas = document.createElement('canvas');
         canvas.className = 'dl-starfield-canvas';
@@ -65,7 +80,7 @@
             canvas.style.width = width + 'px';
             canvas.style.height = height + 'px';
             ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-            stars = makeStars(width, height);
+            stars = makeStars(width, height, cfg);
         }
 
         function onMove(e) {
@@ -89,10 +104,14 @@
                     alpha = Math.min(1, alpha + closeness * 0.5);
                     radius = s.r * (1 + closeness * 1.8);
                 }
+                var rgb = TINT_RGB[s.tint];
+                ctx.shadowColor = 'rgba(' + rgb + ',' + Math.min(1, alpha + 0.15) + ')';
+                ctx.shadowBlur = radius * 3 * cfg.glow;
                 ctx.beginPath();
-                ctx.fillStyle = 'rgba(' + TINT_RGB[s.tint] + ',' + alpha + ')';
+                ctx.fillStyle = 'rgba(' + rgb + ',' + alpha + ')';
                 ctx.arc(s.x, s.y, radius, 0, Math.PI * 2);
                 ctx.fill();
+                ctx.shadowBlur = 0;
             }
             raf = requestAnimationFrame(frame);
         }
