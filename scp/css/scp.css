@@ -4017,3 +4017,129 @@ img.avatar + img.avatar {
     height: auto;
     max-height: 400px !important;
 }
+
+/* ============================================================
+   "Modo creativo" — dark theme, admin/list-screen surfaces.
+   These vendor rules (#eee/#ddd/#fff panels: form-section headers,
+   list-table bulk-select toolbar, dropdowns, tooltips, dialogs, select2)
+   render on nearly every admin CRUD screen and never had a
+   [data-theme="dark"] counterpart — they were the actual cause of admin/
+   settings screens looking visually "patchy" next to solid-dark screens
+   like the dashboard: light panels breaking up the otherwise dark UI.
+   ============================================================ */
+
+[data-theme="dark"] table tfoot td {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] .form_table th,
+[data-theme="dark"] div.section-break {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .dialog {
+    background: var(--dl-surface);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .dialog th {
+    background: rgba(255,255,255,0.06);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .dialog fieldset input:not([type=checkbox]) {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] #ticket_actions {
+    background: rgba(255,255,255,0.04);
+}
+[data-theme="dark"] input[type=text]:disabled,
+[data-theme="dark"] input[type=checkbox]:disabled {
+    background-color: rgba(255,255,255,0.03);
+    color: var(--dl-ink-faint);
+}
+[data-theme="dark"] #resizable-columns .column-header {
+    background-color: var(--dl-surface);
+    color: var(--dl-ink-soft);
+}
+
+/* Ticket-row "..." overflow menu + custom-queue dropdowns */
+[data-theme="dark"] .jb-overflowmenu-menu-secondary,
+[data-theme="dark"] .jb-overflowmenu-menu-primary div.customQ-dropdown,
+[data-theme="dark"] .jb-overflowmenu-menu-secondary div.customQ-dropdown,
+[data-theme="dark"] .jb-overflowmenu-menu-primary .customQ-dropdown .controlQ div.editQ .manageQ ul,
+[data-theme="dark"] .jb-overflowmenu-menu-secondary .customQ-dropdown .controlQ div.editQ .manageQ ul {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .jb-overflowmenu-menu-secondary li.item > a {
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .jb-overflowmenu-menu-secondary li.item:hover {
+    background: var(--dl-violet-tint);
+}
+[data-theme="dark"] .jb-overflowmenu .jb-overflowmenu-container > a.jb-overflowmenu-menu-secondary-handle {
+    background: rgba(255,255,255,0.06);
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] .jb-overflowmenu .jb-overflowmenu-container > a.jb-overflowmenu-menu-secondary-handle:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--dl-ink);
+}
+
+/* Ticket-row preview / hover tooltip cards */
+[data-theme="dark"] .tip_content,
+[data-theme="dark"] .tip_content textarea {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+
+/* select2 (timezone, department, assignment pickers, etc.) — the plugin
+   renders its own popup outside the normal form-control cascade, so the
+   existing [data-theme="dark"] select rule above never reaches it. */
+[data-theme="dark"] .select2-selection,
+[data-theme="dark"] .select2-selection--single,
+[data-theme="dark"] .select2-selection--multiple {
+    background: rgba(255,255,255,0.06) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-selection__rendered {
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-dropdown {
+    background: var(--dl-surface) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-search__field {
+    background: rgba(255,255,255,0.06) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-results__option {
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: var(--dl-violet) !important;
+    color: #fff !important;
+}
+
+/* Ticket-list priority-color cell: priority_color is a DB value applied
+   via an inline style="background-color:#..." per ticket
+   (include/class.priority.php), so it can't be reached by a normal class
+   selector. Neutralize the inline pastel fill in dark mode so the
+   already-dark-tokenized text stays readable — same "leave semantic
+   meaning, fix the surface" approach used for status colors elsewhere in
+   this file, just applied via attribute selector since there's no class
+   to hook. */
+[data-theme="dark"] table.list td[style*="background-color"] {
+    background-color: var(--dl-surface) !important;
+}
+[data-theme="dark"] table.list td[style*="background-color"] div {
+    background-color: transparent !important;
+}
