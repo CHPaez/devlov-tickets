@@ -7,7 +7,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
     $msg = "2FA Pending";
 
 ?>
-<div id="brickwall"></div>
+<div id="brickwall" data-dl-starfield></div>
 <div id="loginBox">
     <div id="blur">
         <div id="background"></div>
@@ -165,5 +165,6 @@ if (($bks=StaffAuthenticationBackend::getExternal())) { ?>
     <![endif]-->
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-ui-1.13.2.custom.min.js"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>assets/devlov/theme-toggle.js"></script>
+    <script type="text/javascript" src="<?php echo ROOT_PATH; ?>assets/devlov/starfield.js"></script>
 </body>
 </html>

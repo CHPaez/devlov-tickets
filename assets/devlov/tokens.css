@@ -122,3 +122,16 @@
     height: 36px;
   }
 }
+
+/* Twinkling starfield (assets/devlov/starfield.js) — mounted into any
+   [data-dl-starfield] container, dark mode only. The container must be
+   itself positioned (relative/absolute/fixed) so the canvas's inset:0
+   fills it, and its real content needs z-index:1 to paint above the
+   canvas (z-index:0). */
+.dl-starfield-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
