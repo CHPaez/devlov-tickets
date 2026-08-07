@@ -414,23 +414,50 @@ a time {
 /***********************************************************************/
 
 /* #sub_nav (per-section secondary nav: Users/Orgs, Tasks, Staff/Teams/
-   Roles/Departments, KB, etc) and #customQ_nav's overflow-menu (the
-   ticket queue's own Open/Mis Tickets/Closed/... selector — vendor CSS
-   already groups both under the same selectors below, confirming they're
-   meant to read as one system) — underline-active treatment matching the
-   dashboard stats tabs and the login Ingresar/Crear cuenta tabs. Layout
-   (height/padding/display) intentionally left untouched: #customQ_nav is
-   driven by scp/js/jb.overflow.menu.js, which measures item widths to
-   decide what collapses into an overflow dropdown — only colors/borders
-   change here, nothing that CSS layout the plugin depends on. */
+   Roles/Departments, KB, Manage's Temas de ayuda/Filtros/SLA/etc, System
+   Settings' tabs, etc) and #customQ_nav's overflow-menu (the ticket
+   queue's own Open/Mis Tickets/Closed/... selector) — vendor CSS groups
+   both under the same selectors, and BOTH literally render as the same
+   <ul id="sub_nav">, just with extra classes added for the queue case.
+
+   Went through two passes on this component off real user feedback: a
+   plain underline first (too cramped/subtle, called out as "feo"), then
+   individual violet pills (better, still not it). Final pass matches a
+   concrete reference image the user provided: a floating, fully-rounded
+   pill CONTAINER (neutral background, soft shadow) holding plain-text
+   inactive tabs and one solid-filled active pill (white text on
+   var(--dl-violet)) — not just recolored individual tabs, the whole bar
+   itself is now a distinct rounded shape sitting on the page.
+
+   IMPORTANT SPLIT: this floating-container treatment is scoped to
+   #sub_nav:not(.jb-overflowmenu-helper-postion) — i.e. every plain
+   #sub_nav EXCEPT the ticket queue's. Verified in scp/js/jb.overflow.menu.js
+   and this file's own .jb-overflowmenu-* rules (further down) that the
+   queue's #sub_nav instance gets `.jb-overflowmenu-helper-postion`
+   added, which sets `position:absolute; inset:0` to fill a fixed-size
+   35px-tall `.jb-overflowmenu` parent — switching THAT instance to
+   inline-flex/shrink-wrapped would fight the plugin's own positioning
+   and width-measuring math. So the queue nav keeps flowing inside its
+   fixed-height box (no outer pill container, no extra margin) while
+   still getting the same active/hover pill colors on each item for
+   visual consistency — verified live, not assumed. */
 #sub_nav {
-    background: none;
-    border-bottom: 1px solid var(--dl-border);
-    padding: 2px 20px;
-    height: 26px;
-    line-height: 26px;
     margin: 0;
+    padding: 0;
     white-space: nowrap;
+}
+#sub_nav:not(.jb-overflowmenu-helper-postion) {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--dl-neutral);
+    border-radius: var(--dl-radius-pill);
+    box-shadow: 0 2px 10px rgba(21,22,29,0.08);
+    padding: 6px;
+    margin: 16px 20px 20px;
+}
+#sub_nav.jb-overflowmenu-helper-postion {
+    background: none;
 }
 #sub_nav > li {
     padding: 0;
@@ -441,7 +468,7 @@ a time {
     clear:both;
     margin:0;
     padding:0;
-    line-height:26px;
+    line-height: normal;
 }
 
 #sub_nav > ul {
@@ -449,40 +476,50 @@ a time {
 }
 
 #sub_nav > li + li > a {
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 #customQ_nav .jb-overflowmenu-menu-primary li.item {
     position:relative;
-    padding:3px 6px 4px;
+    padding: 0;
     display: inline-block;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
+    border-radius: 0;
     margin:0 2px;
 }
 
 #sub_nav > li > a,
 #customQ_nav .jb-overflowmenu-menu-primary li.item > a {
     display:inline-block;
-    padding:0 10px 0 21px;
-    background-position:0 50%;
+    vertical-align: middle;
+    padding: 10px 20px 10px 34px;
+    background-position: 14px 50%;
     background-repeat:no-repeat;
     color: var(--dl-ink-soft);
-    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: var(--dl-radius-pill);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Queue nav only: .jb-overflowmenu-menu-primary is height:30px!important
+   in this file's own vendor-adjacent rules further down — smaller
+   vertical padding so the pill fits without clipping against that fixed
+   row height. */
+#customQ_nav .jb-overflowmenu-menu-primary li.item > a {
+    padding: 4px 14px 4px 26px;
+    background-position: 8px 50%;
 }
 
 #customQ_nav .jb-overflowmenu-menu-primary li.item:hover {
-    padding:2px 5px 3px;
-    color: var(--dl-violet);
     background-color: transparent;
-    border-left: none;
-    border-top: none;
-    border-right: none;
+    border: none;
 }
 
 #sub_nav > li > a:hover,
 #customQ_nav .jb-overflowmenu-menu-primary li.item:hover > a {
     color: var(--dl-violet);
+    background-color: var(--dl-violet-tint);
     text-decoration: none;
 }
 
@@ -492,8 +529,8 @@ a time {
 #customQ_nav .jb-overflowmenu-menu-primary li.item > a.active,
 #customQ_nav .jb-overflowmenu-menu-primary li.item.active > a {
     font-weight: 600;
-    color: var(--dl-ink);
-    border-bottom-color: var(--dl-orange);
+    color: #fff;
+    background-color: var(--dl-violet);
 }
 
 #sub_nav li.child.active > a {
