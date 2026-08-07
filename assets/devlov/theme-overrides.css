@@ -182,6 +182,11 @@ body {
 #content {
   margin: 0 36px;
   padding: 32px 0;
+  /* Safety net for #ticketTable and any other wide table on a narrow
+     viewport: contain the scroll to the table itself instead of letting
+     it push the whole page (sidebar included) into horizontal scroll.
+     Same pattern already used for the staff panel's .tab_content. */
+  overflow-x: auto;
 }
 @media (max-width: 900px) {
   #app-body {
@@ -261,6 +266,20 @@ body {
   margin: 0;
 }
 
+/* osTicket's client templates hardcode <table width="800"> as an HTML
+   attribute — open.inc.php, tickets.inc.php (#ticketTable), view.inc.php,
+   edit.inc.php, profile.inc.php, register.inc.php all do this. Harmless
+   on desktop, but with nothing overriding it these tables stayed a fixed
+   800px wide on any narrower viewport, forcing the ENTIRE page to scroll
+   horizontally on phones — found by emulating 375/390/428px viewports,
+   not guessed. A plain CSS rule is enough to win (HTML presentational
+   attributes sit at the very bottom of the cascade), no !important
+   needed. */
+table[width="800"] {
+    width: 100%;
+    max-width: 800px;
+}
+
 /* Form controls — same shape language (radius, padding, focus ring) used on
    every client page, light or dark, so login/open-ticket/check-status feel
    like one product. */
@@ -271,6 +290,15 @@ input[type="tel"],
 input[type="number"],
 select,
 textarea {
+    /* osTicket's dynamic-forms fields render with a `size="40"` HTML
+       attribute (e.g. open.inc.php). We never set an explicit width here,
+       so the browser fell back to that attribute's intrinsic sizing
+       (~400px) — invisible on desktop where the surrounding table was a
+       fixed 800px anyway, but it overflowed a narrow phone viewport once
+       that table became properly fluid. box-sizing so padding doesn't
+       push actual rendered width past 100% of the field's cell/column. */
+    width: 100%;
+    box-sizing: border-box;
     border: 1px solid var(--dl-border);
     border-radius: var(--dl-radius);
     padding: 12px 14px;
