@@ -69,6 +69,7 @@ if (osTicket::is_ie())
     <script src="<?php echo ROOT_PATH; ?>assets/devlov/lottie-init.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/devlov/ticket-guide-init.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/devlov/theme-toggle.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/devlov/starfield.js"></script>
     <?php
     if($ost && ($headers=$ost->getExtraHeaders())) {
         echo "\n\t".implode("\n\t", $headers)."\n";
@@ -175,7 +176,7 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
             </ul>
         </div>
         <div id="main-panel">
-        <div id="content">
+        <div id="content"<?php if (!empty($dl_starfield)) echo ' data-dl-starfield'; ?>>
 
          <?php if($errors['err']) { ?>
             <div id="msg_error"><?php echo $errors['err']; ?></div>

@@ -81,6 +81,11 @@ if ($cfg->isClientLoginRequired()) {
     }
 }
 
+// Low-density hero background (empty space around the form/guide) —
+// opts #content into the starfield mount, same pattern as staff login's
+// #brickwall. Deliberately NOT set on data-dense client pages
+// (tickets.php, kb, etc.) — see assets/devlov/starfield.js.
+$dl_starfield = true;
 require(CLIENTINC_DIR.'header.inc.php');
 if ($ticket
     && (

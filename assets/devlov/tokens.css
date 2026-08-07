@@ -124,10 +124,22 @@
 }
 
 /* Twinkling starfield (assets/devlov/starfield.js) — mounted into any
-   [data-dl-starfield] container, dark mode only. The container must be
-   itself positioned (relative/absolute/fixed) so the canvas's inset:0
-   fills it, and its real content needs z-index:1 to paint above the
-   canvas (z-index:0). */
+   [data-dl-starfield] container, dark mode only. Both requirements below
+   are enforced generically here (not left to each call site to remember):
+   the container is forced positioned so the canvas's inset:0 fills it
+   (#brickwall on staff login already was; #content on open.php/view.php
+   was not), and every one of its OTHER children is promoted to its own
+   stacking context above the canvas — per CSS2.1 painting order, a
+   position:absolute z-index:0 canvas would otherwise paint ABOVE plain
+   static-flow siblings, not below them. Same z-index:1-on-children
+   technique already used for the login glow blobs (.login-brand > *). */
+[data-dl-starfield] {
+  position: relative;
+}
+[data-dl-starfield] > :not(.dl-starfield-canvas) {
+  position: relative;
+  z-index: 1;
+}
 .dl-starfield-canvas {
   position: absolute;
   inset: 0;

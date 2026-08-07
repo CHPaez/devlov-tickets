@@ -46,6 +46,8 @@ $nav = new UserNav();
 $nav->setActiveNav('status');
 
 $inc = 'accesslink.inc.php';
+// Low-density hero background — see the matching comment in open.php.
+$dl_starfield = true;
 require CLIENTINC_DIR.'header.inc.php';
 require CLIENTINC_DIR.$inc;
 require CLIENTINC_DIR.'footer.inc.php';
