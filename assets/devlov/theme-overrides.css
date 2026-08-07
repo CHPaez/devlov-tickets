@@ -50,6 +50,16 @@ h3 {
 body {
   background: var(--dl-neutral);
   font-family: var(--dl-font-body);
+  /* This client-side stylesheet never had a baseline text color — every
+     component styled its OWN text explicitly, with no site-wide fallback.
+     Harmless in light mode (the CSS-default black happens to read fine on
+     a light bg by coincidence) but any bare/un-styled tag (dynamic-form
+     labels, generic <p>/<h3>/<b> the forms system generates) rendered
+     literally black on the near-black dark background — invisible. The
+     staff panel already had this exact safety net (scp/css/login.css:
+     "body, input { color: var(--dl-ink) }"); the client side was simply
+     missing it. */
+  color: var(--dl-ink);
 }
 #container {
   width: 1140px;
@@ -239,12 +249,15 @@ body {
 }
 .footer-tagline {
   font-size: 12.5px;
-  color: rgba(21,22,29,0.65);
+  /* Was a hardcoded rgba(21,22,29,*) literal (light-mode ink color) with
+     no dark counterpart — invisible against the dark background. Tokens
+     already flip correctly between themes. */
+  color: var(--dl-ink-soft);
   margin: 0 0 4px;
 }
 .footer-copy {
   font-size: 11px;
-  color: rgba(21,22,29,0.45);
+  color: var(--dl-ink-faint);
   margin: 0;
 }
 
@@ -947,4 +960,61 @@ table.custom-data th {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   "Modo creativo" — regressions caught by re-scanning after adding the
+   global `body { color: var(--dl-ink) }` baseline above. That baseline
+   fixed genuinely invisible black-on-black text, but it also flipped
+   text color on a couple of components that had their OWN hardcoded
+   LIGHT background and were relying (like everything else here) on the
+   CSS-default black text for readability — #ticketTable's header row/
+   caption, and select2 (same gap already fixed for the staff panel in
+   scp/css/scp.css, never mirrored here). Same fix approach as
+   everywhere else this session: dark-mode the background rather than
+   special-casing text color back to black.
+   ============================================================ */
+[data-theme="dark"] #ticketTable caption {
+    background: var(--dl-surface);
+    color: var(--dl-ink);
+    border-color: var(--dl-border);
+}
+[data-theme="dark"] #ticketTable th {
+    background: var(--dl-violet-tint);
+    color: var(--dl-ink);
+    border-color: var(--dl-border);
+}
+[data-theme="dark"] #ticketTable th a {
+    color: var(--dl-ink);
+}
+
+/* select2 (timezone picker on profile.php, etc.) — renders its own popup
+   outside the normal form-control cascade. Mirrors the staff-panel fix
+   in scp/css/scp.css. */
+[data-theme="dark"] .select2-selection,
+[data-theme="dark"] .select2-selection--single,
+[data-theme="dark"] .select2-selection--multiple {
+    background: rgba(255,255,255,0.06) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-selection__rendered {
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-dropdown {
+    background: var(--dl-surface) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-search__field {
+    background: rgba(255,255,255,0.06) !important;
+    border-color: var(--dl-border) !important;
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-results__option {
+    color: var(--dl-ink) !important;
+}
+[data-theme="dark"] .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: var(--dl-violet) !important;
+    color: #fff !important;
 }
