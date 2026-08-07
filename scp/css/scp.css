@@ -4157,3 +4157,11 @@ img.avatar + img.avatar {
     background: rgba(255,255,255,0.1);
     color: var(--dl-ink);
 }
+
+/* profile.php (staff) — the "two-column" info table (.table, not
+   .form_table) has its own separate white-background rule that never
+   got a dark override: `.table td:not(:empty) { background-color:#fff }`.
+   Same un-tokenized-vendor-rule pattern hit repeatedly this session. */
+[data-theme="dark"] .table td:not(:empty) {
+    background-color: var(--dl-surface);
+}

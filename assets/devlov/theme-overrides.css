@@ -182,11 +182,21 @@ body {
 #content {
   margin: 0 36px;
   padding: 32px 0;
-  /* Safety net for #ticketTable and any other wide table on a narrow
-     viewport: contain the scroll to the table itself instead of letting
-     it push the whole page (sidebar included) into horizontal scroll.
-     Same pattern already used for the staff panel's .tab_content. */
+}
+/* #ticketTable overflow safety net for narrow viewports — deliberately
+   scoped to the table itself, NOT #content (regression hit shipping
+   this: #content's overflow-x:auto turned .login-shell's intentional
+   negative margin bleed, "margin: 0 -36px" at the 780px breakpoint
+   below, into real clipped/scrolled content — the container's initial
+   scroll position starts at the normal edge and never reaches the
+   negative-margin-bled content to its left, so the whole login card
+   rendered visibly cut off on the left on every mobile width). A
+   `display:block` table keeps its internal row/cell table layout while
+   becoming its own scroll container, so only the table scrolls. */
+#ticketTable {
+  display: block;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 900px) {
   #app-body {
@@ -1045,4 +1055,59 @@ table.custom-data th {
 [data-theme="dark"] .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background: var(--dl-violet) !important;
     color: #fff !important;
+}
+
+/* ============================================================
+   Client-side individual ticket view (tickets.php?id=N —
+   include/client/view.inc.php, rendered via Thread::render()). Same
+   bugs already fixed for the STAFF ticket-thread view in scp/css/scp.css
+   earlier this session, but that fix never reached here — the client
+   portal loads assets/default/css/theme.css, a completely separate
+   vendor stylesheet from the staff panel's scp/css/scp.css, even though
+   both define near-identical-looking un-tokenized rules. Worst case
+   again: the redactor reply editor rendering white-on-white. */
+[data-theme="dark"] #reply {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+}
+[data-theme="dark"] table .headline {
+    background: var(--dl-surface);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .type-icon {
+    background-color: rgba(255,255,255,0.08);
+    color: var(--dl-ink-soft);
+}
+[data-theme="dark"] #reply input[type=text],
+[data-theme="dark"] #reply #response_options textarea {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .redactor-box.redactor-styles-on {
+    background: var(--dl-surface);
+    border-color: var(--dl-border);
+    color: var(--dl-ink);
+}
+[data-theme="dark"] .redactor-box.redactor-styles-on .redactor-toolbar.redactor-toolbar {
+    background-color: rgba(255,255,255,0.04);
+}
+[data-theme="dark"] .redactor-toolbar a,
+[data-theme="dark"] .redactor-air a {
+    color: var(--dl-ink-soft);
+    background-color: transparent !important;
+}
+[data-theme="dark"] .redactor-toolbar a.redactor-button-active {
+    background: rgba(255,255,255,0.1);
+    color: var(--dl-ink);
+}
+
+/* Found while investigating the above (not dark-mode specific): the
+   reply textarea has a hardcoded `width:628px !important` — same
+   fixed-width-on-mobile category as the other overflow bugs fixed
+   earlier this session, just missed because it wasn't inside a
+   <table width="800">. */
+#reply textarea {
+    width: 100% !important;
+    box-sizing: border-box;
 }
